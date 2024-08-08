@@ -40,7 +40,7 @@ internal extension HanziPinyin {
                     }
                     pinyinTable.updateValue(components[1], forKey: components[0])
                 }
-
+                //rama
                 HanziPinyin.cache(pinyinTable, forKey: CacheKeys.unicodeToPinyin)
                 return pinyinTable
             } catch _ {
