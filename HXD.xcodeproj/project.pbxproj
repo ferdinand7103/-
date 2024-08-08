@@ -14,6 +14,8 @@
 		29B12CA22C6467D0008FEAF4 /* PinyinFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12CA12C6467D0008FEAF4 /* PinyinFormatter.swift */; };
 		29B12CA52C6468C0008FEAF4 /* HanziPinyinResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12CA42C6468C0008FEAF4 /* HanziPinyinResources.swift */; };
 		29B12CA92C646AE9008FEAF4 /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 29B12CA72C646AE9008FEAF4 /* unicode_to_hanyu_pinyin.txt */; };
+		29B12CAC2C64CA9D008FEAF4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B12CAB2C64CA9C008FEAF4 /* AVFoundation.framework */; };
+		29B12CAE2C64CABD008FEAF4 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12CAD2C64CABD008FEAF4 /* TextToSpeech.swift */; };
 		29EBBBC62C5BAB0600AFCD60 /* HXDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBC52C5BAB0600AFCD60 /* HXDApp.swift */; };
 		29EBBBC82C5BAB0600AFCD60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */; };
 		29EBBBCA2C5BAB0700AFCD60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29EBBBC92C5BAB0700AFCD60 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 		29B12CA12C6467D0008FEAF4 /* PinyinFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinFormatter.swift; sourceTree = "<group>"; };
 		29B12CA42C6468C0008FEAF4 /* HanziPinyinResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanziPinyinResources.swift; sourceTree = "<group>"; };
 		29B12CA72C646AE9008FEAF4 /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
+		29B12CAB2C64CA9C008FEAF4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		29B12CAD2C64CABD008FEAF4 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		29EBBBC22C5BAB0600AFCD60 /* HXD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29EBBBC52C5BAB0600AFCD60 /* HXDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXDApp.swift; sourceTree = "<group>"; };
 		29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29B12CAC2C64CA9D008FEAF4 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			children = (
 				29B12CA62C6469F3008FEAF4 /* HanzitoPinyin */,
 				29B12C942C631A7B008FEAF4 /* SpeechRecognizer.swift */,
+				29B12CAD2C64CABD008FEAF4 /* TextToSpeech.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -88,11 +94,20 @@
 			path = HanzitoPinyin;
 			sourceTree = "<group>";
 		};
+		29B12CAA2C64CA9C008FEAF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B12CAB2C64CA9C008FEAF4 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		29EBBBB92C5BAB0600AFCD60 = {
 			isa = PBXGroup;
 			children = (
 				29EBBBC42C5BAB0600AFCD60 /* HXD */,
 				29EBBBC32C5BAB0600AFCD60 /* Products */,
+				29B12CAA2C64CA9C008FEAF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29B12CA22C6467D0008FEAF4 /* PinyinFormatter.swift in Sources */,
+				29B12CAE2C64CABD008FEAF4 /* TextToSpeech.swift in Sources */,
 				29EBBBDB2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift in Sources */,
 				29EBBBC82C5BAB0600AFCD60 /* ContentView.swift in Sources */,
 				29B12C9D2C6466AE008FEAF4 /* HanziToPinyin.swift in Sources */,

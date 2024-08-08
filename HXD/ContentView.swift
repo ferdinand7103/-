@@ -9,10 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject private var speechRecognizer = SpeechRecognizer()
+    private let textToSpeechServices = TextToSpeechServices()
     let outputFormat = PinyinOutputFormat(toneType: .none, vCharType: .vCharacter, caseType: .lowercased)
     
     var body: some View {
         VStack {
+            Button(action: {
+                textToSpeechServices.speak(text: "你好，世界")
+            }) {
+                Text("Speak")
+                    .font(.title)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            .padding()
+
             Text(speechRecognizer.transcribedText)
                 .padding()
             Text(speechRecognizer.transcribedText.toPinyin(withFormat: outputFormat, separator: " "))
