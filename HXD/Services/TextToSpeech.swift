@@ -7,7 +7,7 @@
 
 import AVFoundation
 
-class TextToSpeechServices {
+class TextToSpeechServices: TextToSpeechProtocol {
     private let speechSynthesizer = AVSpeechSynthesizer()
 
     func speak(text: String, language: String = "zh-CN") {
