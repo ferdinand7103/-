@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject private var speechRecognizer = SpeechRecognizer()
-    private let textToSpeechServices = TextToSpeechServices()
+    private var textToSpeechServices: TextToSpeechProtocol
+    @ObservedObject var speechRecognizer: SpeechRecognizer
     let outputFormat = PinyinOutputFormat(toneType: .none, vCharType: .vCharacter, caseType: .lowercased)
     
+    init(textToSpeechServices: TextToSpeechProtocol = TextToSpeechServices(), speechRecognizer: SpeechRecognizer = SpeechRecognizer()) {
+        self.textToSpeechServices = textToSpeechServices
+        self.speechRecognizer = speechRecognizer
+    }
+
     var body: some View {
         VStack {
             Button(action: {
-                textToSpeechServices.speak(text: "你好，世界")
+                textToSpeechServices.speak(text: "你好，世界", language: "zh-CN")
             }) {
                 Text("Speak")
                     .font(.title)

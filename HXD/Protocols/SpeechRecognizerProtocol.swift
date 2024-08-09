@@ -5,9 +5,12 @@
 //  Created by Ferdinand Jacques on 07/08/24.
 //
 
+import Foundation
+
 protocol SpeechRecognizerProtocol {
-    func requestAuthorization()
+    var transcribedText: String { get }
+    var isRecognizing: Bool { get }
+    
     func startTranscribing()
     func stopTranscribing()
-    func startRecognition()
 }

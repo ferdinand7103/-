@@ -7,7 +7,7 @@
 
 import Speech
 
-class SpeechRecognizer: ObservableObject {
+class SpeechRecognizer: ObservableObject, SpeechRecognizerProtocol {
     @Published var transcribedText = "Press start to transcribe..."
     @Published var isRecognizing = false
     @Published var showAlert = false
