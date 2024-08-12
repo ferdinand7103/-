@@ -21,6 +21,4 @@ class FlashcardViewModel: ObservableObject {
             "兔子"
         ]
     }
-    
-    func playSound(){}
 }
