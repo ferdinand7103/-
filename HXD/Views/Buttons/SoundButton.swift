@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FlashcardButton: View {
+struct SoundButton: View {
     let vocab: String
     let TTS = TextToSpeechServices()
 
@@ -28,5 +28,5 @@ struct FlashcardButton: View {
 }
 
 #Preview {
-    FlashcardButton(vocab: "听")
+    SoundButton(vocab: "听")
 }
