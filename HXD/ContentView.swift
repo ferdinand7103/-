@@ -20,7 +20,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button(action: {
-                textToSpeechServices.speak(text: "你好，世界", language: "zh-CN")
+                textToSpeechServices.speakSlow(text: "你好，世界", language: "zh-CN")
             }) {
                 Text("Speak")
                     .font(.title)
