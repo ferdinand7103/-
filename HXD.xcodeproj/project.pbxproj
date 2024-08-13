@@ -18,7 +18,6 @@
 		29B12CAE2C64CABD008FEAF4 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12CAD2C64CABD008FEAF4 /* TextToSpeech.swift */; };
 		29B12CB02C64D1F0008FEAF4 /* TextToSpeechProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12CAF2C64D1F0008FEAF4 /* TextToSpeechProtocol.swift */; };
 		29B12CB22C65BFF5008FEAF4 /* TryAgainHanzi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12CB12C65BFF5008FEAF4 /* TryAgainHanzi.swift */; };
-		29B12CB82C6AFCDB008FEAF4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 29B12CB72C6AFCDB008FEAF4 /* .gitignore */; };
 		29EBBBC62C5BAB0600AFCD60 /* HXDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBC52C5BAB0600AFCD60 /* HXDApp.swift */; };
 		29EBBBC82C5BAB0600AFCD60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */; };
 		29EBBBCA2C5BAB0700AFCD60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29EBBBC92C5BAB0700AFCD60 /* Assets.xcassets */; };
@@ -45,7 +44,6 @@
 		29B12CAD2C64CABD008FEAF4 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		29B12CAF2C64D1F0008FEAF4 /* TextToSpeechProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechProtocol.swift; sourceTree = "<group>"; };
 		29B12CB12C65BFF5008FEAF4 /* TryAgainHanzi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryAgainHanzi.swift; sourceTree = "<group>"; };
-		29B12CB72C6AFCDB008FEAF4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		29EBBBC22C5BAB0600AFCD60 /* HXD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29EBBBC52C5BAB0600AFCD60 /* HXDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXDApp.swift; sourceTree = "<group>"; };
 		29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */,
 				29EBBBC92C5BAB0700AFCD60 /* Assets.xcassets */,
 				29EBBBCB2C5BAB0700AFCD60 /* Preview Content */,
-				29B12CB72C6AFCDB008FEAF4 /* .gitignore */,
 			);
 			path = HXD;
 			sourceTree = "<group>";
@@ -266,7 +263,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29B12CB82C6AFCDB008FEAF4 /* .gitignore in Resources */,
 				29B12CA92C646AE9008FEAF4 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				29EBBBCD2C5BAB0700AFCD60 /* Preview Assets.xcassets in Resources */,
 				29EBBBCA2C5BAB0700AFCD60 /* Assets.xcassets in Resources */,
