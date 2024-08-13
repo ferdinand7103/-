@@ -25,6 +25,11 @@
 		29EBBBD72C5BABF000AFCD60 /* Amazing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBD62C5BABF000AFCD60 /* Amazing.swift */; };
 		29EBBBD92C5BABFB00AFCD60 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBD82C5BABFB00AFCD60 /* ViewModel.swift */; };
 		29EBBBDB2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBDA2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift */; };
+		32714E4B2C6A443500EE6486 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4A2C6A443500EE6486 /* FlashcardView.swift */; };
+		32714E4D2C6A46FC00EE6486 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4C2C6A46FC00EE6486 /* FlashcardViewModel.swift */; };
+		32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4E2C6A47EE00EE6486 /* FlashcardListView.swift */; };
+		32714E522C6A4F6E00EE6486 /* SoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E512C6A4F6E00EE6486 /* SoundButton.swift */; };
+		32714E552C6A539A00EE6486 /* FlashcardSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E542C6A539A00EE6486 /* FlashcardSwipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +52,11 @@
 		29EBBBD62C5BABF000AFCD60 /* Amazing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amazing.swift; sourceTree = "<group>"; };
 		29EBBBD82C5BABFB00AFCD60 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		29EBBBDA2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinOutputFormat.swift; sourceTree = "<group>"; };
+		32714E4A2C6A443500EE6486 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
+		32714E4C2C6A46FC00EE6486 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
+		32714E4E2C6A47EE00EE6486 /* FlashcardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardListView.swift; sourceTree = "<group>"; };
+		32714E512C6A4F6E00EE6486 /* SoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundButton.swift; sourceTree = "<group>"; };
+		32714E542C6A539A00EE6486 /* FlashcardSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardSwipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +162,8 @@
 		29EBBBD32C5BAB3E00AFCD60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				32714E532C6A52AD00EE6486 /* Flashcard */,
+				32714E502C6A4F4700EE6486 /* Buttons */,
 				29EBBBD62C5BABF000AFCD60 /* Amazing.swift */,
 				29B12CB12C65BFF5008FEAF4 /* TryAgainHanzi.swift */,
 			);
@@ -162,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				29EBBBD82C5BABFB00AFCD60 /* ViewModel.swift */,
+				32714E4C2C6A46FC00EE6486 /* FlashcardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -172,6 +185,24 @@
 				29EBBBDA2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		32714E502C6A4F4700EE6486 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				32714E512C6A4F6E00EE6486 /* SoundButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		32714E532C6A52AD00EE6486 /* Flashcard */ = {
+			isa = PBXGroup;
+			children = (
+				32714E4A2C6A443500EE6486 /* FlashcardView.swift */,
+				32714E4E2C6A47EE00EE6486 /* FlashcardListView.swift */,
+				32714E542C6A539A00EE6486 /* FlashcardSwipeView.swift */,
+			);
+			path = Flashcard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,12 +276,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32714E522C6A4F6E00EE6486 /* SoundButton.swift in Sources */,
 				29B12CA22C6467D0008FEAF4 /* PinyinFormatter.swift in Sources */,
+				32714E4B2C6A443500EE6486 /* FlashcardView.swift in Sources */,
 				29B12CAE2C64CABD008FEAF4 /* TextToSpeech.swift in Sources */,
 				29EBBBDB2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift in Sources */,
 				29EBBBC82C5BAB0600AFCD60 /* ContentView.swift in Sources */,
 				29B12C9D2C6466AE008FEAF4 /* HanziToPinyin.swift in Sources */,
+				32714E552C6A539A00EE6486 /* FlashcardSwipeView.swift in Sources */,
 				29B12C9B2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift in Sources */,
+				32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */,
+				32714E4D2C6A46FC00EE6486 /* FlashcardViewModel.swift in Sources */,
 				29EBBBC62C5BAB0600AFCD60 /* HXDApp.swift in Sources */,
 				29B12CB22C65BFF5008FEAF4 /* TryAgainHanzi.swift in Sources */,
 				29B12CB02C64D1F0008FEAF4 /* TextToSpeechProtocol.swift in Sources */,
@@ -392,7 +428,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HXD/Preview Content\"";
-				DEVELOPMENT_TEAM = M793N4X6S7;
+				DEVELOPMENT_TEAM = U542U52PMZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
@@ -424,7 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HXD/Preview Content\"";
-				DEVELOPMENT_TEAM = M793N4X6S7;
+				DEVELOPMENT_TEAM = U542U52PMZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
