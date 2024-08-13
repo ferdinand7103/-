@@ -18,6 +18,10 @@
 		29B12CAE2C64CABD008FEAF4 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12CAD2C64CABD008FEAF4 /* TextToSpeech.swift */; };
 		29B12CB02C64D1F0008FEAF4 /* TextToSpeechProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12CAF2C64D1F0008FEAF4 /* TextToSpeechProtocol.swift */; };
 		29B12CB22C65BFF5008FEAF4 /* TryAgainHanzi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12CB12C65BFF5008FEAF4 /* TryAgainHanzi.swift */; };
+		29B12D0A2C6B2909008FEAF4 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12D092C6B2909008FEAF4 /* BackButton.swift */; };
+		29B12D0D2C6B2A53008FEAF4 /* QuizHanzi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12D0C2C6B2A53008FEAF4 /* QuizHanzi.swift */; };
+		29B12D0F2C6B2B8B008FEAF4 /* RectangleChoose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12D0E2C6B2B8B008FEAF4 /* RectangleChoose.swift */; };
+		29B12D122C6B9409008FEAF4 /* QuizPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12D112C6B9409008FEAF4 /* QuizPage.swift */; };
 		29EBBBC62C5BAB0600AFCD60 /* HXDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBC52C5BAB0600AFCD60 /* HXDApp.swift */; };
 		29EBBBC82C5BAB0600AFCD60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */; };
 		29EBBBCA2C5BAB0700AFCD60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29EBBBC92C5BAB0700AFCD60 /* Assets.xcassets */; };
@@ -44,6 +48,10 @@
 		29B12CAD2C64CABD008FEAF4 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		29B12CAF2C64D1F0008FEAF4 /* TextToSpeechProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechProtocol.swift; sourceTree = "<group>"; };
 		29B12CB12C65BFF5008FEAF4 /* TryAgainHanzi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryAgainHanzi.swift; sourceTree = "<group>"; };
+		29B12D092C6B2909008FEAF4 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		29B12D0C2C6B2A53008FEAF4 /* QuizHanzi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizHanzi.swift; sourceTree = "<group>"; };
+		29B12D0E2C6B2B8B008FEAF4 /* RectangleChoose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleChoose.swift; sourceTree = "<group>"; };
+		29B12D112C6B9409008FEAF4 /* QuizPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPage.swift; sourceTree = "<group>"; };
 		29EBBBC22C5BAB0600AFCD60 /* HXD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29EBBBC52C5BAB0600AFCD60 /* HXDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXDApp.swift; sourceTree = "<group>"; };
 		29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +125,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		29B12D0B2C6B2A3C008FEAF4 /* Reuseable */ = {
+			isa = PBXGroup;
+			children = (
+				29EBBBD62C5BABF000AFCD60 /* Amazing.swift */,
+				29B12CB12C65BFF5008FEAF4 /* TryAgainHanzi.swift */,
+				29B12D0C2C6B2A53008FEAF4 /* QuizHanzi.swift */,
+				29B12D0E2C6B2B8B008FEAF4 /* RectangleChoose.swift */,
+			);
+			path = Reuseable;
+			sourceTree = "<group>";
+		};
+		29B12D102C6B93F7008FEAF4 /* QuizPage */ = {
+			isa = PBXGroup;
+			children = (
+				29B12D112C6B9409008FEAF4 /* QuizPage.swift */,
+			);
+			path = QuizPage;
+			sourceTree = "<group>";
+		};
 		29EBBBB92C5BAB0600AFCD60 = {
 			isa = PBXGroup;
 			children = (
@@ -162,10 +189,10 @@
 		29EBBBD32C5BAB3E00AFCD60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				29B12D102C6B93F7008FEAF4 /* QuizPage */,
+				29B12D0B2C6B2A3C008FEAF4 /* Reuseable */,
 				32714E532C6A52AD00EE6486 /* Flashcard */,
 				32714E502C6A4F4700EE6486 /* Buttons */,
-				29EBBBD62C5BABF000AFCD60 /* Amazing.swift */,
-				29B12CB12C65BFF5008FEAF4 /* TryAgainHanzi.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				32714E512C6A4F6E00EE6486 /* SoundButton.swift */,
+				29B12D092C6B2909008FEAF4 /* BackButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -280,9 +308,12 @@
 				29B12CA22C6467D0008FEAF4 /* PinyinFormatter.swift in Sources */,
 				32714E4B2C6A443500EE6486 /* FlashcardView.swift in Sources */,
 				29B12CAE2C64CABD008FEAF4 /* TextToSpeech.swift in Sources */,
+				29B12D0A2C6B2909008FEAF4 /* BackButton.swift in Sources */,
 				29EBBBDB2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift in Sources */,
+				29B12D0D2C6B2A53008FEAF4 /* QuizHanzi.swift in Sources */,
 				29EBBBC82C5BAB0600AFCD60 /* ContentView.swift in Sources */,
 				29B12C9D2C6466AE008FEAF4 /* HanziToPinyin.swift in Sources */,
+				29B12D122C6B9409008FEAF4 /* QuizPage.swift in Sources */,
 				32714E552C6A539A00EE6486 /* FlashcardSwipeView.swift in Sources */,
 				29B12C9B2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift in Sources */,
 				32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */,
@@ -292,6 +323,7 @@
 				29B12CB02C64D1F0008FEAF4 /* TextToSpeechProtocol.swift in Sources */,
 				29B12CA52C6468C0008FEAF4 /* HanziPinyinResources.swift in Sources */,
 				29B12C952C631A7B008FEAF4 /* SpeechRecognizer.swift in Sources */,
+				29B12D0F2C6B2B8B008FEAF4 /* RectangleChoose.swift in Sources */,
 				29EBBBD92C5BABFB00AFCD60 /* ViewModel.swift in Sources */,
 				29B12CA02C6467A1008FEAF4 /* HanziPinyin.swift in Sources */,
 				29EBBBD72C5BABF000AFCD60 /* Amazing.swift in Sources */,
