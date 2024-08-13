@@ -16,8 +16,7 @@ struct SoundButton: View {
             TTS.speak(text: vocab)
         }) {
             Circle()
-                .fill(Color.blue)
-                .frame(width: 30, height: 30)
+                .fill(Color.orange3)
                 .overlay(
                     Image(systemName: "speaker.wave.2.fill")
                         .foregroundStyle(.white)

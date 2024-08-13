@@ -13,20 +13,21 @@ struct FlashcardView: View {
     var height: CGFloat = 200
     
     var body: some View {
-        let buttonSize = min(width, height) * 0.2
+        let soundButtonSize = min(width, height) * 0.120
         Image(vocab)
             .resizable()
             .scaledToFit()
             .frame(width: width, height: height)
+            .shadow(radius: 1.5)
             .overlay(
                 SoundButton(vocab: vocab)
-                    .frame(width: buttonSize, height: buttonSize)
-                    .padding(.top, height * 0.75)
-                    .padding(.leading, width * 0.17)
+                    .frame(width: soundButtonSize, height: soundButtonSize)
+                    .padding(.top, height * 0.65)
+                    .padding(.leading, width * 0.24)
             )
     }
 }
 
 #Preview {
-    FlashcardView(vocab: "狗", width: 300, height: 200)
+    FlashcardView(vocab: "谢谢", width: 300, height: 400)
 }
