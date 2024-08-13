@@ -10,11 +10,12 @@ import SwiftUI
 struct RectangleChoose: View {
     @State var hanzi: String
     @State var pinyin: String? = nil
+    @Binding var fill: Color
     
     var body: some View {
         ZStack{
             Rectangle()
-                .fill(Color.white)
+                .fill(fill)
                 .frame(width: 182, height: 72)
                 .cornerRadius(12)
                 .overlay(
@@ -37,5 +38,5 @@ struct RectangleChoose: View {
 }
 
 #Preview {
-    RectangleChoose(hanzi: "成人", pinyin: "Zàijiàn")
+    RectangleChoose(hanzi: "成人", pinyin: "Zàijiàn", fill: .constant(Color.white))
 }

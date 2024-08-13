@@ -11,8 +11,8 @@ struct QuizPage: View {
     var body: some View {
         ZStack {
             Image("QuizStart")
-            QuizHanzi(choice1: "成人", choice2: "周一", choice3: "猫", choice4: "日记")
-                .padding(.top, 550)
+            QuizHanzi(choice1: "成人", choice2: "周一", choice3: "猫", choice4: "日记", correctAnswerIndex: 3)
+                .padding(.top, 525)
                 .padding([.leading, .trailing])
         }
     }
