@@ -1,0 +1,24 @@
+# Project
+**/*.xcodeproj
+**/*.xcworkspace
+DerivedData/
+.build/
+build/
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.zip
+dSYMs.zip
+
+# Others
+*.mobileprovision
+.vscode/
+.ruby-version
+
+Pods/
+Podfile.lock
+
+# DS_Store
+**/.DS_Store
