@@ -64,11 +64,11 @@ struct QuizHanzi: View {
                         viewModel.handleButtonClick(index: 2, colors: &colors)
                     }) {
                         if (pinyin2 != nil) {
-                            RectangleChoose(hanzi: choice2, pinyin: pinyin2, fill: $colors[0])
-                                .foregroundColor(viewModel.foregroundColors[0])
+                            RectangleChoose(hanzi: choice2, pinyin: pinyin2, fill: $colors[1])
+                                .foregroundColor(viewModel.foregroundColors[1])
                         } else {
-                            RectangleChoose(hanzi: choice2, fill: $colors[0])
-                                .foregroundColor(viewModel.foregroundColors[0])
+                            RectangleChoose(hanzi: choice2, fill: $colors[1])
+                                .foregroundColor(viewModel.foregroundColors[1])
                         }
                     }
                 }
@@ -77,22 +77,22 @@ struct QuizHanzi: View {
                         viewModel.handleButtonClick(index: 3, colors: &colors)
                     }) {
                         if (pinyin3 != nil) {
-                            RectangleChoose(hanzi: choice3, pinyin: pinyin3, fill: $colors[0])
-                                .foregroundColor(viewModel.foregroundColors[0])
+                            RectangleChoose(hanzi: choice3, pinyin: pinyin3, fill: $colors[2])
+                                .foregroundColor(viewModel.foregroundColors[2])
                         } else {
-                            RectangleChoose(hanzi: choice3, fill: $colors[0])
-                                .foregroundColor(viewModel.foregroundColors[0])
+                            RectangleChoose(hanzi: choice3, fill: $colors[2])
+                                .foregroundColor(viewModel.foregroundColors[2])
                         }
                     }
                     Button(action: {
                         viewModel.handleButtonClick(index: 4, colors: &colors)
                     }) {
                         if (pinyin4 != nil) {
-                            RectangleChoose(hanzi: choice4, pinyin: pinyin4, fill: $colors[0])
-                                .foregroundColor(viewModel.foregroundColors[0])
+                            RectangleChoose(hanzi: choice4, pinyin: pinyin4, fill: $colors[3])
+                                .foregroundColor(viewModel.foregroundColors[3])
                         } else {
-                            RectangleChoose(hanzi: choice4, fill: $colors[0])
-                                .foregroundColor(viewModel.foregroundColors[0])
+                            RectangleChoose(hanzi: choice4, fill: $colors[3])
+                                .foregroundColor(viewModel.foregroundColors[3])
                         }
                     }
                 }

@@ -18,18 +18,24 @@ class HandleButtonClick: ObservableObject {
     }
 
     func handleButtonClick(index: Int, colors: inout [Color]) {
-        guard !clicked else { return }
-        
-        clicked = true
-        
-        if index == correctAnswerIndex {
-            colors[index - 1] = .green
-            foregroundColors[index - 1] = .white
-        } else {
-            colors[index - 1] = .red
-            foregroundColors[index - 1] = .white
-            colors[correctAnswerIndex - 1] = .green
-            foregroundColors[correctAnswerIndex - 1] = .white
+        for i in 0..<colors.count {
+            colors[i] = .white
+            foregroundColors[i] = .black
         }
+        colors[index - 1] = .orange3
+        foregroundColors[index - 1] = .white
+//        guard !clicked else { return }
+//        
+//        clicked = true
+//        
+//        if index == correctAnswerIndex {
+//            colors[index - 1] = .orange3
+//            foregroundColors[index - 1] = .white
+//        } else {
+//            colors[index - 1] = .red
+//            foregroundColors[index - 1] = .white
+//            colors[correctAnswerIndex - 1] = .green
+//            foregroundColors[correctAnswerIndex - 1] = .white
+//        }
     }
 }

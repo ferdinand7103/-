@@ -15,7 +15,7 @@ struct FlashcardButton: View {
             print(navigateTo)
         }) {
             Rectangle()
-                .fill(Color.backFlash)
+                .fill(Color.orange3)
                 .frame(width: 50, height: 50)
                 .overlay(
                     Image(systemName: "rectangle.on.rectangle")
