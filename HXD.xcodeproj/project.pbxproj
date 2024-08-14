@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		293E0E8E2C6C62A00062C2AD /* FCNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E8D2C6C62A00062C2AD /* FCNavigationButton.swift */; };
-		293E0E902C6C62AA0062C2AD /* FlashcardSwipeActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E8F2C6C62AA0062C2AD /* FlashcardSwipeActionView.swift */; };
 		29B12C952C631A7B008FEAF4 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C942C631A7B008FEAF4 /* SpeechRecognizer.swift */; };
 		29B12C9B2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C9A2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift */; };
 		29B12C9D2C6466AE008FEAF4 /* HanziToPinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C9C2C6466AE008FEAF4 /* HanziToPinyin.swift */; };
@@ -33,6 +32,7 @@
 		29EBBBD72C5BABF000AFCD60 /* Correct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBD62C5BABF000AFCD60 /* Correct.swift */; };
 		29EBBBD92C5BABFB00AFCD60 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBD82C5BABFB00AFCD60 /* ViewModel.swift */; };
 		29EBBBDB2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBDA2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift */; };
+		3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */; };
 		32714E4B2C6A443500EE6486 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4A2C6A443500EE6486 /* FlashcardView.swift */; };
 		32714E4D2C6A46FC00EE6486 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4C2C6A46FC00EE6486 /* FlashcardViewModel.swift */; };
 		32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4E2C6A47EE00EE6486 /* FlashcardListView.swift */; };
@@ -42,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		293E0E8D2C6C62A00062C2AD /* FCNavigationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCNavigationButton.swift; sourceTree = "<group>"; };
-		293E0E8F2C6C62AA0062C2AD /* FlashcardSwipeActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardSwipeActionView.swift; sourceTree = "<group>"; };
 		29B12C942C631A7B008FEAF4 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		29B12C9A2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerProtocol.swift; sourceTree = "<group>"; };
 		29B12C9C2C6466AE008FEAF4 /* HanziToPinyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanziToPinyin.swift; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 		29EBBBD62C5BABF000AFCD60 /* Correct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Correct.swift; sourceTree = "<group>"; };
 		29EBBBD82C5BABFB00AFCD60 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		29EBBBDA2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinOutputFormat.swift; sourceTree = "<group>"; };
+		3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperButtons.swift; sourceTree = "<group>"; };
 		32714E4A2C6A443500EE6486 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		32714E4C2C6A46FC00EE6486 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
 		32714E4E2C6A47EE00EE6486 /* FlashcardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardListView.swift; sourceTree = "<group>"; };
@@ -141,6 +141,7 @@
 				29B12CB12C65BFF5008FEAF4 /* Wrong.swift */,
 				29B12D0C2C6B2A53008FEAF4 /* QuizHanzi.swift */,
 				29B12D0E2C6B2B8B008FEAF4 /* RectangleChoose.swift */,
+				3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */,
 			);
 			path = Reuseable;
 			sourceTree = "<group>";
@@ -198,6 +199,7 @@
 		29EBBBD32C5BAB3E00AFCD60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3252BD812C6CE2DF00CE8CEE /* OnboardingPage */,
 				29B12D102C6B93F7008FEAF4 /* QuizPage */,
 				29B12D0B2C6B2A3C008FEAF4 /* Reuseable */,
 				32714E532C6A52AD00EE6486 /* Flashcard */,
@@ -223,6 +225,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		3252BD812C6CE2DF00CE8CEE /* OnboardingPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OnboardingPage;
+			sourceTree = "<group>";
+		};
 		32714E502C6A4F4700EE6486 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,7 +246,6 @@
 		32714E532C6A52AD00EE6486 /* Flashcard */ = {
 			isa = PBXGroup;
 			children = (
-				293E0E8F2C6C62AA0062C2AD /* FlashcardSwipeActionView.swift */,
 				32714E4A2C6A443500EE6486 /* FlashcardView.swift */,
 				32714E4E2C6A47EE00EE6486 /* FlashcardListView.swift */,
 				32714E542C6A539A00EE6486 /* FlashcardSwipeView.swift */,
@@ -318,7 +326,6 @@
 			files = (
 				29B12D162C6C4E64008FEAF4 /* FlashcardButton.swift in Sources */,
 				29B12D142C6B9E7A008FEAF4 /* HandleButtonClick.swift in Sources */,
-				293E0E902C6C62AA0062C2AD /* FlashcardSwipeActionView.swift in Sources */,
 				32714E522C6A4F6E00EE6486 /* SoundButton.swift in Sources */,
 				29B12CA22C6467D0008FEAF4 /* PinyinFormatter.swift in Sources */,
 				32714E4B2C6A443500EE6486 /* FlashcardView.swift in Sources */,
@@ -335,6 +342,7 @@
 				32714E4D2C6A46FC00EE6486 /* FlashcardViewModel.swift in Sources */,
 				29EBBBC62C5BAB0600AFCD60 /* HXDApp.swift in Sources */,
 				29B12CB22C65BFF5008FEAF4 /* Wrong.swift in Sources */,
+				3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */,
 				29B12CB02C64D1F0008FEAF4 /* TextToSpeechProtocol.swift in Sources */,
 				29B12CA52C6468C0008FEAF4 /* HanziPinyinResources.swift in Sources */,
 				293E0E8E2C6C62A00062C2AD /* FCNavigationButton.swift in Sources */,
