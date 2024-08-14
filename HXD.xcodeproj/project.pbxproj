@@ -97,6 +97,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		293E0EA52C6CEB670062C2AD /* OnBoardingPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OnBoardingPage;
+			sourceTree = "<group>";
+		};
 		29B12C992C632B68008FEAF4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +219,7 @@
 		29EBBBD32C5BAB3E00AFCD60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3252BD812C6CE2DF00CE8CEE /* OnboardingPage */,
+				293E0EA52C6CEB670062C2AD /* OnBoardingPage */,
 				29B12D102C6B93F7008FEAF4 /* QuizPage */,
 				29B12D0B2C6B2A3C008FEAF4 /* Reuseable */,
 				32714E532C6A52AD00EE6486 /* Flashcard */,
@@ -238,13 +245,6 @@
 				29EBBBDA2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		3252BD812C6CE2DF00CE8CEE /* OnboardingPage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = OnboardingPage;
 			sourceTree = "<group>";
 		};
 		32714E502C6A4F4700EE6486 /* Buttons */ = {

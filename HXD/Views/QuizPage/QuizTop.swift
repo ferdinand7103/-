@@ -15,12 +15,8 @@ struct QuizTop: View {
         ZStack{
             Image("QuizStart")
                 .padding(.bottom, 195)
-            BackButton(isShowingConfirmation: $isShowingConfirmation)
+            UpperButtons(isShowingConfirmation: $isShowingConfirmation)
                 .padding(.bottom, 680)
-                .padding(.trailing, 290)
-            FlashcardButton(navigateTo: "Flashcard")
-                .padding(.bottom, 680)
-                .padding(.leading, 290)
             if isShowingConfirmation {
                 Color.black.opacity(0.4)
                     .edgesIgnoringSafeArea(.all)
