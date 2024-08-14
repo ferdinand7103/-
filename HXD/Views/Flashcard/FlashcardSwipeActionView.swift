@@ -12,9 +12,13 @@ struct FlashcardSwipeActionView: View {
         VStack (spacing: 4) {
             FlashcardSwipeView()
             HStack {
-                PreviousButton()
+                PreviousButton(action: {
+                    print("previous button tapped")
+                })
                 Spacer()
-                NextButton()
+                NextButton(action: {
+                    print("next button tapped")
+                })
             }
         }
         .padding()

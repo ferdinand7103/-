@@ -9,14 +9,14 @@ import SwiftUI
 
 struct FlashcardSwipeView: View {
     @ObservedObject var flashcardVM = FlashcardViewModel()
-    @State private var currentIndex: Int = 0 // Ensure this is a plain Int
+    @State private var currentIndex: Int = 0
     @State private var offset: CGSize = .zero
     @State private var opacity: Double = 1.0
 
     var body: some View {
         ZStack {
             ForEach(0 ..< flashcardVM.flashcards.count, id: \.self) { index in
-                if index >= currentIndex { // Safe comparison since currentIndex is an Int
+                if index >= currentIndex {
                     FlashcardView(vocab: flashcardVM.flashcards[index], width: 300, height: 400)
                         .if(index == currentIndex) { view in
                             view
@@ -37,7 +37,7 @@ struct FlashcardSwipeView: View {
                 }
             }
         }
-        .contentShape(Rectangle()) // Makes the entire ZStack draggable
+        .contentShape(Rectangle())
         .gesture(
             DragGesture()
                 .onChanged { gesture in
@@ -59,7 +59,7 @@ struct FlashcardSwipeView: View {
                                 currentIndex = min(currentIndex + 1, flashcardVM.flashcards.count - 1)
                             }
                         }
-                    } else if gesture.translation.width >= 100 && gesture.translation.width < 200, currentIndex > 0 {
+                    } else if gesture.translation.width >= 100, gesture.translation.width < 200, currentIndex > 0 {
                         // swipe right to bring back the previous card
                         withAnimation {
                             offset = CGSize(width: 200, height: 0)
@@ -79,12 +79,17 @@ struct FlashcardSwipeView: View {
                 }
         )
     }
+
+    // MARK: - Helper Methods
+    
+//    private func createFlashcardView(for index: Int) -> some View {
+//        
+//    }
 }
 
 #Preview {
     FlashcardSwipeView()
 }
-
 
 extension View {
     func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {

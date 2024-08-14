@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct PreviousButton: View {
+    var action: () -> Void
     var body: some View {
-        Button(action: {}, label: {
+        Button(action: action, label: {
             Label("Previous", image: "previousIcon")
                 .modifier(ButtonTextModifier())
 
@@ -19,8 +20,9 @@ struct PreviousButton: View {
 }
 
 struct NextButton: View {
+    var action: () -> Void
     var body: some View {
-        Button(action: {}, label: {
+        Button(action: action, label: {
             Label("Next", image: "nextIcon")
                 .modifier(ButtonTextModifier())
 
@@ -59,6 +61,13 @@ struct ButtonModifier: ViewModifier {
 }
 
 #Preview {
-//    PreviousButton()
-    NextButton()
+    VStack {
+            PreviousButton(action: {
+                print("Previous button tapped")
+            })
+
+            NextButton(action: {
+                print("Next button tapped")
+            })
+        }
 }
