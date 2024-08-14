@@ -42,6 +42,7 @@
 		3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */; };
 		3252BDA42C6CFB8A00CE8CEE /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252BDA32C6CFB8A00CE8CEE /* OnboardingPage.swift */; };
 		3252BDA62C6D0A4000CE8CEE /* BubbleChatNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252BDA52C6D0A4000CE8CEE /* BubbleChatNext.swift */; };
+		3252BDA82C6D1C8100CE8CEE /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252BDA72C6D1C8100CE8CEE /* PrimaryButton.swift */; };
 		32714E4B2C6A443500EE6486 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4A2C6A443500EE6486 /* FlashcardView.swift */; };
 		32714E4D2C6A46FC00EE6486 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4C2C6A46FC00EE6486 /* FlashcardViewModel.swift */; };
 		32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4E2C6A47EE00EE6486 /* FlashcardListView.swift */; };
@@ -86,6 +87,7 @@
 		3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperButtons.swift; sourceTree = "<group>"; };
 		3252BDA32C6CFB8A00CE8CEE /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingPage.swift; path = HXD/Views/OnboardingPage/Scene1_School/OnboardingPage.swift; sourceTree = SOURCE_ROOT; };
 		3252BDA52C6D0A4000CE8CEE /* BubbleChatNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChatNext.swift; sourceTree = "<group>"; };
+		3252BDA72C6D1C8100CE8CEE /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		32714E4A2C6A443500EE6486 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		32714E4C2C6A46FC00EE6486 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
 		32714E4E2C6A47EE00EE6486 /* FlashcardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardListView.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				29B12D092C6B2909008FEAF4 /* BackButton.swift */,
 				3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */,
 				29B12D152C6C4E64008FEAF4 /* FlashcardButton.swift */,
+				3252BDA72C6D1C8100CE8CEE /* PrimaryButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				29EBBBD92C5BABFB00AFCD60 /* ViewModel.swift in Sources */,
 				293E0E982C6CCFDD0062C2AD /* TalkingAnimation.swift in Sources */,
 				29B12CA02C6467A1008FEAF4 /* HanziPinyin.swift in Sources */,
+				3252BDA82C6D1C8100CE8CEE /* PrimaryButton.swift in Sources */,
 				29EBBBD72C5BABF000AFCD60 /* Correct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

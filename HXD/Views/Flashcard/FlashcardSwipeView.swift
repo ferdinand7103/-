@@ -13,6 +13,7 @@ struct FlashcardSwipeView: View {
     @State private var currentIndex: Int = 0
     @State private var offset: CGSize = .zero
     @State private var opacity: Double = 1.0
+//    @State private var readyBtn = PrimaryButton()
 
     var body: some View {
         ZStack {
@@ -42,16 +43,11 @@ struct FlashcardSwipeView: View {
                 }
                 .contentShape(Rectangle())
                 .gesture(createDragGesture())
-                Button(action: {
-                    isShowingFlashcard = false
-                }) {
-                    Text("Close")
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.red)
-                        .cornerRadius(10)
-                }
-                .padding(.top, 20)
+                
+                if (currentIndex == flashcardVM.flashcards.count - 1) {
+                    PrimaryButton()
+                } 
+               
             }
             .padding()
             .background(
