@@ -8,43 +8,56 @@
 import SwiftUI
 
 struct FlashcardSwipeView: View {
+    @Binding var isShowingFlashcard: Bool
     @ObservedObject var flashcardVM = FlashcardViewModel()
     @State private var currentIndex: Int = 0
     @State private var offset: CGSize = .zero
     @State private var opacity: Double = 1.0
 
     var body: some View {
-        VStack {
-            ZStack {
-                VStack {
-                    ZStack {
-                        ForEach(0 ..< flashcardVM.flashcards.count, id: \.self) { index in
-                            if index >= currentIndex {
-                                createFlashcardView(for: index)
-                                    .zIndex(Double(flashcardVM.flashcards.count - index))
+        ZStack {
+            VStack {
+                ZStack {
+                    VStack {
+                        ZStack {
+                            ForEach(0 ..< flashcardVM.flashcards.count, id: \.self) { index in
+                                if index >= currentIndex {
+                                    createFlashcardView(for: index)
+                                        .zIndex(Double(flashcardVM.flashcards.count - index))
+                                }
                             }
                         }
-                    }
-                    HStack {
-                        if currentIndex > 0 {
-                            PreviousButton(action: {
-                                performSwipeLeft()
+                        HStack {
+                            if currentIndex > 0 {
+                                PreviousButton(action: {
+                                    performSwipeLeft()
+                                })
+                            }
+                            Spacer()
+                            NextButton(action: {
+                                performSwipeRight()
                             })
                         }
-                        Spacer()
-                        NextButton(action: {
-                            performSwipeRight()
-                        })
                     }
                 }
+                .contentShape(Rectangle())
+                .gesture(createDragGesture())
+                Button(action: {
+                    isShowingFlashcard = false
+                }) {
+                    Text("Close")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.red)
+                        .cornerRadius(10)
+                }
+                .padding(.top, 20)
             }
-            .contentShape(Rectangle())
-            .gesture(createDragGesture())
-        }
-        .padding()
-        .background(
-            .opacity(0)
+            .padding()
+            .background(
+                .opacity(0)
         )
+        }
     }
 
     // MARK: - Helper Methods
@@ -68,7 +81,6 @@ struct FlashcardSwipeView: View {
                         .animation(.spring(), value: offset)
                 }
 
-            // Static Sound Button not affected by offset or animation
             SoundButton(vocab: flashcardVM.flashcards[index])
                 .frame(width: 30, height: 30)
                 .offset(x: 36, y: 130)
@@ -138,7 +150,7 @@ struct FlashcardSwipeView: View {
 }
 
 #Preview {
-    FlashcardSwipeView()
+    FlashcardSwipeView(isShowingFlashcard: .constant(false))
 }
 
 extension View {
