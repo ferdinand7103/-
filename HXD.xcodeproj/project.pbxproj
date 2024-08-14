@@ -37,6 +37,7 @@
 		29EBBBD72C5BABF000AFCD60 /* Correct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBD62C5BABF000AFCD60 /* Correct.swift */; };
 		29EBBBD92C5BABFB00AFCD60 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBD82C5BABFB00AFCD60 /* ViewModel.swift */; };
 		29EBBBDB2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBDA2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift */; };
+		3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */; };
 		32714E4B2C6A443500EE6486 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4A2C6A443500EE6486 /* FlashcardView.swift */; };
 		32714E4D2C6A46FC00EE6486 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4C2C6A46FC00EE6486 /* FlashcardViewModel.swift */; };
 		32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4E2C6A47EE00EE6486 /* FlashcardListView.swift */; };
@@ -76,6 +77,7 @@
 		29EBBBD62C5BABF000AFCD60 /* Correct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Correct.swift; sourceTree = "<group>"; };
 		29EBBBD82C5BABFB00AFCD60 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		29EBBBDA2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinOutputFormat.swift; sourceTree = "<group>"; };
+		3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperButtons.swift; sourceTree = "<group>"; };
 		32714E4A2C6A443500EE6486 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		32714E4C2C6A46FC00EE6486 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
 		32714E4E2C6A47EE00EE6486 /* FlashcardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardListView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				29B12CB12C65BFF5008FEAF4 /* Wrong.swift */,
 				29B12D0C2C6B2A53008FEAF4 /* QuizHanzi.swift */,
 				29B12D0E2C6B2B8B008FEAF4 /* RectangleChoose.swift */,
+				3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */,
 			);
 			path = Reuseable;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 		29EBBBD32C5BAB3E00AFCD60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3252BD812C6CE2DF00CE8CEE /* OnboardingPage */,
 				29B12D102C6B93F7008FEAF4 /* QuizPage */,
 				29B12D0B2C6B2A3C008FEAF4 /* Reuseable */,
 				32714E532C6A52AD00EE6486 /* Flashcard */,
@@ -234,6 +238,13 @@
 				29EBBBDA2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3252BD812C6CE2DF00CE8CEE /* OnboardingPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OnboardingPage;
 			sourceTree = "<group>";
 		};
 		32714E502C6A4F4700EE6486 /* Buttons */ = {
@@ -348,6 +359,7 @@
 				32714E4D2C6A46FC00EE6486 /* FlashcardViewModel.swift in Sources */,
 				29EBBBC62C5BAB0600AFCD60 /* HXDApp.swift in Sources */,
 				29B12CB22C65BFF5008FEAF4 /* Wrong.swift in Sources */,
+				3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */,
 				293E0E9A2C6CD00D0062C2AD /* TalkingAnimationProtocol.swift in Sources */,
 				29B12CB02C64D1F0008FEAF4 /* TextToSpeechProtocol.swift in Sources */,
 				293E0E922C6C64DD0062C2AD /* QuizTop.swift in Sources */,
