@@ -14,7 +14,7 @@ struct HXDApp: App {
 //            ContentView()
 //            FlashcardSwipeView()
 //            QuizPage()
-            UpperButtons(isShowingConfirmation: .constant(false))
+            OnboardingPage()
         }
     }
 }

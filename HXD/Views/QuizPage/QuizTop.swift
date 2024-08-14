@@ -9,13 +9,14 @@ import SwiftUI
 
 struct QuizTop: View {
     @State private var isShowingConfirmation: Bool = false
+    @State private var isShowingFlashcard: Bool = false
     @StateObject private var talkingAnimation = TalkingAnimation()
     
     var body: some View {
         ZStack{
             Image("QuizStart")
                 .padding(.bottom, 195)
-            UpperButtons(isShowingConfirmation: $isShowingConfirmation)
+            UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingFlashcard: $isShowingFlashcard)
                 .padding(.bottom, 680)
             if isShowingConfirmation {
                 Color.black.opacity(0.4)
@@ -24,7 +25,17 @@ struct QuizTop: View {
                 ConfirmationView(isShowingConfirmation: $isShowingConfirmation)
                     .frame(width: 313, height: 282)
                     .transition(.scale)
-                    .zIndex(1)
+                    .zIndex(3)
+                    .padding(.bottom, 85)
+            }
+            if isShowingFlashcard {
+                Color.black.opacity(0.4)
+                    .edgesIgnoringSafeArea(.all)
+                
+                FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard)
+                    .frame(width: 313, height: 282)
+                    .transition(.scale)
+                    .zIndex(3)
                     .padding(.bottom, 85)
             }
             TalkingView(talkingAnimation: talkingAnimation)

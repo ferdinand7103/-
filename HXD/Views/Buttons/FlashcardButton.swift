@@ -8,24 +8,52 @@
 import SwiftUI
 
 struct FlashcardButton: View {
+    @Binding var isShowingFlashcard: Bool
 
     var body: some View {
-        Button(action: {
-            FlashcardSwipeView()
-        }) {
-            Rectangle()
-                .fill(Color.orange3)
-                .frame(width: 50, height: 50)
-                .overlay(
-                    Image(systemName: "rectangle.on.rectangle")
-                        .foregroundStyle(.white)
-                        .font(.system(size: 20, weight: .bold))
-                )
-                .cornerRadius(10)
+        ZStack {
+            Button(action: {
+                isShowingFlashcard = true
+            }) {
+                Rectangle()
+                    .fill(Color.orange3)
+                    .frame(width: 50, height: 50)
+                    .overlay(
+                        Image(systemName: "rectangle.on.rectangle")
+                            .foregroundStyle(.white)
+                            .font(.system(size: 20, weight: .bold))
+                    )
+                    .cornerRadius(10)
+            }
+
+//            if isShowingFlashcard {
+//                // Background overlay
+//                Color.black.opacity(0.4)
+//                    .ignoresSafeArea()
+//                    .onTapGesture {
+//                        isShowingFlashcard = false
+//                    }
+//
+//                VStack {
+//                    FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard)
+//
+//                    Button(action: {
+//                        isShowingFlashcard = false
+//                    }) {
+//                        Text("Close")
+//                            .foregroundColor(.white)
+//                            .padding()
+//                            .background(Color.red)
+//                            .cornerRadius(10)
+//                    }
+//                    .padding(.top, 20)
+//                }
+//                .frame(maxWidth: .infinity, maxHeight: .infinity)
+//            }
         }
     }
 }
 
 #Preview {
-    FlashcardButton()
+    FlashcardButton(isShowingFlashcard: .constant(false))
 }
