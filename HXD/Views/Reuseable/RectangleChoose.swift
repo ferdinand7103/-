@@ -16,13 +16,13 @@ struct RectangleChoose: View {
         ZStack{
             Rectangle()
                 .fill(fill)
-                .frame(width: 182, height: 72)
+                .frame(width: 172, height: 72)
                 .cornerRadius(12)
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
                         .stroke(Color.orange1, lineWidth: 2)
                 )
-            if pinyin != nil {
+            if (pinyin != nil) {
                 VStack {
                     Text(hanzi)
                         .font(.system(size: 20))

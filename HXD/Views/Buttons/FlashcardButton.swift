@@ -1,13 +1,13 @@
 //
-//  BackButton.swift
+//  FlashcardButton.swift
 //  HXD
 //
-//  Created by Ferdinand Jacques on 13/08/24.
+//  Created by Ferdinand Jacques on 14/08/24.
 //
 
 import SwiftUI
 
-struct BackButton: View {
+struct FlashcardButton: View {
     let navigateTo: String
 
     var body: some View {
@@ -18,9 +18,9 @@ struct BackButton: View {
                 .fill(Color.orange3)
                 .frame(width: 50, height: 50)
                 .overlay(
-                    Image(systemName: "arrowshape.backward.fill")
+                    Image(systemName: "rectangle.on.rectangle")
                         .foregroundStyle(.white)
-                        .font(.system(size: 20))
+                        .font(.system(size: 20, weight: .bold))
                 )
                 .cornerRadius(10)
         }
@@ -28,5 +28,5 @@ struct BackButton: View {
 }
 
 #Preview {
-    BackButton(navigateTo: "home")
+    FlashcardButton(navigateTo: "flashcard")
 }
