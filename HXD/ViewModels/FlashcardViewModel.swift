@@ -16,9 +16,17 @@ class FlashcardViewModel: ObservableObject {
     
     func loadFlashcards() {
         flashcards = [
-            "狗",
-            "猫",
-            "兔子"
+            "你好",
+            "我们",
+            "人",
+            "点菜",
+            "公主",
+            "谢谢",
+            "开心",
+            "礼物",
+            "羊肉",
+            "汤",
+            "什么"
         ]
     }
 }
