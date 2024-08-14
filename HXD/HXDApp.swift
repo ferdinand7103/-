@@ -11,8 +11,10 @@ import SwiftUI
 struct HXDApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-//            FlashcardSwipeActionView()
+//            ContentView()
+//            FlashcardSwipeView()
+//            QuizPage()
+            UpperButtons()
         }
     }
 }
