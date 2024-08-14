@@ -12,8 +12,9 @@ struct HXDApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            FlashcardSwipeView()
+//            FlashcardSwipeView()
 //            QuizPage()
+            UpperButtons()
         }
     }
 }

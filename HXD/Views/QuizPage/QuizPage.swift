@@ -15,7 +15,7 @@ struct QuizPage: View {
             BackButton(navigateTo: "home")
                 .padding(.bottom, 680)
                 .padding(.trailing, 290)
-            FlashcardButton(navigateTo: "Flashcard")
+            FlashcardButton()
                 .padding(.bottom, 680)
                 .padding(.leading, 290)
             QuizHanzi(choice1: "再见", choice2: "欢迎", choice3: "你好", choice4: "请问", pinyin1: "Zàijiàn", pinyin2: "Huānyíng", pinyin3: "Nǐ hǎo", pinyin4: "Qǐng wèn", correctAnswerIndex: 3)

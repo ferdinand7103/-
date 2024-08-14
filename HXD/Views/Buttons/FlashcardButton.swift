@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct FlashcardButton: View {
-    let navigateTo: String
 
     var body: some View {
         Button(action: {
-            print(navigateTo)
+            FlashcardSwipeView()
         }) {
             Rectangle()
                 .fill(Color.orange3)
@@ -28,5 +27,5 @@ struct FlashcardButton: View {
 }
 
 #Preview {
-    FlashcardButton(navigateTo: "flashcard")
+    FlashcardButton()
 }

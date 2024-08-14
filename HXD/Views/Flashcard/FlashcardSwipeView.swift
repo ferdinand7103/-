@@ -26,10 +26,11 @@ struct FlashcardSwipeView: View {
                         }
                     }
                     HStack {
-                    
-                        PreviousButton(action: {
-                            performSwipeLeft()
-                        })
+                        if currentIndex > 0 {
+                            PreviousButton(action: {
+                                performSwipeLeft()
+                            })
+                        }
                         Spacer()
                         NextButton(action: {
                             performSwipeRight()
@@ -42,7 +43,7 @@ struct FlashcardSwipeView: View {
         }
         .padding()
         .background(
-            Image("Scene1")
+            .opacity(0)
         )
     }
 
