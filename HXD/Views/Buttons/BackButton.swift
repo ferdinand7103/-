@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct BackButton: View {
-    let navigateTo: String
+    @Binding var isShowingConfirmation: Bool
 
     var body: some View {
         Button(action: {
-            print(navigateTo)
+            isShowingConfirmation = true
         }) {
             Rectangle()
                 .fill(Color.orange3)
@@ -28,5 +28,5 @@ struct BackButton: View {
 }
 
 #Preview {
-    BackButton(navigateTo: "home")
+    BackButton(isShowingConfirmation: .constant(false))
 }
