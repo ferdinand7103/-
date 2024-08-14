@@ -13,6 +13,7 @@ struct HXDApp: App {
         WindowGroup {
 //            ContentView()
             FlashcardSwipeView()
+//            QuizPage()
         }
     }
 }
