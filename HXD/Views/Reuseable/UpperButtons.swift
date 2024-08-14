@@ -14,13 +14,13 @@ struct UpperButtons: View {
                 HStack {
                     BackButton(navigateTo: "home")
                     Spacer()
-                    FlashcardButton(navigateTo: "Flashcard")
+                    FlashcardButton()
 
                 }
-                .padding(.horizontal, 27)
-                .padding(.top, 16)
+                .frame(width: UIScreen.main.bounds.width - 60, height: 85)
                 Spacer()
             }
+            
         }
     }
 }
