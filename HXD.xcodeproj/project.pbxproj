@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		293E0E8E2C6C62A00062C2AD /* FCNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E8D2C6C62A00062C2AD /* FCNavigationButton.swift */; };
-		293E0E902C6C62AA0062C2AD /* FlashcardSwipeActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E8F2C6C62AA0062C2AD /* FlashcardSwipeActionView.swift */; };
 		293E0E922C6C64DD0062C2AD /* QuizTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E912C6C64DD0062C2AD /* QuizTop.swift */; };
 		293E0E942C6C67420062C2AD /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E932C6C67420062C2AD /* ConfirmationView.swift */; };
 		293E0E962C6C701A0062C2AD /* TalkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E952C6C701A0062C2AD /* TalkingView.swift */; };
@@ -47,7 +46,6 @@
 
 /* Begin PBXFileReference section */
 		293E0E8D2C6C62A00062C2AD /* FCNavigationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCNavigationButton.swift; sourceTree = "<group>"; };
-		293E0E8F2C6C62AA0062C2AD /* FlashcardSwipeActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardSwipeActionView.swift; sourceTree = "<group>"; };
 		293E0E912C6C64DD0062C2AD /* QuizTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTop.swift; sourceTree = "<group>"; };
 		293E0E932C6C67420062C2AD /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		293E0E952C6C701A0062C2AD /* TalkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingView.swift; sourceTree = "<group>"; };
@@ -252,7 +250,6 @@
 		32714E532C6A52AD00EE6486 /* Flashcard */ = {
 			isa = PBXGroup;
 			children = (
-				293E0E8F2C6C62AA0062C2AD /* FlashcardSwipeActionView.swift */,
 				32714E4A2C6A443500EE6486 /* FlashcardView.swift */,
 				32714E4E2C6A47EE00EE6486 /* FlashcardListView.swift */,
 				32714E542C6A539A00EE6486 /* FlashcardSwipeView.swift */,
@@ -334,7 +331,6 @@
 				29B12D162C6C4E64008FEAF4 /* FlashcardButton.swift in Sources */,
 				293E0E962C6C701A0062C2AD /* TalkingView.swift in Sources */,
 				29B12D142C6B9E7A008FEAF4 /* HandleButtonClick.swift in Sources */,
-				293E0E902C6C62AA0062C2AD /* FlashcardSwipeActionView.swift in Sources */,
 				32714E522C6A4F6E00EE6486 /* SoundButton.swift in Sources */,
 				29B12CA22C6467D0008FEAF4 /* PinyinFormatter.swift in Sources */,
 				32714E4B2C6A443500EE6486 /* FlashcardView.swift in Sources */,
