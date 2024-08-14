@@ -39,6 +39,8 @@ struct QuizTop: View {
                 .frame(width: 200, height: 200)
                 .padding(.leading, 190)
                 .padding(.bottom, 100)
+            BubbleChat(text: "Ok, you already know some words! Do you know how to say “Hello” in Mandarin?")
+                .padding(.bottom, 380)
         }
         .animation(.easeInOut, value: isShowingConfirmation)
     }

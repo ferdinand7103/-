@@ -13,6 +13,8 @@
 		293E0E962C6C701A0062C2AD /* TalkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E952C6C701A0062C2AD /* TalkingView.swift */; };
 		293E0E982C6CCFDD0062C2AD /* TalkingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E972C6CCFDD0062C2AD /* TalkingAnimation.swift */; };
 		293E0E9A2C6CD00D0062C2AD /* TalkingAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E992C6CD00D0062C2AD /* TalkingAnimationProtocol.swift */; };
+		293E0EA92C6CEDC20062C2AD /* BubbleChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EA82C6CEDC20062C2AD /* BubbleChat.swift */; };
+		293E0EAB2C6CF8A30062C2AD /* BubbleChatTail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EAA2C6CF8A30062C2AD /* BubbleChatTail.swift */; };
 		29B12C952C631A7B008FEAF4 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C942C631A7B008FEAF4 /* SpeechRecognizer.swift */; };
 		29B12C9B2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C9A2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift */; };
 		29B12C9D2C6466AE008FEAF4 /* HanziToPinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C9C2C6466AE008FEAF4 /* HanziToPinyin.swift */; };
@@ -52,6 +54,8 @@
 		293E0E952C6C701A0062C2AD /* TalkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingView.swift; sourceTree = "<group>"; };
 		293E0E972C6CCFDD0062C2AD /* TalkingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingAnimation.swift; sourceTree = "<group>"; };
 		293E0E992C6CD00D0062C2AD /* TalkingAnimationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingAnimationProtocol.swift; sourceTree = "<group>"; };
+		293E0EA82C6CEDC20062C2AD /* BubbleChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChat.swift; sourceTree = "<group>"; };
+		293E0EAA2C6CF8A30062C2AD /* BubbleChatTail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChatTail.swift; sourceTree = "<group>"; };
 		29B12C942C631A7B008FEAF4 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		29B12C9A2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerProtocol.swift; sourceTree = "<group>"; };
 		29B12C9C2C6466AE008FEAF4 /* HanziToPinyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanziToPinyin.swift; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 				32714E502C6A4F4700EE6486 /* Buttons */,
 				293E0E932C6C67420062C2AD /* ConfirmationView.swift */,
 				293E0E952C6C701A0062C2AD /* TalkingView.swift */,
+				293E0EA82C6CEDC20062C2AD /* BubbleChat.swift */,
+				293E0EAA2C6CF8A30062C2AD /* BubbleChatTail.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -356,10 +362,12 @@
 				29B12C9B2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift in Sources */,
 				293E0E942C6C67420062C2AD /* ConfirmationView.swift in Sources */,
 				32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */,
+				293E0EAB2C6CF8A30062C2AD /* BubbleChatTail.swift in Sources */,
 				32714E4D2C6A46FC00EE6486 /* FlashcardViewModel.swift in Sources */,
 				29EBBBC62C5BAB0600AFCD60 /* HXDApp.swift in Sources */,
 				29B12CB22C65BFF5008FEAF4 /* Wrong.swift in Sources */,
 				3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */,
+				293E0EA92C6CEDC20062C2AD /* BubbleChat.swift in Sources */,
 				293E0E9A2C6CD00D0062C2AD /* TalkingAnimationProtocol.swift in Sources */,
 				29B12CB02C64D1F0008FEAF4 /* TextToSpeechProtocol.swift in Sources */,
 				293E0E922C6C64DD0062C2AD /* QuizTop.swift in Sources */,
