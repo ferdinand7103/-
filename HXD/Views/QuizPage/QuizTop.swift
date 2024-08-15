@@ -16,8 +16,6 @@ struct QuizTop: View {
         ZStack{
             Image("QuizStart")
                 .padding(.bottom, 195)
-            UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingFlashcard: $isShowingFlashcard)
-                .padding(.bottom, 680)
             if isShowingConfirmation {
                 Color.black.opacity(0.4)
                     .edgesIgnoringSafeArea(.all)
@@ -38,6 +36,8 @@ struct QuizTop: View {
                     .zIndex(3)
                     .padding(.bottom, 85)
             }
+            UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingFlashcard: $isShowingFlashcard)
+                .padding(.bottom, 680)
             TalkingView(talkingAnimation: talkingAnimation)
                 .onAppear {
                     talkingAnimation.startTalking(duration: 5)

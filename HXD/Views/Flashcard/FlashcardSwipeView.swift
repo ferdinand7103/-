@@ -42,16 +42,16 @@ struct FlashcardSwipeView: View {
                 }
                 .contentShape(Rectangle())
                 .gesture(createDragGesture())
-                Button(action: {
-                    isShowingFlashcard = false
-                }) {
-                    Text("Close")
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.red)
-                        .cornerRadius(10)
-                }
-                .padding(.top, 20)
+//                Button(action: {
+//                    isShowingFlashcard = false
+//                }) {
+//                    Text("Close")
+//                        .foregroundColor(.white)
+//                        .padding()
+//                        .background(Color.red)
+//                        .cornerRadius(10)
+//                }
+//                .padding(.top, 20)
             }
             .padding()
             .background(

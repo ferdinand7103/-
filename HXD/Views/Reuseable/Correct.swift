@@ -34,14 +34,18 @@ struct Correct: View {
                     .padding(.trailing, 130)
                     .padding(.bottom, 50)
                     .padding(.top, 10)
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(Color.orange3)
-                        .frame(width: 350, height: 64)
-                        .cornerRadius(12)
-                    Text("Continue")
-                        .foregroundStyle(Color.white)
-                        .font(.system(size: 30, weight: .bold))
+                Button(action: {
+                    print("Continue")
+                }) {
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color.orange3)
+                            .frame(width: 350, height: 64)
+                            .cornerRadius(12)
+                        Text("Continue")
+                            .foregroundStyle(Color.white)
+                            .font(.system(size: 30, weight: .bold))
+                    }
                 }
             }
         }

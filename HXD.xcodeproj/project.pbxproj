@@ -15,6 +15,8 @@
 		293E0E9A2C6CD00D0062C2AD /* TalkingAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E992C6CD00D0062C2AD /* TalkingAnimationProtocol.swift */; };
 		293E0EA92C6CEDC20062C2AD /* BubbleChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EA82C6CEDC20062C2AD /* BubbleChat.swift */; };
 		293E0EAB2C6CF8A30062C2AD /* BubbleChatTail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EAA2C6CF8A30062C2AD /* BubbleChatTail.swift */; };
+		293E0EB12C6D99BF0062C2AD /* QuizPage.json in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EB02C6D99BF0062C2AD /* QuizPage.json */; };
+		293E0EB92C6DAD1E0062C2AD /* HXDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EB82C6DAD1E0062C2AD /* HXDTests.swift */; };
 		29B12C952C631A7B008FEAF4 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C942C631A7B008FEAF4 /* SpeechRecognizer.swift */; };
 		29B12C9B2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C9A2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift */; };
 		29B12C9D2C6466AE008FEAF4 /* HanziToPinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C9C2C6466AE008FEAF4 /* HanziToPinyin.swift */; };
@@ -49,6 +51,16 @@
 		32714E552C6A539A00EE6486 /* FlashcardSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E542C6A539A00EE6486 /* FlashcardSwipeView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		293E0EBA2C6DAD1E0062C2AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29EBBBBA2C5BAB0600AFCD60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29EBBBC12C5BAB0600AFCD60;
+			remoteInfo = HXD;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		293E0E8D2C6C62A00062C2AD /* FCNavigationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCNavigationButton.swift; sourceTree = "<group>"; };
 		293E0E912C6C64DD0062C2AD /* QuizTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTop.swift; sourceTree = "<group>"; };
@@ -58,6 +70,9 @@
 		293E0E992C6CD00D0062C2AD /* TalkingAnimationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingAnimationProtocol.swift; sourceTree = "<group>"; };
 		293E0EA82C6CEDC20062C2AD /* BubbleChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChat.swift; sourceTree = "<group>"; };
 		293E0EAA2C6CF8A30062C2AD /* BubbleChatTail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChatTail.swift; sourceTree = "<group>"; };
+		293E0EB02C6D99BF0062C2AD /* QuizPage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuizPage.json; sourceTree = "<group>"; };
+		293E0EB62C6DAD1E0062C2AD /* HXDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HXDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		293E0EB82C6DAD1E0062C2AD /* HXDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXDTests.swift; sourceTree = "<group>"; };
 		29B12C942C631A7B008FEAF4 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		29B12C9A2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerProtocol.swift; sourceTree = "<group>"; };
 		29B12C9C2C6466AE008FEAF4 /* HanziToPinyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanziToPinyin.swift; sourceTree = "<group>"; };
@@ -94,6 +109,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		293E0EB32C6DAD1E0062C2AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29EBBBBF2C5BAB0600AFCD60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -111,6 +133,22 @@
 				3252BDA22C6CFB5500CE8CEE /* Scene1_School */,
 			);
 			path = OnBoardingPage;
+			sourceTree = "<group>";
+		};
+		293E0EAF2C6D99B10062C2AD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				293E0EB02C6D99BF0062C2AD /* QuizPage.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		293E0EB72C6DAD1E0062C2AD /* HXDTests */ = {
+			isa = PBXGroup;
+			children = (
+				293E0EB82C6DAD1E0062C2AD /* HXDTests.swift */,
+			);
+			path = HXDTests;
 			sourceTree = "<group>";
 		};
 		29B12C992C632B68008FEAF4 /* Protocols */ = {
@@ -191,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				29EBBBC42C5BAB0600AFCD60 /* HXD */,
+				293E0EB72C6DAD1E0062C2AD /* HXDTests */,
 				29EBBBC32C5BAB0600AFCD60 /* Products */,
 				29B12CAA2C64CA9C008FEAF4 /* Frameworks */,
 			);
@@ -200,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				29EBBBC22C5BAB0600AFCD60 /* HXD.app */,
+				293E0EB62C6DAD1E0062C2AD /* HXDTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -207,6 +247,7 @@
 		29EBBBC42C5BAB0600AFCD60 /* HXD */ = {
 			isa = PBXGroup;
 			children = (
+				293E0EAF2C6D99B10062C2AD /* Data */,
 				29B12CA32C6468B5008FEAF4 /* Resources */,
 				29B12C9E2C6466D9008FEAF4 /* Services */,
 				29B12C992C632B68008FEAF4 /* Protocols */,
@@ -291,6 +332,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		293E0EB52C6DAD1E0062C2AD /* HXDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 293E0EBC2C6DAD1E0062C2AD /* Build configuration list for PBXNativeTarget "HXDTests" */;
+			buildPhases = (
+				293E0EB22C6DAD1E0062C2AD /* Sources */,
+				293E0EB32C6DAD1E0062C2AD /* Frameworks */,
+				293E0EB42C6DAD1E0062C2AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				293E0EBB2C6DAD1E0062C2AD /* PBXTargetDependency */,
+			);
+			name = HXDTests;
+			productName = HXDTests;
+			productReference = 293E0EB62C6DAD1E0062C2AD /* HXDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		29EBBBC12C5BAB0600AFCD60 /* HXD */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29EBBBD02C5BAB0700AFCD60 /* Build configuration list for PBXNativeTarget "HXD" */;
@@ -318,6 +377,10 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					293E0EB52C6DAD1E0062C2AD = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 29EBBBC12C5BAB0600AFCD60;
+					};
 					29EBBBC12C5BAB0600AFCD60 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -337,11 +400,19 @@
 			projectRoot = "";
 			targets = (
 				29EBBBC12C5BAB0600AFCD60 /* HXD */,
+				293E0EB52C6DAD1E0062C2AD /* HXDTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		293E0EB42C6DAD1E0062C2AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29EBBBC02C5BAB0600AFCD60 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,6 +426,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		293E0EB22C6DAD1E0062C2AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				293E0EB92C6DAD1E0062C2AD /* HXDTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29EBBBBE2C5BAB0600AFCD60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,6 +455,7 @@
 				29B12C9B2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift in Sources */,
 				293E0E942C6C67420062C2AD /* ConfirmationView.swift in Sources */,
 				32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */,
+				293E0EB12C6D99BF0062C2AD /* QuizPage.json in Sources */,
 				293E0EAB2C6CF8A30062C2AD /* BubbleChatTail.swift in Sources */,
 				32714E4D2C6A46FC00EE6486 /* FlashcardViewModel.swift in Sources */,
 				3252BDA42C6CFB8A00CE8CEE /* OnboardingPage.swift in Sources */,
@@ -400,7 +480,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		293E0EBB2C6DAD1E0062C2AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29EBBBC12C5BAB0600AFCD60 /* HXD */;
+			targetProxy = 293E0EBA2C6DAD1E0062C2AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		293E0EBD2C6DAD1E0062C2AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M793N4X6S7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mini3.HXDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HXD.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HXD";
+			};
+			name = Debug;
+		};
+		293E0EBE2C6DAD1E0062C2AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M793N4X6S7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mini3.HXDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HXD.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HXD";
+			};
+			name = Release;
+		};
 		29EBBBCE2C5BAB0700AFCD60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -528,7 +652,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HXD/Preview Content\"";
-				DEVELOPMENT_TEAM = U542U52PMZ;
+				DEVELOPMENT_TEAM = M793N4X6S7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
@@ -560,7 +684,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HXD/Preview Content\"";
-				DEVELOPMENT_TEAM = U542U52PMZ;
+				DEVELOPMENT_TEAM = M793N4X6S7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
@@ -587,6 +711,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		293E0EBC2C6DAD1E0062C2AD /* Build configuration list for PBXNativeTarget "HXDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				293E0EBD2C6DAD1E0062C2AD /* Debug */,
+				293E0EBE2C6DAD1E0062C2AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		29EBBBBD2C5BAB0600AFCD60 /* Build configuration list for PBXProject "HXD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
