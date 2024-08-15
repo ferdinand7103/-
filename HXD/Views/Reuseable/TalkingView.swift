@@ -9,9 +9,10 @@ import SwiftUI
 
 struct TalkingView: View {
     @ObservedObject private var talkingAnimation: TalkingAnimation
-    private let images = ["Orange1", "Orange2"]
+    private let images: [String]
 
-    init(talkingAnimation: TalkingAnimation = TalkingAnimation()) {
+    init(images: [String],talkingAnimation: TalkingAnimation = TalkingAnimation()) {
+        self.images = images
         self.talkingAnimation = talkingAnimation
     }
     
@@ -24,5 +25,5 @@ struct TalkingView: View {
 }
 
 #Preview {
-    TalkingView()
+    TalkingView(images: ["Orange1","Orange2"])
 }

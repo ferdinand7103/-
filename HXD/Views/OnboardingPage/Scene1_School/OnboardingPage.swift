@@ -18,7 +18,7 @@ struct OnboardingPage: View {
             Image("Scene1").resizable().modifier(BackgroundImageModifier())
             UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingFlashcard: $isShowingFlashcard)
                 .padding(.bottom, 680)
-            TalkingView(talkingAnimation: talkingAnimation)
+            TalkingView(images: ["Orange1","Orange2"],talkingAnimation: talkingAnimation)
                 .onAppear {
                     talkingAnimation.startTalking(duration: 5)
                 }
