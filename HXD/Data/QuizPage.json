@@ -1,0 +1,46 @@
+//
+//  QuizPage.swift
+//  HXD
+//
+//  Created by Ferdinand Jacques on 15/08/24.
+//
+
+{
+    "Quiz" : {
+        "Quiz1" : {
+            "Background" : "School",
+            "Onboarding" : {
+                "A" : "Hey, wanna go to the new chinese hotpot resto? If you can speak Mandarin, you can get a discount!",
+                "B" : "I don't know Mandarin 😢",
+                "A" : "No worries, I'll teach you. Let's practice some words first.",
+                "B" : "Ok Let’s go!"
+            },
+            "Flashcard" : [
+                "Flashcard1" : {
+                    "Hanzi" : "你好",
+                    "Pinyin" : "nǐ hǎo",
+                    "Meaning" : "Hello"
+                },
+                "Flashcard2" : {
+                    "Hanzi" : "我们",
+                    "Pinyin" : "wǒ men",
+                    "Meaning" : "We/Us"
+                },
+                "Flashcard3" : {
+                    "Hanzi" : "人",
+                    "Pinyin" : "rén",
+                    "Meaning" : "Person/People"
+                }
+            ],
+            "Quiz1" : [
+                "Text" : "Ok, you already know some words! Do you know how to say “Hello” in Mandarin?",
+                "Choice" : {
+                    "Choice1" : ["再见", "Zàijiàn"],
+                    "Choice2" : ["欢迎", "Huānyíng"],
+                    "Choice3" : ["你好", "Nǐ hǎo"],
+                    "Choice4" : ["请问", "Qǐng wèn"]
+                }
+            ]
+        }
+    }
+}

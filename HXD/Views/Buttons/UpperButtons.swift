@@ -16,7 +16,7 @@ struct UpperButtons: View {
         ZStack {
             VStack {
                 HStack {
-                    BackButton(isShowingConfirmation: $isShowingConfirmation)
+                    BackButton(isShowingConfirmation: $isShowingConfirmation, isShowingFlashcard: $isShowingFlashcard)
                     Spacer()
                     FlashcardButton(isShowingFlashcard: $isShowingFlashcard)
 

@@ -39,28 +39,36 @@ struct Wrong: View {
                 .padding(.trailing, 200)
                 .padding(.bottom, 20)
                 HStack(spacing: 16) {
-                    ZStack {
-                        Rectangle()
-                            .fill(.redLight)
-                            .frame(width: 64, height: 64)
-                            .cornerRadius(12)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(Color.orange3, lineWidth: 3)
-                            )
-                        Image(systemName: "arrow.clockwise")
-                            .foregroundStyle(Color.orange3)
-                            .font(.system(size: 30, weight: .bold))
-                            .rotationEffect(.degrees(45))
+                    Button(action: {
+                        print("Retry")
+                    }) {
+                        ZStack {
+                            Rectangle()
+                                .fill(.redLight)
+                                .frame(width: 64, height: 64)
+                                .cornerRadius(12)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .stroke(Color.orange3, lineWidth: 3)
+                                )
+                            Image(systemName: "arrow.clockwise")
+                                .foregroundStyle(Color.orange3)
+                                .font(.system(size: 30, weight: .bold))
+                                .rotationEffect(.degrees(45))
+                        }
                     }
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(Color.orange3)
-                            .frame(width: 280, height: 64)
-                            .cornerRadius(12)
-                        Text("Continue")
-                            .foregroundStyle(Color.white)
-                            .font(.system(size: 30, weight: .bold))
+                    Button(action: {
+                        print("Continue")
+                    }) {
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(Color.orange3)
+                                .frame(width: 280, height: 64)
+                                .cornerRadius(12)
+                            Text("Continue")
+                                .foregroundStyle(Color.white)
+                                .font(.system(size: 30, weight: .bold))
+                        }
                     }
                 }
             }
