@@ -22,6 +22,9 @@
 		293E0EC62C6DB1CB0062C2AD /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EC42C6DB1CB0062C2AD /* Recorder.swift */; };
 		293E0EC82C6DC9560062C2AD /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EC72C6DC9560062C2AD /* StoryModel.swift */; };
 		293E0ECA2C6DCA470062C2AD /* FetchJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EC92C6DCA470062C2AD /* FetchJSON.swift */; };
+		293E0ED42C6EFCC00062C2AD /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0ED22C6EFCC00062C2AD /* HomePage.swift */; };
+		293E0ED62C6EFCC90062C2AD /* HomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0ED52C6EFCC90062C2AD /* HomeCard.swift */; };
+		293E0ED82C6EFCD20062C2AD /* RectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0ED72C6EFCD20062C2AD /* RectangleButton.swift */; };
 		29B12C952C631A7B008FEAF4 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C942C631A7B008FEAF4 /* SpeechRecognizer.swift */; };
 		29B12C9B2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C9A2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift */; };
 		29B12C9D2C6466AE008FEAF4 /* HanziToPinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C9C2C6466AE008FEAF4 /* HanziToPinyin.swift */; };
@@ -83,6 +86,9 @@
 		293E0EC42C6DB1CB0062C2AD /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		293E0EC72C6DC9560062C2AD /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
 		293E0EC92C6DCA470062C2AD /* FetchJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchJSON.swift; sourceTree = "<group>"; };
+		293E0ED22C6EFCC00062C2AD /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		293E0ED52C6EFCC90062C2AD /* HomeCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCard.swift; sourceTree = "<group>"; };
+		293E0ED72C6EFCD20062C2AD /* RectangleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleButton.swift; sourceTree = "<group>"; };
 		29B12C942C631A7B008FEAF4 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		29B12C9A2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerProtocol.swift; sourceTree = "<group>"; };
 		29B12C9C2C6466AE008FEAF4 /* HanziToPinyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanziToPinyin.swift; sourceTree = "<group>"; };
@@ -177,6 +183,14 @@
 			path = Recorder;
 			sourceTree = "<group>";
 		};
+		293E0ED32C6EFCC00062C2AD /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				293E0ED22C6EFCC00062C2AD /* HomePage.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
 		29B12C992C632B68008FEAF4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +246,8 @@
 		29B12D0B2C6B2A3C008FEAF4 /* Reuseable */ = {
 			isa = PBXGroup;
 			children = (
+				293E0ED72C6EFCD20062C2AD /* RectangleButton.swift */,
+				293E0ED52C6EFCC90062C2AD /* HomeCard.swift */,
 				293E0E932C6C67420062C2AD /* ConfirmationView.swift */,
 				293E0E952C6C701A0062C2AD /* TalkingView.swift */,
 				293E0EA82C6CEDC20062C2AD /* BubbleChat.swift */,
@@ -302,6 +318,7 @@
 		29EBBBD32C5BAB3E00AFCD60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				293E0ED32C6EFCC00062C2AD /* HomePage */,
 				293E0EA52C6CEB670062C2AD /* OnBoardingPage */,
 				29B12D102C6B93F7008FEAF4 /* QuizPage */,
 				29B12D0B2C6B2A3C008FEAF4 /* Reuseable */,
@@ -473,6 +490,7 @@
 				293E0E962C6C701A0062C2AD /* TalkingView.swift in Sources */,
 				29B12D142C6B9E7A008FEAF4 /* HandleButtonClick.swift in Sources */,
 				32714E522C6A4F6E00EE6486 /* SoundButton.swift in Sources */,
+				293E0ED82C6EFCD20062C2AD /* RectangleButton.swift in Sources */,
 				29B12CA22C6467D0008FEAF4 /* PinyinFormatter.swift in Sources */,
 				32714E4B2C6A443500EE6486 /* FlashcardView.swift in Sources */,
 				29B12CAE2C64CABD008FEAF4 /* TextToSpeech.swift in Sources */,
@@ -497,9 +515,11 @@
 				293E0EC32C6DB1BC0062C2AD /* HuggingFace.swift in Sources */,
 				3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */,
 				293E0EA92C6CEDC20062C2AD /* BubbleChat.swift in Sources */,
+				293E0ED42C6EFCC00062C2AD /* HomePage.swift in Sources */,
 				293E0E9A2C6CD00D0062C2AD /* TalkingAnimationProtocol.swift in Sources */,
 				29B12CB02C64D1F0008FEAF4 /* TextToSpeechProtocol.swift in Sources */,
 				293E0E922C6C64DD0062C2AD /* QuizTop.swift in Sources */,
+				293E0ED62C6EFCC90062C2AD /* HomeCard.swift in Sources */,
 				29B12CA52C6468C0008FEAF4 /* HanziPinyinResources.swift in Sources */,
 				293E0E8E2C6C62A00062C2AD /* FCNavigationButton.swift in Sources */,
 				29B12C952C631A7B008FEAF4 /* SpeechRecognizer.swift in Sources */,
