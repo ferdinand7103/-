@@ -8,13 +8,18 @@
 import Foundation
 
 class FetchJSON {
-    func loadStoryData(from jsonString: String) -> StoryData? {
-        let jsonData = jsonString.data(using: .utf8)!
+    func readJSONFileFromBundle(filename: String) -> String? {
+        guard let fileURL = Bundle.main.url(forResource: "QuizPage", withExtension: "json") else {
+            print("File not found in bundle.")
+            return nil
+        }
+
         do {
-            let storyData = try JSONDecoder().decode(StoryData.self, from: jsonData)
-            return storyData
+            let jsonData = try String(contentsOf: fileURL, encoding: .utf8)
+            print(jsonData, "ss")
+            return jsonData
         } catch {
-            print("Error decoding JSON: \(error)")
+            print("Error reading file: \(error)")
             return nil
         }
     }

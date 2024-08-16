@@ -75,7 +75,7 @@
 		293E0E992C6CD00D0062C2AD /* TalkingAnimationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingAnimationProtocol.swift; sourceTree = "<group>"; };
 		293E0EA82C6CEDC20062C2AD /* BubbleChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChat.swift; sourceTree = "<group>"; };
 		293E0EAA2C6CF8A30062C2AD /* BubbleChatTail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChatTail.swift; sourceTree = "<group>"; };
-		293E0EB02C6D99BF0062C2AD /* QuizPage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuizPage.json; sourceTree = "<group>"; };
+		293E0EB02C6D99BF0062C2AD /* QuizPage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = QuizPage.json; path = HXD/Data/QuizPage.json; sourceTree = SOURCE_ROOT; };
 		293E0EB62C6DAD1E0062C2AD /* HXDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HXDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		293E0EB82C6DAD1E0062C2AD /* HXDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXDTests.swift; sourceTree = "<group>"; };
 		293E0EBF2C6DB1B20062C2AD /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		29EBBBC92C5BAB0700AFCD60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29EBBBCC2C5BAB0700AFCD60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		29EBBBD62C5BABF000AFCD60 /* Correct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Correct.swift; sourceTree = "<group>"; };
+		29EBBBD62C5BABF000AFCD60 /* Correct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Correct.swift; path = HXD/Views/Reuseable/Correct.swift; sourceTree = SOURCE_ROOT; };
 		29EBBBD82C5BABFB00AFCD60 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		29EBBBDA2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinOutputFormat.swift; sourceTree = "<group>"; };
 		3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperButtons.swift; sourceTree = "<group>"; };
