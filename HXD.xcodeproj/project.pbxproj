@@ -20,6 +20,8 @@
 		293E0EC02C6DB1B20062C2AD /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EBF2C6DB1B20062C2AD /* APIResponse.swift */; };
 		293E0EC32C6DB1BC0062C2AD /* HuggingFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EC12C6DB1BC0062C2AD /* HuggingFace.swift */; };
 		293E0EC62C6DB1CB0062C2AD /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EC42C6DB1CB0062C2AD /* Recorder.swift */; };
+		293E0EC82C6DC9560062C2AD /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EC72C6DC9560062C2AD /* StoryModel.swift */; };
+		293E0ECA2C6DCA470062C2AD /* FetchJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EC92C6DCA470062C2AD /* FetchJSON.swift */; };
 		29B12C952C631A7B008FEAF4 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C942C631A7B008FEAF4 /* SpeechRecognizer.swift */; };
 		29B12C9B2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C9A2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift */; };
 		29B12C9D2C6466AE008FEAF4 /* HanziToPinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C9C2C6466AE008FEAF4 /* HanziToPinyin.swift */; };
@@ -73,12 +75,14 @@
 		293E0E992C6CD00D0062C2AD /* TalkingAnimationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingAnimationProtocol.swift; sourceTree = "<group>"; };
 		293E0EA82C6CEDC20062C2AD /* BubbleChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChat.swift; sourceTree = "<group>"; };
 		293E0EAA2C6CF8A30062C2AD /* BubbleChatTail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChatTail.swift; sourceTree = "<group>"; };
-		293E0EB02C6D99BF0062C2AD /* QuizPage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuizPage.json; sourceTree = "<group>"; };
+		293E0EB02C6D99BF0062C2AD /* QuizPage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = QuizPage.json; path = HXD/Data/QuizPage.json; sourceTree = SOURCE_ROOT; };
 		293E0EB62C6DAD1E0062C2AD /* HXDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HXDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		293E0EB82C6DAD1E0062C2AD /* HXDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXDTests.swift; sourceTree = "<group>"; };
 		293E0EBF2C6DB1B20062C2AD /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		293E0EC12C6DB1BC0062C2AD /* HuggingFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuggingFace.swift; sourceTree = "<group>"; };
 		293E0EC42C6DB1CB0062C2AD /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		293E0EC72C6DC9560062C2AD /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
+		293E0EC92C6DCA470062C2AD /* FetchJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchJSON.swift; sourceTree = "<group>"; };
 		29B12C942C631A7B008FEAF4 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		29B12C9A2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerProtocol.swift; sourceTree = "<group>"; };
 		29B12C9C2C6466AE008FEAF4 /* HanziToPinyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanziToPinyin.swift; sourceTree = "<group>"; };
@@ -101,7 +105,7 @@
 		29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		29EBBBC92C5BAB0700AFCD60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29EBBBCC2C5BAB0700AFCD60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		29EBBBD62C5BABF000AFCD60 /* Correct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Correct.swift; sourceTree = "<group>"; };
+		29EBBBD62C5BABF000AFCD60 /* Correct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Correct.swift; path = HXD/Views/Reuseable/Correct.swift; sourceTree = SOURCE_ROOT; };
 		29EBBBD82C5BABFB00AFCD60 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		29EBBBDA2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinOutputFormat.swift; sourceTree = "<group>"; };
 		3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperButtons.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 				29B12CAD2C64CABD008FEAF4 /* TextToSpeech.swift */,
 				29B12D132C6B9E7A008FEAF4 /* HandleButtonClick.swift */,
 				293E0E972C6CCFDD0062C2AD /* TalkingAnimation.swift */,
+				293E0EC92C6DCA470062C2AD /* FetchJSON.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 			children = (
 				293E0EBF2C6DB1B20062C2AD /* APIResponse.swift */,
 				29EBBBDA2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift */,
+				293E0EC72C6DC9560062C2AD /* StoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -479,6 +485,7 @@
 				32714E552C6A539A00EE6486 /* FlashcardSwipeView.swift in Sources */,
 				29B12C9B2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift in Sources */,
 				293E0EC62C6DB1CB0062C2AD /* Recorder.swift in Sources */,
+				293E0ECA2C6DCA470062C2AD /* FetchJSON.swift in Sources */,
 				293E0E942C6C67420062C2AD /* ConfirmationView.swift in Sources */,
 				32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */,
 				293E0EB12C6D99BF0062C2AD /* QuizPage.json in Sources */,
@@ -499,6 +506,7 @@
 				3252BDA62C6D0A4000CE8CEE /* BubbleChatNext.swift in Sources */,
 				29B12D0F2C6B2B8B008FEAF4 /* RectangleChoose.swift in Sources */,
 				29EBBBD92C5BABFB00AFCD60 /* ViewModel.swift in Sources */,
+				293E0EC82C6DC9560062C2AD /* StoryModel.swift in Sources */,
 				293E0E982C6CCFDD0062C2AD /* TalkingAnimation.swift in Sources */,
 				29B12CA02C6467A1008FEAF4 /* HanziPinyin.swift in Sources */,
 				29EBBBD72C5BABF000AFCD60 /* Correct.swift in Sources */,
