@@ -36,7 +36,7 @@ struct Correct: View {
                     .padding(.top, 10)
                 Button(action: {
                     print("Continue")
-                    FetchJSON().readJSONFileFromBundle(filename: "QuizPage")
+                    FetchJSON().readJSONFileFromBundle(filename: "quizpage")
                 }) {
                     ZStack {
                         Rectangle()
@@ -50,21 +50,6 @@ struct Correct: View {
                 }
             }
         }
-    }
-}
-
-func readJSONFileFromBundle(filename: String, inFolder folderName: String) -> String? {
-    guard let fileURL = Bundle.main.url(forResource: filename, withExtension: "json", subdirectory: folderName) else {
-        print("File not found in bundle.")
-        return nil
-    }
-
-    do {
-        let jsonData = try String(contentsOf: fileURL, encoding: .utf8)
-        return jsonData
-    } catch {
-        print("Error reading file: \(error)")
-        return nil
     }
 }
 

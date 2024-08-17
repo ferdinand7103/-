@@ -9,7 +9,7 @@ import Foundation
 
 class FetchJSON {
     func readJSONFileFromBundle(filename: String) -> String? {
-        guard let fileURL = Bundle.main.url(forResource: "QuizPage", withExtension: "json") else {
+        guard let fileURL = Bundle.main.url(forResource: filename, withExtension: "json") else {
             print("File not found in bundle.")
             return nil
         }

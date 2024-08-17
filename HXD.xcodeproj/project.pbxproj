@@ -15,7 +15,6 @@
 		293E0E9A2C6CD00D0062C2AD /* TalkingAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E992C6CD00D0062C2AD /* TalkingAnimationProtocol.swift */; };
 		293E0EA92C6CEDC20062C2AD /* BubbleChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EA82C6CEDC20062C2AD /* BubbleChat.swift */; };
 		293E0EAB2C6CF8A30062C2AD /* BubbleChatTail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EAA2C6CF8A30062C2AD /* BubbleChatTail.swift */; };
-		293E0EB12C6D99BF0062C2AD /* QuizPage.json in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EB02C6D99BF0062C2AD /* QuizPage.json */; };
 		293E0EB92C6DAD1E0062C2AD /* HXDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EB82C6DAD1E0062C2AD /* HXDTests.swift */; };
 		293E0EC02C6DB1B20062C2AD /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EBF2C6DB1B20062C2AD /* APIResponse.swift */; };
 		293E0EC32C6DB1BC0062C2AD /* HuggingFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0EC12C6DB1BC0062C2AD /* HuggingFace.swift */; };
@@ -25,6 +24,8 @@
 		293E0ED42C6EFCC00062C2AD /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0ED22C6EFCC00062C2AD /* HomePage.swift */; };
 		293E0ED62C6EFCC90062C2AD /* HomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0ED52C6EFCC90062C2AD /* HomeCard.swift */; };
 		293E0ED82C6EFCD20062C2AD /* RectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0ED72C6EFCD20062C2AD /* RectangleButton.swift */; };
+		293E0EDA2C7068D20062C2AD /* filedata.json in Sources */ = {isa = PBXBuildFile; fileRef = 293E0ED92C7068D20062C2AD /* filedata.json */; };
+		293E0EDC2C7069860062C2AD /* quizpage.json in Resources */ = {isa = PBXBuildFile; fileRef = 293E0EDB2C7069860062C2AD /* quizpage.json */; };
 		29B12C952C631A7B008FEAF4 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C942C631A7B008FEAF4 /* SpeechRecognizer.swift */; };
 		29B12C9B2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C9A2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift */; };
 		29B12C9D2C6466AE008FEAF4 /* HanziToPinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C9C2C6466AE008FEAF4 /* HanziToPinyin.swift */; };
@@ -78,7 +79,6 @@
 		293E0E992C6CD00D0062C2AD /* TalkingAnimationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingAnimationProtocol.swift; sourceTree = "<group>"; };
 		293E0EA82C6CEDC20062C2AD /* BubbleChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChat.swift; sourceTree = "<group>"; };
 		293E0EAA2C6CF8A30062C2AD /* BubbleChatTail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChatTail.swift; sourceTree = "<group>"; };
-		293E0EB02C6D99BF0062C2AD /* QuizPage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = QuizPage.json; path = HXD/Data/QuizPage.json; sourceTree = SOURCE_ROOT; };
 		293E0EB62C6DAD1E0062C2AD /* HXDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HXDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		293E0EB82C6DAD1E0062C2AD /* HXDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXDTests.swift; sourceTree = "<group>"; };
 		293E0EBF2C6DB1B20062C2AD /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
@@ -89,6 +89,8 @@
 		293E0ED22C6EFCC00062C2AD /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		293E0ED52C6EFCC90062C2AD /* HomeCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCard.swift; sourceTree = "<group>"; };
 		293E0ED72C6EFCD20062C2AD /* RectangleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleButton.swift; sourceTree = "<group>"; };
+		293E0ED92C7068D20062C2AD /* filedata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = filedata.json; sourceTree = "<group>"; };
+		293E0EDB2C7069860062C2AD /* quizpage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = quizpage.json; path = ../../../../Downloads/quizpage.json; sourceTree = "<group>"; };
 		29B12C942C631A7B008FEAF4 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		29B12C9A2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerProtocol.swift; sourceTree = "<group>"; };
 		29B12C9C2C6466AE008FEAF4 /* HanziToPinyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanziToPinyin.swift; sourceTree = "<group>"; };
@@ -149,14 +151,6 @@
 				3252BDA22C6CFB5500CE8CEE /* Scene1_School */,
 			);
 			path = OnBoardingPage;
-			sourceTree = "<group>";
-		};
-		293E0EAF2C6D99B10062C2AD /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				293E0EB02C6D99BF0062C2AD /* QuizPage.json */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		293E0EB72C6DAD1E0062C2AD /* HXDTests */ = {
@@ -292,7 +286,7 @@
 		29EBBBC42C5BAB0600AFCD60 /* HXD */ = {
 			isa = PBXGroup;
 			children = (
-				293E0EAF2C6D99B10062C2AD /* Data */,
+				293E0EDB2C7069860062C2AD /* quizpage.json */,
 				29B12CA32C6468B5008FEAF4 /* Resources */,
 				29B12C9E2C6466D9008FEAF4 /* Services */,
 				29B12C992C632B68008FEAF4 /* Protocols */,
@@ -303,6 +297,7 @@
 				29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */,
 				29EBBBC92C5BAB0700AFCD60 /* Assets.xcassets */,
 				29EBBBCB2C5BAB0700AFCD60 /* Preview Content */,
+				293E0ED92C7068D20062C2AD /* filedata.json */,
 			);
 			path = HXD;
 			sourceTree = "<group>";
@@ -468,6 +463,7 @@
 				29B12CA92C646AE9008FEAF4 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				29EBBBCD2C5BAB0700AFCD60 /* Preview Assets.xcassets in Resources */,
 				29EBBBCA2C5BAB0700AFCD60 /* Assets.xcassets in Resources */,
+				293E0EDC2C7069860062C2AD /* quizpage.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +485,7 @@
 				29B12D162C6C4E64008FEAF4 /* FlashcardButton.swift in Sources */,
 				293E0E962C6C701A0062C2AD /* TalkingView.swift in Sources */,
 				29B12D142C6B9E7A008FEAF4 /* HandleButtonClick.swift in Sources */,
+				293E0EDA2C7068D20062C2AD /* filedata.json in Sources */,
 				32714E522C6A4F6E00EE6486 /* SoundButton.swift in Sources */,
 				293E0ED82C6EFCD20062C2AD /* RectangleButton.swift in Sources */,
 				29B12CA22C6467D0008FEAF4 /* PinyinFormatter.swift in Sources */,
@@ -506,7 +503,6 @@
 				293E0ECA2C6DCA470062C2AD /* FetchJSON.swift in Sources */,
 				293E0E942C6C67420062C2AD /* ConfirmationView.swift in Sources */,
 				32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */,
-				293E0EB12C6D99BF0062C2AD /* QuizPage.json in Sources */,
 				293E0EAB2C6CF8A30062C2AD /* BubbleChatTail.swift in Sources */,
 				32714E4D2C6A46FC00EE6486 /* FlashcardViewModel.swift in Sources */,
 				3252BDA42C6CFB8A00CE8CEE /* OnboardingPage.swift in Sources */,
