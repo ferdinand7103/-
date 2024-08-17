@@ -24,7 +24,7 @@
 		293E0ED42C6EFCC00062C2AD /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0ED22C6EFCC00062C2AD /* HomePage.swift */; };
 		293E0ED62C6EFCC90062C2AD /* HomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0ED52C6EFCC90062C2AD /* HomeCard.swift */; };
 		293E0ED82C6EFCD20062C2AD /* RectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0ED72C6EFCD20062C2AD /* RectangleButton.swift */; };
-		293E0EDC2C7069860062C2AD /* quizpage.json in Resources */ = {isa = PBXBuildFile; fileRef = 293E0EDB2C7069860062C2AD /* quizpage.json */; };
+		293E0EDE2C706B230062C2AD /* quizpage.json in Resources */ = {isa = PBXBuildFile; fileRef = 293E0EDD2C706B230062C2AD /* quizpage.json */; };
 		29B12C952C631A7B008FEAF4 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C942C631A7B008FEAF4 /* SpeechRecognizer.swift */; };
 		29B12C9B2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C9A2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift */; };
 		29B12C9D2C6466AE008FEAF4 /* HanziToPinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12C9C2C6466AE008FEAF4 /* HanziToPinyin.swift */; };
@@ -88,7 +88,7 @@
 		293E0ED22C6EFCC00062C2AD /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		293E0ED52C6EFCC90062C2AD /* HomeCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCard.swift; sourceTree = "<group>"; };
 		293E0ED72C6EFCD20062C2AD /* RectangleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleButton.swift; sourceTree = "<group>"; };
-		293E0EDB2C7069860062C2AD /* quizpage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = quizpage.json; path = ../../../../Downloads/quizpage.json; sourceTree = "<group>"; };
+		293E0EDD2C706B230062C2AD /* quizpage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quizpage.json; sourceTree = "<group>"; };
 		29B12C942C631A7B008FEAF4 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		29B12C9A2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerProtocol.swift; sourceTree = "<group>"; };
 		29B12C9C2C6466AE008FEAF4 /* HanziToPinyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanziToPinyin.swift; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 		29EBBBC42C5BAB0600AFCD60 /* HXD */ = {
 			isa = PBXGroup;
 			children = (
-				293E0EDB2C7069860062C2AD /* quizpage.json */,
+				293E0EDD2C706B230062C2AD /* quizpage.json */,
 				29B12CA32C6468B5008FEAF4 /* Resources */,
 				29B12C9E2C6466D9008FEAF4 /* Services */,
 				29B12C992C632B68008FEAF4 /* Protocols */,
@@ -460,7 +460,7 @@
 				29B12CA92C646AE9008FEAF4 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				29EBBBCD2C5BAB0700AFCD60 /* Preview Assets.xcassets in Resources */,
 				29EBBBCA2C5BAB0700AFCD60 /* Assets.xcassets in Resources */,
-				293E0EDC2C7069860062C2AD /* quizpage.json in Resources */,
+				293E0EDE2C706B230062C2AD /* quizpage.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

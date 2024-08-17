@@ -1,0 +1,224 @@
+{
+    "Story1" : [
+        "Background" : "School",
+        "Onboarding" : {
+            "A" : "Hey, wanna go to the new chinese hotpot resto? If you can speak Mandarin, you can get a discount!",
+            "B" : "I don't know Mandarin 😢",
+            "A" : "No worries, I'll teach you. Let's practice some words first.",
+            "B" : "Ok Let’s go!"
+        },
+        "Flashcard" : ["你好","我们","人"],
+        "Quiz1" : {
+            "Text" : "Ok, you already know some words! Do you know how to say “Hello” in Mandarin?",
+            "Choice" : [
+                "Choice1" : ["再见", "Zàijiàn"],
+                "Choice2" : ["欢迎", "Huānyíng"],
+                "Choice3" : ["你好", "Nǐ hǎo"],
+                "Choice4" : ["请问", "Qǐng wèn"]
+            ],
+            "CorrectAnswer" : 3,
+            "HappyFlow" : "Amazing! let’s move on to next question",
+            "NegativeFlow" : "It’s okay! You can try again"
+        },
+        "Quiz2" : {
+            "Text" : "Listen to me. What does it mean?",
+            "Speak" : "你好"
+            "Choice" : ["Hello", "May I Ask", "Welcome", "Thank You"],
+            "CorrectAnswer" : 1,
+            "HappyFlow" : "Incredible! Let’s move to next question",
+            "NegativeFlow" : "It’s okay! You can try again"
+        },
+        "ToneTest" : {
+            "Text" : "Now, repeat after me: '你好' (Nǐ hǎo).",
+            "Speak" : "你好",
+            "HappyFlow" : "Great! Now we're ready to head to Haidilao and get that discount!",
+            "NegativeFlow" : "It’s okay! You can try again"
+        },
+        "Conversation" : {
+            "A" : {
+                "Hanzi" : "你好，我饿了，我们去吃饭吧。",
+                "Pinyin" : "Nǐ hǎo, wǒ è le, wǒmen qù chīfàn ba.",
+                "Meaning" : "Hello, I'm hungry, let's go eat."
+            },
+            "B" : {
+                "Hanzi" : "好啊，我也饿了，去海底捞吧。",
+                "Pinyin" : "Hǎo a, wǒ yě è le, qù Hǎidǐlāo ba.",
+                "Meaning" : "Sure, I'm hungry too, let's go to Haidilao."
+            },
+            "A" : {
+                "Hanzi" : "好的。",
+                "Pinyin" : "Hǎo de",
+                "Meaning" : "Okay"
+            }
+        }
+    ],
+    "Story2" : [
+        "Background" : "Haidilao",
+        "Onboarding" : {
+            "A" : "We’ve arrived at Haidilao. The receptionist is about to ask how many people are in our group.",
+            "B" : "I’m a bit nervous.",
+            "A" : "Don’t worry, I’ll help you. Let’s practice some words first.",
+            "B" : "Alright, let’s give it a try!"
+        },
+        "Flashcard" : ["几位","三","欢迎"],
+        "Quiz1" : {
+            "Text" : "How do you say “How many” in Mandarin?",
+            "Choice" : [
+                "Choice1" : ["几位", "jǐ wèi"],
+                "Choice2" : ["三", "sān"],
+                "Choice3" : ["汤", "tāng"],
+                "Choice4" : ["朋友", "péng yǒu"]
+            ],
+            "CorrectAnswer" : 1,
+            "HappyFlow" : "Amazing! let’s move on to next question",
+            "NegativeFlow" : "It’s okay! You can try again"
+        },
+        "Quiz2" : {
+            "Text" : "Listen to me. What does it mean?",
+            "Speak" : "几位"
+            "Choice" : ["How many people", "Three", "Welcome", "Friend"],
+            "CorrectAnswer" : 1,
+            "HappyFlow" : "Incredible! Let’s move to next question",
+            "NegativeFlow" : "It’s okay! You can try again"
+        },
+        "ToneTest" : {
+            "Text" : "Now, repeat after me: '几位' (jǐ wèi).",
+            "Speak" : "几位",
+            "HappyFlow" : "Great! Now we’re ready to answer the receptionist!",
+            "NegativeFlow" : "It’s okay! You can try again"
+        },
+        "Conversation" : {
+            "A" : {
+                "Hanzi" : "你好，请问，你们几位？",
+                "Pinyin" : "Nǐ hǎo, qǐng wèn, nǐmen jǐ wèi?",
+                "Meaning" : "Hi, may I ask, how many people are you?"
+            },
+            "B" : {
+                "Hanzi" : "我们有三个人。",
+                "Pinyin" : "Wǒmen yǒu sān gè rén.",
+                "Meaning" : "We have three people."
+            },
+            "A" : {
+                "Hanzi" : "欢迎光临",
+                "Pinyin" : "Huānyíng guānglín!",
+                "Meaning" : "Welcome!"
+            }
+        }
+    ],
+    "Story3" : [
+        "Background" : "Order",
+        "Onboarding" : {
+            "A" : "Alright, the waiter is about to ask if we're ready to order.",
+            "B" : "I’m nervous.",
+            "A" : "No worries, I'll teach you. Let's practice some words first.",
+            "B" : "Ok Let’s try!"
+        },
+        "Flashcard" : ["点菜","什么","汤"],
+        "Quiz1" : {
+            "Text" : "How do you say “Order” in Mandarin?",
+            "Choice" : [
+                "Choice1" : ["点菜", "diǎn cài"],
+                "Choice2" : ["喝水", "hē shuǐ"],
+                "Choice3" : ["什么", "shén me"],
+                "Choice4" : ["饿", "è"]
+            ],
+            "CorrectAnswer" : 1,
+            "HappyFlow" : "Amazing! let’s move on to next question",
+            "NegativeFlow" : "It’s okay! You can try again"
+        },
+        "Quiz2" : {
+            "Text" : "Listen to me. What does it mean?",
+            "Speak" : "几位"
+            "Choice" : ["How many people", "Three", "Welcome", "Friend"],
+            "CorrectAnswer" : 1,
+            "HappyFlow" : "Incredible! Let’s move to next question",
+            "NegativeFlow" : "It’s okay! You can try again"
+        },
+        "ToneTest" : {
+            "Text" : "Now, repeat after me: '点菜' (diǎn cài).",
+            "Speak" : "点菜",
+            "HappyFlow" : "Great! Now we're ready to order!",
+            "NegativeFlow" : "It’s okay! You can try again"
+        },
+        "Conversation" : {
+            "A" : {
+                "Hanzi" : "你好，你们要点了吗？",
+                "Pinyin" : "Nǐ hǎo, nǐmen yào diǎn le ma?",
+                "Meaning" : "Hello, are you ready to order?"
+            },
+            "B" : {
+                "Hanzi" : "对，我们要点了。",
+                "Pinyin" : "Duì, wǒmen yào diǎn le.",
+                "Meaning" : "Yes, we’re ready to order."
+            },
+            "A" : {
+                "Hanzi" : "好的，你想点什么？",
+                "Pinyin" : "Hǎo de, nǐ xiǎng diǎn shénme?",
+                "Meaning" : "Yes, what do you want to order?"
+            }
+            "B" : {
+                "Hanzi" : "我想点菜和羊肉。",
+                "Pinyin" : "Wǒ xiǎng diǎn cài hé yáng ròu.",
+                "Meaning" : "I want to order vegetables and lamb."
+            }
+        }
+    ],
+    "Story4" : [
+        "Background" : "SecretCode",
+        "Onboarding" : {
+            "A" : "And now, the special part.",
+            "B" : "What is it??",
+            "A" : "If you say the secret code, you'll get a special treat",
+            "B" : "I’m excited to learn that!"
+        },
+        "Flashcard" : ["开心","公主","谢谢","礼物"],
+        "Quiz1" : {
+            "Text" : "How do you say “Princess” in Mandarin?",
+            "Choice" : [
+                "Choice1" : ["打开", "dǎ kāi"],
+                "Choice2" : ["书", "shū"],
+                "Choice3" : ["公主", "gōngzhǔ"],
+                "Choice4" : ["米饭", "mǐ fàn"]
+            ],
+            "CorrectAnswer" : 3,
+            "HappyFlow" : "Amazing! let’s move on to next question",
+            "NegativeFlow" : "It’s okay! You can try again"
+        },
+        "Quiz2" : {
+            "Text" : "Listen to me. What does it mean?",
+            "Speak" : "公主"
+            "Choice" : ["Open", "Book", "Princess", "Rice"],
+            "CorrectAnswer" : 3,
+            "HappyFlow" : "Incredible! Let’s move to next question",
+            "NegativeFlow" : "It’s okay! You can try again"
+        },
+        "ToneTest" : {
+            "Text" : "Now, repeat after me: '公主' (gōngzhǔ).",
+            "Speak" : "公主",
+            "HappyFlow" : "Great! Now we're ready to get the special treat!",
+            "NegativeFlow" : "It’s okay! You can try again"
+        },
+        "Conversation" : {
+            "B" : {
+                "Hanzi" : "你好，我是公主。",
+                "Pinyin" : "Nǐ hǎo, wǒ shì gōngzhǔ",
+                "Meaning" : "Hi, I'm a princess"
+            },
+            "A" : {
+                "Hanzi" : "你好，公主，这是你的礼物",
+                "Pinyin" : "Nǐ hǎo, gōngzhǔ, zhè shì nǐ de lǐwù。",
+                "Meaning" : "Hi Princess, here is your gift."
+            },
+            "B" : {
+                "Hanzi" : "我很开心，谢谢你。",
+                "Pinyin" : "Wǒ hěn kāixīn, xièxiè nǐ.",
+                "Meaning" : "I'm so happy, thank you."
+            },
+            "A" : {
+                "Hanzi" : "不客气",
+                "Pinyin" : "Bù kèqì",
+                "Meaning" : "Welcome"
+            }
+        }
+    ]
+}
