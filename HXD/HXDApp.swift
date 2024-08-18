@@ -15,7 +15,8 @@ struct HXDApp: App {
 //            FlashcardSwipeView()
 //            QuizPage()
 //            OnboardingPage()
-            Correct(hanzi: "猫", pinyin: "Māo", meaning: "Cat")
+            RecordingView()
+//            Correct(hanzi: "猫", pinyin: "Māo", meaning: "Cat")
         }
     }
 }

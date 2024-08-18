@@ -42,9 +42,9 @@ class RecordView: UIView {
         return button
     }()
     
-    private let replayButton: UIButton = {
+    private let repeatButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "Replay"), for: .normal)
+        button.setImage(UIImage(named: "Repeat"), for: .normal)
         button.tintColor = .orange3
         button.translatesAutoresizingMaskIntoConstraints = false
         button.isHidden = true
@@ -54,6 +54,16 @@ class RecordView: UIView {
     private let transcribeLabel: UILabel = {
         let label = UILabel()
         label.text = "Transcribing..."
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 20, weight: .regular)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.isHidden = true
+        return label
+    }()
+    
+    private let finalTranscriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Result"
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -82,10 +92,15 @@ class RecordView: UIView {
         addSubview(statusLabel)
         addSubview(recordButton)
         addSubview(transcribeLabel)
+        addSubview(repeatButton)
+        addSubview(confirmButton)
+        addSubview(finalTranscriptionLabel)
         
         setupConstraints()
         
         recordButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        repeatButton.addTarget(self, action: #selector(repeatTapped), for: .touchUpInside)
+        confirmButton.addTarget(self, action: #selector(confirmTapped), for: .touchUpInside)
     }
     
     private func setupConstraints() {
@@ -98,18 +113,21 @@ class RecordView: UIView {
             recordButton.widthAnchor.constraint(equalToConstant: 84),
             recordButton.heightAnchor.constraint(equalTo: recordButton.widthAnchor),
             
-            replayButton.trailingAnchor.constraint(equalTo: confirmButton.leadingAnchor, constant: -20),
-            replayButton.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 20),
-            replayButton.widthAnchor.constraint(equalToConstant: 84),
-            replayButton.heightAnchor.constraint(equalTo: replayButton.widthAnchor),
-                        
-            confirmButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            confirmButton.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 20),
+            confirmButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 40),
+            confirmButton.centerYAnchor.constraint(equalTo: recordButton.centerYAnchor),
             confirmButton.widthAnchor.constraint(equalToConstant: 84),
             confirmButton.heightAnchor.constraint(equalTo: confirmButton.widthAnchor),
             
+            repeatButton.trailingAnchor.constraint(equalTo: confirmButton.leadingAnchor, constant: -20),
+            repeatButton.topAnchor.constraint(equalTo: confirmButton.topAnchor),
+            repeatButton.widthAnchor.constraint(equalToConstant: 84),
+            repeatButton.heightAnchor.constraint(equalTo: repeatButton.widthAnchor),
+            
             transcribeLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            transcribeLabel.topAnchor.constraint(equalTo: recordButton.bottomAnchor, constant: 20)
+            transcribeLabel.topAnchor.constraint(equalTo: recordButton.bottomAnchor, constant: 20),
+            
+            finalTranscriptionLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            finalTranscriptionLabel.topAnchor.constraint(equalTo: transcribeLabel.topAnchor)
             
         ])
     }
@@ -121,28 +139,41 @@ class RecordView: UIView {
             currentState = .confirming
         }
     }
+    
+    @objc private func repeatTapped() {
+        currentState = .idle
+    }
+      
+    @objc private func confirmTapped() {
+        currentState = .confirming
+    }
 
     private func updateViewForState() {
         switch currentState {
         case .idle:
             statusLabel.text = "Tap to Record"
             recordButton.setImage(UIImage(named: "Microphone"), for: .normal)
+            statusLabel.isHidden = false
+            recordButton.isHidden = false
             transcribeLabel.isHidden = true
-            replayButton.isHidden = true
+            repeatButton.isHidden = true
             confirmButton.isHidden = true
+            finalTranscriptionLabel.isHidden = true
         case .recording:
             statusLabel.text = "Tap to Stop"
             recordButton.setImage(UIImage(named: "Stop"), for: .normal)
             transcribeLabel.isHidden = false
-            replayButton.isHidden = false
-            replayButton.isHidden = true
+            repeatButton.isHidden = false
+            repeatButton.isHidden = true
             confirmButton.isHidden = true
+            finalTranscriptionLabel.isHidden = true
         case .confirming:
             statusLabel.text = "Tap to Confirm"
-            transcribeLabel.isHidden = false
+            transcribeLabel.isHidden = true
             recordButton.isHidden = true
-            replayButton.isHidden = false
+            repeatButton.isHidden = false
             confirmButton.isHidden = false
+            finalTranscriptionLabel.isHidden = false
         }
     }
     
@@ -150,5 +181,7 @@ class RecordView: UIView {
         super.layoutSubviews()
         recordButton.layer.cornerRadius = recordButton.bounds.width / 2
         recordButton.clipsToBounds = true
+        confirmButton.layer.cornerRadius = recordButton.bounds.width / 2
+        confirmButton.clipsToBounds = true
     }
 }
