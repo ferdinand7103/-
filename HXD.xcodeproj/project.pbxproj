@@ -49,6 +49,10 @@
 		29EBBBD72C5BABF000AFCD60 /* Correct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBD62C5BABF000AFCD60 /* Correct.swift */; };
 		29EBBBD92C5BABFB00AFCD60 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBD82C5BABFB00AFCD60 /* ViewModel.swift */; };
 		29EBBBDB2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBDA2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift */; };
+		323B23952C7239A200A3403E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B23942C7239A200A3403E /* RecordViewController.swift */; };
+		323B23972C723A0700A3403E /* RecordViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B23962C723A0700A3403E /* RecordViewWrapper.swift */; };
+		323B23992C723A3300A3403E /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B23982C723A3300A3403E /* RecordView.swift */; };
+		323B239B2C723B1200A3403E /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B239A2C723B1200A3403E /* RecordingView.swift */; };
 		3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */; };
 		3252BDA42C6CFB8A00CE8CEE /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252BDA32C6CFB8A00CE8CEE /* OnboardingPage.swift */; };
 		3252BDA62C6D0A4000CE8CEE /* BubbleChatNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252BDA52C6D0A4000CE8CEE /* BubbleChatNext.swift */; };
@@ -111,9 +115,13 @@
 		29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		29EBBBC92C5BAB0700AFCD60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29EBBBCC2C5BAB0700AFCD60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		29EBBBD62C5BABF000AFCD60 /* Correct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Correct.swift; path = HXD/Views/Reuseable/Correct.swift; sourceTree = SOURCE_ROOT; };
+		29EBBBD62C5BABF000AFCD60 /* Correct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Correct.swift; path = HXD/Views/Reuseable/Feedback/Correct.swift; sourceTree = SOURCE_ROOT; };
 		29EBBBD82C5BABFB00AFCD60 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		29EBBBDA2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinOutputFormat.swift; sourceTree = "<group>"; };
+		323B23942C7239A200A3403E /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		323B23962C723A0700A3403E /* RecordViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewWrapper.swift; sourceTree = "<group>"; };
+		323B23982C723A3300A3403E /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		323B239A2C723B1200A3403E /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 		3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperButtons.swift; sourceTree = "<group>"; };
 		3252BDA32C6CFB8A00CE8CEE /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingPage.swift; path = HXD/Views/OnboardingPage/Scene1_School/OnboardingPage.swift; sourceTree = SOURCE_ROOT; };
 		3252BDA52C6D0A4000CE8CEE /* BubbleChatNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChatNext.swift; sourceTree = "<group>"; };
@@ -238,17 +246,14 @@
 		29B12D0B2C6B2A3C008FEAF4 /* Reuseable */ = {
 			isa = PBXGroup;
 			children = (
+				323B23A02C724BAC00A3403E /* Feedback */,
+				323B239F2C724B9D00A3403E /* Quiz */,
+				323B239E2C724B5800A3403E /* Animation */,
+				323B239D2C724B2500A3403E /* Bubble */,
+				323B239C2C724AA900A3403E /* Recording */,
 				293E0ED72C6EFCD20062C2AD /* RectangleButton.swift */,
 				293E0ED52C6EFCC90062C2AD /* HomeCard.swift */,
 				293E0E932C6C67420062C2AD /* ConfirmationView.swift */,
-				293E0E952C6C701A0062C2AD /* TalkingView.swift */,
-				293E0EA82C6CEDC20062C2AD /* BubbleChat.swift */,
-				3252BDA52C6D0A4000CE8CEE /* BubbleChatNext.swift */,
-				293E0EAA2C6CF8A30062C2AD /* BubbleChatTail.swift */,
-				29EBBBD62C5BABF000AFCD60 /* Correct.swift */,
-				29B12CB12C65BFF5008FEAF4 /* Wrong.swift */,
-				29B12D0C2C6B2A53008FEAF4 /* QuizHanzi.swift */,
-				29B12D0E2C6B2B8B008FEAF4 /* RectangleChoose.swift */,
 			);
 			path = Reuseable;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				293E0EDD2C706B230062C2AD /* quizpage.json */,
+				323B23932C72397600A3403E /* Controllers */,
 				29B12CA32C6468B5008FEAF4 /* Resources */,
 				29B12C9E2C6466D9008FEAF4 /* Services */,
 				29B12C992C632B68008FEAF4 /* Protocols */,
@@ -337,6 +343,60 @@
 				293E0EC72C6DC9560062C2AD /* StoryModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		323B23932C72397600A3403E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				323B23942C7239A200A3403E /* RecordViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		323B239C2C724AA900A3403E /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				323B23982C723A3300A3403E /* RecordView.swift */,
+				323B239A2C723B1200A3403E /* RecordingView.swift */,
+				323B23962C723A0700A3403E /* RecordViewWrapper.swift */,
+			);
+			path = Recording;
+			sourceTree = "<group>";
+		};
+		323B239D2C724B2500A3403E /* Bubble */ = {
+			isa = PBXGroup;
+			children = (
+				293E0EA82C6CEDC20062C2AD /* BubbleChat.swift */,
+				3252BDA52C6D0A4000CE8CEE /* BubbleChatNext.swift */,
+				293E0EAA2C6CF8A30062C2AD /* BubbleChatTail.swift */,
+			);
+			path = Bubble;
+			sourceTree = "<group>";
+		};
+		323B239E2C724B5800A3403E /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				293E0E952C6C701A0062C2AD /* TalkingView.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		323B239F2C724B9D00A3403E /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				29B12D0C2C6B2A53008FEAF4 /* QuizHanzi.swift */,
+				29B12D0E2C6B2B8B008FEAF4 /* RectangleChoose.swift */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		323B23A02C724BAC00A3403E /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				29EBBBD62C5BABF000AFCD60 /* Correct.swift */,
+				29B12CB12C65BFF5008FEAF4 /* Wrong.swift */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 		3252BDA22C6CFB5500CE8CEE /* Scene1_School */ = {
@@ -503,6 +563,7 @@
 				32714E4D2C6A46FC00EE6486 /* FlashcardViewModel.swift in Sources */,
 				3252BDA42C6CFB8A00CE8CEE /* OnboardingPage.swift in Sources */,
 				29EBBBC62C5BAB0600AFCD60 /* HXDApp.swift in Sources */,
+				323B239B2C723B1200A3403E /* RecordingView.swift in Sources */,
 				29B12CB22C65BFF5008FEAF4 /* Wrong.swift in Sources */,
 				293E0EC32C6DB1BC0062C2AD /* HuggingFace.swift in Sources */,
 				3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */,
@@ -513,10 +574,13 @@
 				293E0E922C6C64DD0062C2AD /* QuizTop.swift in Sources */,
 				293E0ED62C6EFCC90062C2AD /* HomeCard.swift in Sources */,
 				29B12CA52C6468C0008FEAF4 /* HanziPinyinResources.swift in Sources */,
+				323B23972C723A0700A3403E /* RecordViewWrapper.swift in Sources */,
 				293E0E8E2C6C62A00062C2AD /* FCNavigationButton.swift in Sources */,
+				323B23992C723A3300A3403E /* RecordView.swift in Sources */,
 				29B12C952C631A7B008FEAF4 /* SpeechRecognizer.swift in Sources */,
 				3252BDA62C6D0A4000CE8CEE /* BubbleChatNext.swift in Sources */,
 				29B12D0F2C6B2B8B008FEAF4 /* RectangleChoose.swift in Sources */,
+				323B23952C7239A200A3403E /* RecordViewController.swift in Sources */,
 				29EBBBD92C5BABFB00AFCD60 /* ViewModel.swift in Sources */,
 				293E0EC82C6DC9560062C2AD /* StoryModel.swift in Sources */,
 				293E0E982C6CCFDD0062C2AD /* TalkingAnimation.swift in Sources */,
