@@ -16,11 +16,9 @@ struct StoryView: View {
             case .onboarding:
                 OnboardingPage(viewModel: viewModel)
             case .flashcard:
-                FlashcardSwipeView(isShowingFlashcard: .constant(false), viewModel: StoryViewModel())
-                Text("flash")
+                FlashcardSwipeView(isShowingFlashcard: .constant(false), viewModel: viewModel)
             case .quiz1:
-//                Quiz1View(viewModel: viewModel)
-                Text("quiz1")
+                QuizPage(viewModel: viewModel)
             case .quiz2:
                 Text("quiz2")
 //                Quiz2View(viewModel: viewModel)
@@ -33,14 +31,11 @@ struct StoryView: View {
             case .completed:
                 Text("Story Completed")
             }
-            Button(action: {
-                viewModel.moveToNextStage()
-            }) {
-                Text("Next")
-            }
-        }
-        .onAppear {
-            // Load stories and initialize
+//            Button(action: {
+//                viewModel.moveToNextStage()
+//            }) {
+//                Text("Next")
+//            }
         }
     }
 }

@@ -13,6 +13,7 @@ struct FlashcardSwipeView: View {
     @State private var currentIndex: Int = 0
     @State private var offset: CGSize = .zero
     @State private var opacity: Double = 1.0
+    @State private var done: Bool = false
 
     var body: some View {
         ZStack {
@@ -42,16 +43,27 @@ struct FlashcardSwipeView: View {
                 }
                 .contentShape(Rectangle())
                 .gesture(createDragGesture())
-//                Button(action: {
-//                    isShowingFlashcard = false
-//                }) {
-//                    Text("Close")
-//                        .foregroundColor(.white)
-//                        .padding()
-//                        .background(Color.red)
-//                        .cornerRadius(10)
-//                }
-//                .padding(.top, 20)
+                if done {
+                    Button(action: {
+                        viewModel.moveToNextStage()
+                    }) {
+                        HStack {
+                            Text("I'm Ready!")
+                                .foregroundColor(.white)
+                                .padding()
+                                .font(.system(size: 20, weight: .bold))
+                        }
+                        .frame(width: 300)
+                        .background(.orange3)
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(.orange3, lineWidth: 1)
+                                .frame(width: 300)
+                        )
+                    }
+                    .padding(.top, 20)
+                }
             }
             .padding()
             .background(Image(viewModel.currentStory.background))
@@ -132,6 +144,9 @@ struct FlashcardSwipeView: View {
                 opacity = 1.0
                 if currentIndex == viewModel.currentStory.flashcard.count - 1 {
                     currentIndex = 0
+                } else if currentIndex == viewModel.currentStory.flashcard.count - 2 {
+                    done.toggle()
+                    currentIndex = min(currentIndex + 1, viewModel.currentStory.flashcard.count - 1)
                 } else {
                     currentIndex = min(currentIndex + 1, viewModel.currentStory.flashcard.count - 1)
                 }

@@ -22,7 +22,6 @@ struct BubbleChat: View {
                 Spacer(minLength: 0)
             }
             .frame(minWidth: 300, maxWidth: 300, alignment: .leading)
-//            .frame(maxWidth: 300, alignment: .leading)
             .background(bubbleColor)
             .clipShape(RoundedRectangle(cornerRadius: 16))
             .overlay(

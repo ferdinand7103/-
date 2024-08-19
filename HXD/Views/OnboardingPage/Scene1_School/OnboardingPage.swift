@@ -64,9 +64,9 @@ struct OnboardingPage: View {
     }
 }
 
-//#Preview {
-//    OnboardingPage()
-//}
+#Preview {
+    OnboardingPage(viewModel: StoryViewModel())
+}
 
 struct BackgroundImageModifier: ViewModifier {
     func body(content: Content) -> some View {
