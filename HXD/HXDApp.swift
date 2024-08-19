@@ -17,6 +17,7 @@ struct HXDApp: App {
 //            OnboardingPage()
 //            RecordingView()
 //            Correct(hanzi: "猫", pinyin: "Māo", meaning: "Cat")
+            StoryView()
         }
     }
 }
