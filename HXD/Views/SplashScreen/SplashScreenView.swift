@@ -17,8 +17,14 @@ struct SplashScreenView: View {
             VStack {
                 LogoAnimationView(images: ["OrangeLeft","OrangeRight", "OrangeMiddle"],logoAnimation: logoAnimation)
                     .onAppear {
-                        logoAnimation.startIntroducing(duration: 6)
+                        logoAnimation.startIntroducing(duration: 2.8)
                     }
+                
+                Image("Tagline").resizable()
+                    .frame(width: 390, height: 163)
+                    .scaleEffect(CGSize(width: 0.8, height: 0.8))
+                    .scaledToFit()
+                    .padding(.top, -100)
             }
         }
     }
