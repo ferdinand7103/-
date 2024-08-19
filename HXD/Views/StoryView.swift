@@ -23,15 +23,36 @@ struct StoryView: View {
                 Text("flash")
             case .quiz1:
 //                Quiz1View(viewModel: viewModel)
+                Text(viewModel.currentStory.quiz1.text)
+                ForEach(viewModel.currentStory.quiz1.choice.indices, id: \.self) { index in
+                    VStack {
+                        Text(viewModel.currentStory.quiz1.choice[index].text)
+                        Text(viewModel.currentStory.quiz1.choice[index].pinyin)
+                    }
+                }
+
                 Text("quiz1")
             case .quiz2:
+                Text(viewModel.currentStory.quiz2.text)
+                Text(viewModel.currentStory.quiz2.speak)
+                ForEach(viewModel.currentStory.quiz1.choice.indices, id: \.self) { index in
+                    VStack {
+                   
+                        Text(viewModel.currentStory.quiz2.choice[index])
+                    }
+                }
                 Text("quiz2")
 //                Quiz2View(viewModel: viewModel)
             case .toneTest:
+                Text(viewModel.currentStory.toneTest.text)
+                Text(viewModel.currentStory.toneTest.speak)
                 Text("tone")
 //                ToneTestView(viewModel: viewModel)
             case .conversation:
                 Text("convo")
+                Text(viewModel.currentStory.conversation[viewModel.currentConversationIndex].hanzi)
+                Text(viewModel.currentStory.conversation[viewModel.currentConversationIndex].pinyin)
+                Text(viewModel.currentStory.conversation[viewModel.currentConversationIndex].meaning)
 //                ConversationView(viewModel: viewModel)
             case .completed:
                 Text("Story Completed")
