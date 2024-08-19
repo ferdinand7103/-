@@ -9,17 +9,12 @@ import SwiftUI
 
 struct RecordingView: View {
     var body: some View {
-        ZStack {
-            Rectangle()
-                .foregroundColor(Color.white)
-                .frame(width: .infinity, height: 300)
-                .cornerRadius(24)
             VStack {
                 RecordViewWrapper()
                     .frame(width: 200, height: 200)
-            }
-            .padding()
-        }
+                    .padding()
+            }.background(.black)
+            .clipShape(.rect(cornerRadius: 24))
     }
 }
 
