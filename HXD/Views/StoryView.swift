@@ -12,7 +12,9 @@ struct StoryView: View {
     @StateObject private var talkingAnimation = TalkingAnimation()
 
     var body: some View {
-        Text("hell")
+        ForEach(0..<viewModel.stories.count, id: \.self) { index in
+            Text(viewModel.stories[index].background)
+        }
     }
 }
 
