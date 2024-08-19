@@ -118,14 +118,9 @@ class RecordView: UIView {
 
     func setMode(_ mode: RecordingMode) {
         currentMode = mode
-        if currentMode == .conversation {
-            instructionLabel.isHidden = false
-            questionLabel.isHidden = false
-        }
         updateViewForState()
     }
     
-    // Set up the view's layout and actions
     private func setupView() {
         addSubview(statusLabel)
         addSubview(recordButton)
@@ -182,6 +177,9 @@ class RecordView: UIView {
                 questionLabel.topAnchor.constraint(equalTo: instructionLabel.bottomAnchor, constant: 10),
                 questionLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
             ])
+            instructionLabel.isHidden = false
+            questionLabel.isHidden = false
+            recordButtonTopConstraint.constant = 100
         }
     }
 
@@ -207,11 +205,11 @@ class RecordView: UIView {
             if currentMode == .conversation {
                 instructionLabel.isHidden = false
                 questionLabel.isHidden = false
-                recordButtonTopConstraint.constant = 100 // Default position
+                recordButtonTopConstraint.constant = 100
             } else if currentMode == .pinyin {
                 instructionLabel.isHidden = true
                 questionLabel.isHidden = true
-                recordButtonTopConstraint.constant = 30
+                recordButtonTopConstraint.constant = 20
             }
             statusLabel.text = "Tap to Record"
             recordButton.setImage(UIImage(named: "Microphone"), for: .normal)
