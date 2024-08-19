@@ -10,6 +10,71 @@ import Combine
 
 class StoryViewModel: ObservableObject {
     @Published var stories: [Story] = []
+       @Published var currentStoryIndex = 0
+       @Published var currentStage: StoryStage = .onboarding
+       @Published var currentOnboardingIndex = 0
+       @Published var currentFlashcardIndex = 0
+       @Published var currentQuiz1Index = 0
+       @Published var currentQuiz2Index = 0
+       @Published var currentToneTestIndex = 0
+       @Published var currentConversationIndex = 0
+       
+    enum StoryStage {
+        case onboarding
+        case flashcard
+        case quiz1
+        case quiz2
+        case toneTest
+        case conversation
+        case completed
+    }
+    
+       var currentStory: Story {
+           stories[currentStoryIndex]
+       }
+
+       // Method to move to the next stage or story
+       func moveToNextStage() {
+           switch currentStage {
+           case .onboarding:
+               if currentOnboardingIndex < currentStory.onboarding.count - 1 {
+                   currentOnboardingIndex += 1
+               } else {
+                   currentStage = .flashcard
+                   currentOnboardingIndex = 0
+               }
+           case .flashcard:
+               if currentFlashcardIndex < currentStory.flashcard.count - 1 {
+                   currentFlashcardIndex += 1
+               } else {
+                   currentStage = .quiz1
+                   currentFlashcardIndex = 0
+               }
+           case .quiz1:
+               currentStage = .quiz2
+           case .quiz2:
+               currentStage = .toneTest
+           case .toneTest:
+               currentStage = .conversation
+           case .conversation:
+               if currentConversationIndex < currentStory.conversation.count - 1 {
+                   currentConversationIndex += 1
+               } else {
+                   currentStage = .completed
+                   currentConversationIndex = 0
+                   // Move to next story or reset if done
+                   if currentStoryIndex < stories.count - 1 {
+                       currentStoryIndex += 1
+                       currentStage = .onboarding
+                   } else {
+                       // Handle end of all stories
+                   }
+               }
+           case .completed:
+               // Optionally handle completion
+               break
+           }
+       }
     
     init() {
         loadStories()
