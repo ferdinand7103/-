@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum RecordingMode {
+    case pinyin
+    case conversation
+}
+
 enum RecordingState {
     case idle
     case recording
@@ -20,6 +25,26 @@ class RecordView: UIView {
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let instructionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Answer using this sentence in Chinese"
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.isHidden = true
+        return label
+    }()
+        
+    private let questionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Question"
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.isHidden = true
         return label
     }()
     
@@ -71,22 +96,31 @@ class RecordView: UIView {
         return label
     }()
     
+    // Define dynamic constraints
+    private var recordButtonTopConstraint: NSLayoutConstraint!
+    
+    var currentMode: RecordingMode
     private var currentState: RecordingState = .idle {
         didSet {
             updateViewForState()
         }
     }
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, mode: RecordingMode) {
+        self.currentMode = mode
         super.init(frame: frame)
         setupView()
     }
 
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupView()
+        fatalError("init(coder:) has not been implemented")
     }
 
+    func setMode(_ mode: RecordingMode) {
+        currentMode = mode
+        updateViewForState()
+    }
+    
     // Set up the view's layout and actions
     private func setupView() {
         addSubview(statusLabel)
@@ -95,6 +129,8 @@ class RecordView: UIView {
         addSubview(repeatButton)
         addSubview(confirmButton)
         addSubview(finalTranscriptionLabel)
+        addSubview(instructionLabel)
+        addSubview(questionLabel)
         
         setupConstraints()
         
@@ -104,13 +140,13 @@ class RecordView: UIView {
     }
     
     private func setupConstraints() {
+        // Set static constraints
         NSLayoutConstraint.activate([
             statusLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            statusLabel.centerYAnchor.constraint(equalTo: topAnchor, constant: 20),
-        
-            recordButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            recordButton.centerYAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 60),
+            statusLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            
             recordButton.widthAnchor.constraint(equalToConstant: 84),
+            recordButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             recordButton.heightAnchor.constraint(equalTo: recordButton.widthAnchor),
             
             confirmButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 40),
@@ -128,8 +164,21 @@ class RecordView: UIView {
             
             finalTranscriptionLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             finalTranscriptionLabel.topAnchor.constraint(equalTo: transcribeLabel.topAnchor)
-            
         ])
+        
+        // Set dynamic top constraint for recordButton
+        recordButtonTopConstraint = recordButton.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 20)
+        recordButtonTopConstraint.isActive = true
+        
+        if currentMode == .conversation {
+            NSLayoutConstraint.activate([
+                instructionLabel.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 20),
+                instructionLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+                       
+                questionLabel.topAnchor.constraint(equalTo: instructionLabel.bottomAnchor, constant: 10),
+                questionLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
+            ])
+        }
     }
 
     @objc private func buttonTapped() {
@@ -151,29 +200,55 @@ class RecordView: UIView {
     private func updateViewForState() {
         switch currentState {
         case .idle:
+            if currentMode == .conversation {
+                instructionLabel.isHidden = false
+                questionLabel.isHidden = false
+                recordButtonTopConstraint.constant = 20 // Default position
+            } else if currentMode == .pinyin {
+                instructionLabel.isHidden = true
+                questionLabel.isHidden = true
+                recordButtonTopConstraint.constant = 20
+            }
             statusLabel.text = "Tap to Record"
             recordButton.setImage(UIImage(named: "Microphone"), for: .normal)
-            statusLabel.isHidden = false
             recordButton.isHidden = false
             transcribeLabel.isHidden = true
             repeatButton.isHidden = true
             confirmButton.isHidden = true
             finalTranscriptionLabel.isHidden = true
+
         case .recording:
             statusLabel.text = "Tap to Stop"
             recordButton.setImage(UIImage(named: "Stop"), for: .normal)
+            instructionLabel.isHidden = true
+            questionLabel.isHidden = true
             transcribeLabel.isHidden = false
-            repeatButton.isHidden = false
+            recordButton.isHidden = false
             repeatButton.isHidden = true
             confirmButton.isHidden = true
             finalTranscriptionLabel.isHidden = true
+            
+            if currentMode == .conversation {
+                // Move the button up when recording in conversation mode
+                recordButtonTopConstraint.constant = 5
+            } else {
+                recordButtonTopConstraint.constant = 20
+            }
+
         case .confirming:
             statusLabel.text = "Tap to Confirm"
+            instructionLabel.isHidden = true
+            questionLabel.isHidden = true
             transcribeLabel.isHidden = true
             recordButton.isHidden = true
             repeatButton.isHidden = false
             confirmButton.isHidden = false
             finalTranscriptionLabel.isHidden = false
+        }
+
+        // Animate the constraint change
+        UIView.animate(withDuration: 0.3) {
+            self.layoutIfNeeded()
         }
     }
     

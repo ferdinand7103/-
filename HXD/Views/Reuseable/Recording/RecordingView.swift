@@ -15,8 +15,8 @@ struct RecordingView: View {
                 .frame(width: .infinity, height: 300)
                 .cornerRadius(24)
             VStack {
-                RecordViewWrapper()
-                    .frame(width: 200, height: 200)
+                RecordViewWrapper(mode: .conversation)
+                    .frame(width: 300, height: 250)
             }
             .padding()
         }
@@ -26,4 +26,3 @@ struct RecordingView: View {
 #Preview {
     RecordingView()
 }
-
