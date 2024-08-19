@@ -36,14 +36,14 @@
         },
         "Conversation" : {
             "A" : {
-                "Hanzi" : "你好，我饿了，我们去吃饭吧。",
-                "Pinyin" : "Nǐ hǎo, wǒ è le, wǒmen qù chīfàn ba.",
-                "Meaning" : "Hello, I'm hungry, let's go eat."
+                "Hanzi" : "你好，我饿了。",
+                "Pinyin" : "Nǐ hǎo, wǒ è le. ",
+                "Meaning" : "Hello, I'm hungry."
             },
             "B" : {
-                "Hanzi" : "好啊，我也饿了，去海底捞吧。",
-                "Pinyin" : "Hǎo a, wǒ yě è le, qù Hǎidǐlāo ba.",
-                "Meaning" : "Sure, I'm hungry too, let's go to Haidilao."
+                "Hanzi" : "我也饿了，吃吧。",
+                "Pinyin" : "wǒ yě è le, chī ba.",
+                "Meaning" : "I'm hungry too, let's eat."
             },
             "A" : {
                 "Hanzi" : "好的。",
@@ -89,8 +89,8 @@
         },
         "Conversation" : {
             "A" : {
-                "Hanzi" : "你好，请问，你们几位？",
-                "Pinyin" : "Nǐ hǎo, qǐng wèn, nǐmen jǐ wèi?",
+                "Hanzi" : "你好，你们几位？",
+                "Pinyin" : "Nǐ hǎo, nǐ men jǐ wèi?",
                 "Meaning" : "Hi, may I ask, how many people are you?"
             },
             "B" : {
@@ -99,8 +99,8 @@
                 "Meaning" : "We have three people."
             },
             "A" : {
-                "Hanzi" : "欢迎光临",
-                "Pinyin" : "Huānyíng guānglín!",
+                "Hanzi" : "欢迎",
+                "Pinyin" : "Huānyíng!",
                 "Meaning" : "Welcome!"
             }
         }
@@ -200,9 +200,9 @@
         },
         "Conversation" : {
             "B" : {
-                "Hanzi" : "你好，我是公主。",
-                "Pinyin" : "Nǐ hǎo, wǒ shì gōngzhǔ",
-                "Meaning" : "Hi, I'm a princess"
+                "Hanzi" : "我是公主。",
+                "Pinyin" : "wǒ shì gōngzhǔ",
+                "Meaning" : "I'm a princess"
             },
             "A" : {
                 "Hanzi" : "你好，公主，这是你的礼物",
