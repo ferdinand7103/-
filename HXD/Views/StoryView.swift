@@ -8,16 +8,42 @@
 import SwiftUI
 
 struct StoryView: View {
-    @ObservedObject var viewModel = StoryViewModel()
-    @StateObject private var talkingAnimation = TalkingAnimation()
-
+    @StateObject private var viewModel = StoryViewModel()
+    
     var body: some View {
-        ForEach(0..<viewModel.stories.count, id: \.self) { index in
-            Text(viewModel.stories[index].background)
+        VStack {
+            switch viewModel.currentStage {
+            case .onboarding:
+//                OnboardingView(viewModel: viewModel)
+                Text(viewModel.currentStory.onboarding[viewModel.currentOnboardingIndex].identifier)
+                Text(viewModel.currentStory.onboarding[viewModel.currentOnboardingIndex].text)
+            case .flashcard:
+//                FlashcardView(vocab: String, viewModel: viewModel)
+                Text(viewModel.currentStory.flashcard[viewModel.currentFlashcardIndex])
+                Text("flash")
+            case .quiz1:
+//                Quiz1View(viewModel: viewModel)
+                Text("quiz1")
+            case .quiz2:
+                Text("quiz2")
+//                Quiz2View(viewModel: viewModel)
+            case .toneTest:
+                Text("tone")
+//                ToneTestView(viewModel: viewModel)
+            case .conversation:
+                Text("convo")
+//                ConversationView(viewModel: viewModel)
+            case .completed:
+                Text("Story Completed")
+            }
+            Button(action: {
+                viewModel.moveToNextStage()
+            }) {
+                Text("Next")
+            }
+        }
+        .onAppear {
+            // Load stories and initialize
         }
     }
-}
-
-#Preview {
-    StoryView()
 }
