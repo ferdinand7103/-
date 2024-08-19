@@ -20,7 +20,8 @@ struct HXDApp: App {
 //            TalkingView(images: ["Orange1","Orange2"])
 //            SplashScreenView()
 //            Correct(hanzi: "猫", pinyin: "Māo", meaning: "Cat")
-            StoryView()
+//            StoryView()
+            RecordingView()
         }
     }
 }

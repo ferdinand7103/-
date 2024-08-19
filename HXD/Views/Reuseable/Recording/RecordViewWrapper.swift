@@ -9,12 +9,16 @@ import SwiftUI
 import UIKit
 
 struct RecordViewWrapper: UIViewRepresentable {
+    var mode: RecordingMode
 
     func makeUIView(context: Context) -> RecordView{
-        return RecordView()
+        return RecordView(frame: .zero, mode: mode)
     }
 
     func updateUIView(_ uiView: RecordView, context: Context) {
+        if uiView.currentMode != mode {
+            uiView.setMode(mode)
+        }
     }
 }
 
