@@ -14,24 +14,11 @@ struct StoryView: View {
         VStack {
             switch viewModel.currentStage {
             case .onboarding:
-//                OnboardingView(viewModel: viewModel)
-                Text(viewModel.currentStory.onboarding[viewModel.currentOnboardingIndex].identifier)
-                Text(viewModel.currentStory.onboarding[viewModel.currentOnboardingIndex].text)
+                OnboardingPage(viewModel: viewModel)
             case .flashcard:
-//                FlashcardView(vocab: String, viewModel: viewModel)
-                Text(viewModel.currentStory.flashcard[viewModel.currentFlashcardIndex])
-                Text("flash")
+                FlashcardSwipeView(isShowingFlashcard: .constant(false), viewModel: viewModel)
             case .quiz1:
-//                Quiz1View(viewModel: viewModel)
-                Text(viewModel.currentStory.quiz1.text)
-                ForEach(viewModel.currentStory.quiz1.choice.indices, id: \.self) { index in
-                    VStack {
-                        Text(viewModel.currentStory.quiz1.choice[index].text)
-                        Text(viewModel.currentStory.quiz1.choice[index].pinyin)
-                    }
-                }
-
-                Text("quiz1")
+                QuizPage(viewModel: viewModel)
             case .quiz2:
                 Text(viewModel.currentStory.quiz2.text)
                 Text(viewModel.currentStory.quiz2.speak)
@@ -57,14 +44,15 @@ struct StoryView: View {
             case .completed:
                 Text("Story Completed")
             }
-            Button(action: {
-                viewModel.moveToNextStage()
-            }) {
-                Text("Next")
-            }
-        }
-        .onAppear {
-            // Load stories and initialize
+//            Button(action: {
+//                viewModel.moveToNextStage()
+//            }) {
+//                Text("Next")
+//            }
         }
     }
+}
+
+#Preview {
+    StoryView()
 }

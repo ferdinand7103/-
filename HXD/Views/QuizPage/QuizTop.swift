@@ -11,10 +11,12 @@ struct QuizTop: View {
     @State private var isShowingConfirmation: Bool = false
     @State private var isShowingFlashcard: Bool = false
     @StateObject private var talkingAnimation = TalkingAnimation()
+    @ObservedObject var viewModel: StoryViewModel
+    @State var text: String
     
     var body: some View {
         ZStack{
-            Image("QuizStart")
+            Image(viewModel.currentStory.background)
                 .padding(.bottom, 195)
             if isShowingConfirmation {
                 Color.black.opacity(0.4)
@@ -30,7 +32,7 @@ struct QuizTop: View {
                 Color.black.opacity(0.4)
                     .edgesIgnoringSafeArea(.all)
                 
-                FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard)
+                FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard, viewModel: StoryViewModel())
                     .frame(width: 313, height: 282)
                     .transition(.scale)
                     .zIndex(3)
@@ -50,7 +52,7 @@ struct QuizTop: View {
                 .frame(width: 200, height: 200)
                 .padding(.leading, 190)
                 .padding(.bottom, 100)
-            BubbleChat(text: "Ok, you already know some words! Do you know how to say “Hello” in Mandarin?")
+            BubbleChat(text: text)
                 .padding(.bottom, 380)
         }
         .animation(.easeInOut, value: isShowingConfirmation)
@@ -58,5 +60,5 @@ struct QuizTop: View {
 }
 
 #Preview {
-    QuizTop()
+    QuizTop(viewModel: StoryViewModel(), text: "Ok, you already know some words! Do you know how to say “Hello” in Mandarin?")
 }

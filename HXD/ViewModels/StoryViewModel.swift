@@ -44,12 +44,7 @@ class StoryViewModel: ObservableObject {
                    currentOnboardingIndex = 0
                }
            case .flashcard:
-               if currentFlashcardIndex < currentStory.flashcard.count - 1 {
-                   currentFlashcardIndex += 1
-               } else {
-                   currentStage = .quiz1
-                   currentFlashcardIndex = 0
-               }
+               currentStage = .quiz1
            case .quiz1:
                currentStage = .quiz2
            case .quiz2:
