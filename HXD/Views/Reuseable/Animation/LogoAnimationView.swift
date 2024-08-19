@@ -20,7 +20,7 @@ struct LogoAnimationView: View {
         Image(images[logoAnimation.currentIndex])
             .resizable()
             .scaledToFit()
-            .frame(width: 400, height: 392)
+            .frame(width: 350, height: 350)
             .transition(.opacity)
             .animation(.none, value: logoAnimation.currentIndex)
     }
