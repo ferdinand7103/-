@@ -30,7 +30,7 @@ struct QuizTop: View {
                 Color.black.opacity(0.4)
                     .edgesIgnoringSafeArea(.all)
                 
-                FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard)
+                FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard, viewModel: StoryViewModel())
                     .frame(width: 313, height: 282)
                     .transition(.scale)
                     .zIndex(3)

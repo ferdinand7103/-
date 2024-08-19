@@ -14,12 +14,9 @@ struct StoryView: View {
         VStack {
             switch viewModel.currentStage {
             case .onboarding:
-//                OnboardingView(viewModel: viewModel)
-                Text(viewModel.currentStory.onboarding[viewModel.currentOnboardingIndex].identifier)
-                Text(viewModel.currentStory.onboarding[viewModel.currentOnboardingIndex].text)
+                OnboardingPage(viewModel: viewModel)
             case .flashcard:
-//                FlashcardView(vocab: String, viewModel: viewModel)
-                Text(viewModel.currentStory.flashcard[viewModel.currentFlashcardIndex])
+                FlashcardSwipeView(isShowingFlashcard: .constant(false), viewModel: StoryViewModel())
                 Text("flash")
             case .quiz1:
 //                Quiz1View(viewModel: viewModel)
@@ -46,4 +43,8 @@ struct StoryView: View {
             // Load stories and initialize
         }
     }
+}
+
+#Preview {
+    StoryView()
 }

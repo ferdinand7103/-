@@ -11,11 +11,12 @@ struct OnboardingPage: View {
     @State private var isShowingConfirmation: Bool = false
     @State private var isShowingFlashcard: Bool = false
     @StateObject private var talkingAnimation = TalkingAnimation()
+    @ObservedObject var viewModel: StoryViewModel
 
 
     var body: some View {
         ZStack {
-            Image("Scene1").resizable().modifier(BackgroundImageModifier())
+            Image(viewModel.currentStory.background).resizable().modifier(BackgroundImageModifier())
             UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingFlashcard: $isShowingFlashcard)
                 .padding(.bottom, 680)
             TalkingView(images: ["Orange1","Orange2"],talkingAnimation: talkingAnimation)
@@ -35,7 +36,7 @@ struct OnboardingPage: View {
                 .zIndex(0)
 
             
-            BubbleChatNext(text: "Hey, wanna go to the new chinese hotpot resto? If you can speak Mandarin, you can get a discount!")
+            BubbleChatNext(text: viewModel.currentStory.onboarding[viewModel.currentOnboardingIndex].text, pos: viewModel.currentStory.onboarding[viewModel.currentOnboardingIndex].text, viewModel: viewModel)
                 .padding(.bottom, 100)
                 .zIndex(0)
             
@@ -53,7 +54,7 @@ struct OnboardingPage: View {
                 Color.black.opacity(0.4)
                     .edgesIgnoringSafeArea(.all)
 
-                FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard)
+                FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard, viewModel: StoryViewModel())
                     .frame(width: 313, height: 282)
                     .transition(.scale)
                     .zIndex(100)
@@ -63,9 +64,9 @@ struct OnboardingPage: View {
     }
 }
 
-#Preview {
-    OnboardingPage()
-}
+//#Preview {
+//    OnboardingPage()
+//}
 
 struct BackgroundImageModifier: ViewModifier {
     func body(content: Content) -> some View {

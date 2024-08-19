@@ -8,12 +8,20 @@
 import SwiftUI
 
 struct BubbleChatTail: Shape {
+    var pos: String
+    
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
-        path.move(to: CGPoint(x: rect.midX - 100, y: rect.minY + 20))
-        path.addLine(to: CGPoint(x: rect.midX - 120, y: rect.maxY - 20))
-        path.addLine(to: CGPoint(x: rect.midX - 80, y: rect.maxY - 20))
+        if pos == "A" {
+            path.move(to: CGPoint(x: rect.midX - 100, y: rect.minY + 20))
+            path.addLine(to: CGPoint(x: rect.midX - 120, y: rect.maxY - 20))
+            path.addLine(to: CGPoint(x: rect.midX - 80, y: rect.maxY - 20))
+        } else if pos == "B" {
+            path.move(to: CGPoint(x: rect.midX + 100, y: rect.minY + 20))
+            path.addLine(to: CGPoint(x: rect.midX + 120, y: rect.maxY - 20))
+            path.addLine(to: CGPoint(x: rect.midX + 80, y: rect.maxY - 20))
+        }
         path.closeSubpath()
         
         return path

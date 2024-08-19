@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FlashcardSwipeView: View {
     @Binding var isShowingFlashcard: Bool
-    @ObservedObject var flashcardVM = FlashcardViewModel()
+    @ObservedObject var viewModel: StoryViewModel
     @State private var currentIndex: Int = 0
     @State private var offset: CGSize = .zero
     @State private var opacity: Double = 1.0
@@ -20,10 +20,10 @@ struct FlashcardSwipeView: View {
                 ZStack {
                     VStack {
                         ZStack {
-                            ForEach(0 ..< flashcardVM.flashcards.count, id: \.self) { index in
+                            ForEach(0 ..< viewModel.currentStory.flashcard.count, id: \.self) { index in
                                 if index >= currentIndex {
                                     createFlashcardView(for: index)
-                                        .zIndex(Double(flashcardVM.flashcards.count - index))
+                                        .zIndex(Double(viewModel.currentStory.flashcard.count - index))
                                 }
                             }
                         }
@@ -54,9 +54,7 @@ struct FlashcardSwipeView: View {
 //                .padding(.top, 20)
             }
             .padding()
-            .background(
-                .opacity(0)
-        )
+            .background(Image(viewModel.currentStory.background))
         }
     }
 
@@ -64,7 +62,7 @@ struct FlashcardSwipeView: View {
 
     private func createFlashcardView(for index: Int) -> some View {
         ZStack {
-            FlashcardView(vocab: flashcardVM.flashcards[index], width: 300, height: 400)
+            FlashcardView(vocab: viewModel.currentStory.flashcard[index], width: 300, height: 400)
                 .if(index == currentIndex) { view in
                     view
                         .opacity(opacity)
@@ -77,11 +75,11 @@ struct FlashcardSwipeView: View {
                     view
                         .opacity(1.0)
                         .offset(x: -300 + offset.width)
-                        .zIndex(Double(flashcardVM.flashcards.count - index))
+                        .zIndex(Double(viewModel.currentStory.flashcard.count - index))
                         .animation(.spring(), value: offset)
                 }
 
-            SoundButton(vocab: flashcardVM.flashcards[index])
+            SoundButton(vocab: viewModel.currentStory.flashcard[index])
                 .frame(width: 30, height: 30)
                 .offset(x: 36, y: 130)
         }
@@ -132,10 +130,10 @@ struct FlashcardSwipeView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 offset = .zero
                 opacity = 1.0
-                if currentIndex == flashcardVM.flashcards.count - 1 {
+                if currentIndex == viewModel.currentStory.flashcard.count - 1 {
                     currentIndex = 0
                 } else {
-                    currentIndex = min(currentIndex + 1, flashcardVM.flashcards.count - 1)
+                    currentIndex = min(currentIndex + 1, viewModel.currentStory.flashcard.count - 1)
                 }
             }
         }
@@ -150,7 +148,7 @@ struct FlashcardSwipeView: View {
 }
 
 #Preview {
-    FlashcardSwipeView(isShowingFlashcard: .constant(false))
+    FlashcardSwipeView(isShowingFlashcard: .constant(false), viewModel: StoryViewModel())
 }
 
 extension View {

@@ -29,7 +29,7 @@ struct BubbleChat: View {
                 RoundedRectangle(cornerRadius: 16)
                     .stroke(bubbleColor, lineWidth: 1)
             )
-            BubbleChatTail()
+            BubbleChatTail(pos: "A")
                 .fill(bubbleColor)
                 .frame(width: 30, height: 15)
                 .offset(y: -5)
