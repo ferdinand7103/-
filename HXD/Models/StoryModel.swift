@@ -8,30 +8,41 @@
 import Foundation
 
 struct StoryData: Codable {
-    var story1: Story
-    var story2: Story
-    var story3: Story
-    var story4: Story
+    var stories: [Story]
 }
 
 struct Story: Codable {
     var background: String
-    var onboarding: Onboarding
+    var onboarding: [OnboardingEntry]
     var flashcard: [String]
-    var quiz1: Quiz
-    var quiz2: Quiz
+    var quiz1: Quiz1
+    var quiz2: Quiz2
     var toneTest: ToneTest
-    var conversation: [String: ConversationPart]
+    var conversation: [ConversationPart]
 }
 
-struct Onboarding: Codable {
-    var a: String
-    var b: String
-}
-
-struct Quiz: Codable {
+struct OnboardingEntry: Codable {
+    var identifier: String
     var text: String
-    var choice: [String: [String]]
+}
+
+struct Quiz1: Codable {
+    var text: String
+    var choice: [QuizChoice]
+    var correctAnswer: Int
+    var happyFlow: String
+    var negativeFlow: String
+}
+
+struct QuizChoice: Codable {
+    var text: String
+    var pinyin: String
+}
+
+struct Quiz2: Codable {
+    var text: String
+    var speak: String
+    var choice: [String]
     var correctAnswer: Int
     var happyFlow: String
     var negativeFlow: String
@@ -45,6 +56,7 @@ struct ToneTest: Codable {
 }
 
 struct ConversationPart: Codable {
+    var identifier: String
     var hanzi: String
     var pinyin: String
     var meaning: String

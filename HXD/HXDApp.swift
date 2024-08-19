@@ -11,6 +11,7 @@ import SwiftUI
 struct HXDApp: App {
     var body: some Scene {
         WindowGroup {
+            StoryView()
 //            ContentView()
 //            FlashcardSwipeView()
 //            QuizPage()
