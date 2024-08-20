@@ -29,7 +29,7 @@ struct QuizHanzi: View {
         self.choice4 = choice4
         self.correctAnswerIndex = correctAnswerIndex
         self.viewModel2 = viewModel2
-        _viewModel = StateObject(wrappedValue: HandleButtonClick(correctAnswerIndex: correctAnswerIndex))
+        _viewModel = StateObject(wrappedValue: HandleButtonClick(correctAnswerIndex: correctAnswerIndex, viewModel: viewModel2))
     }
 
     init(choice1: String, choice2: String, choice3: String, choice4: String, pinyin1: String, pinyin2: String, pinyin3: String, pinyin4: String, correctAnswerIndex: Int, viewModel2: StoryViewModel) {
@@ -43,7 +43,7 @@ struct QuizHanzi: View {
         self.pinyin4 = pinyin4
         self.correctAnswerIndex = correctAnswerIndex
         self.viewModel2 = viewModel2
-        _viewModel = StateObject(wrappedValue: HandleButtonClick(correctAnswerIndex: correctAnswerIndex))
+        _viewModel = StateObject(wrappedValue: HandleButtonClick(correctAnswerIndex: correctAnswerIndex, viewModel: viewModel2))
     }
     
     var body: some View {
@@ -60,7 +60,6 @@ struct QuizHanzi: View {
                 HStack {
                     Button(action: {
                         viewModel.handleButtonClick(index: 1, colors: &colors)
-                        navigate()
                     }) {
                         if (pinyin1 != nil) {
                             RectangleChoose(hanzi: choice1, pinyin: pinyin1, fill: $colors[0])
@@ -72,7 +71,6 @@ struct QuizHanzi: View {
                     }
                     Button(action: {
                         viewModel.handleButtonClick(index: 2, colors: &colors)
-                        navigate()
                     }) {
                         if (pinyin2 != nil) {
                             RectangleChoose(hanzi: choice2, pinyin: pinyin2, fill: $colors[1])
@@ -86,7 +84,6 @@ struct QuizHanzi: View {
                 HStack {
                     Button(action: {
                         viewModel.handleButtonClick(index: 3, colors: &colors)
-                        navigate()
                     }) {
                         if (pinyin3 != nil) {
                             RectangleChoose(hanzi: choice3, pinyin: pinyin3, fill: $colors[2])
@@ -98,7 +95,6 @@ struct QuizHanzi: View {
                     }
                     Button(action: {
                         viewModel.handleButtonClick(index: 4, colors: &colors)
-                        navigate()
                     }) {
                         if (pinyin4 != nil) {
                             RectangleChoose(hanzi: choice4, pinyin: pinyin4, fill: $colors[3])
@@ -111,23 +107,6 @@ struct QuizHanzi: View {
                 }
             }
             .padding(.bottom, 20)
-            
-            NavigationLink(destination: QuizCorrect(viewModel: viewModel2).navigationBarBackButtonHidden(), isActive: $navigateToCorrect) {
-                EmptyView()
-            }
-            NavigationLink(destination: QuizWrong(viewModel: viewModel2).navigationBarBackButtonHidden(), isActive: $navigateToWrong) {
-                EmptyView()
-            }
-        }
-    }
-    
-    func navigate() {
-        if let isCorrect = viewModel.isCorrect {
-            if isCorrect {
-                navigateToCorrect = true
-            } else {
-                navigateToWrong = true
-            }
         }
     }
 }

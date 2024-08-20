@@ -12,10 +12,11 @@ class HandleButtonClick: ObservableObject {
     var correctAnswerIndex: Int
     
     @Published var foregroundColors: [Color] = [.black, .black, .black, .black]
-    @Published var isCorrect: Bool? = nil
+    @ObservedObject var viewModel: StoryViewModel
 
-    init(correctAnswerIndex: Int) {
+    init(correctAnswerIndex: Int, viewModel: StoryViewModel) {
         self.correctAnswerIndex = correctAnswerIndex
+        self.viewModel = viewModel
     }
 
     func handleButtonClick(index: Int, colors: inout [Color]) {
@@ -27,9 +28,11 @@ class HandleButtonClick: ObservableObject {
         foregroundColors[index - 1] = .white
         
         if ((index - 1) == correctAnswerIndex) {
-            isCorrect = true
+            viewModel.quizView = "Correct"
+            viewModel.quizView2 = "Correct"
         } else {
-            isCorrect = false
+            viewModel.quizView = "Wrong"
+            viewModel.quizView2 = "Wrong"
         }
     }
 }

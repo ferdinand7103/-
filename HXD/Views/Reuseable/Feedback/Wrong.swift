@@ -42,7 +42,8 @@ struct Wrong: View {
                 .padding(.bottom, 20)
                 HStack(spacing: 16) {
                     Button(action: {
-                        print("Retry")
+                        viewModel.quizView = "Quiz"
+                        viewModel.quizView2 = "Quiz"
                     }) {
                         ZStack {
                             Rectangle()

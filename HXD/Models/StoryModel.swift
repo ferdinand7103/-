@@ -43,6 +43,8 @@ struct QuizChoice: Codable {
 struct Quiz2: Codable {
     var text: String
     var speak: String
+    var pinyin: String
+    var meaning: String
     var choice: [String]
     var correctAnswer: Int
     var happyFlow: String
