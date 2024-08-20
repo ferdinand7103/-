@@ -32,6 +32,7 @@ struct Quiz1: Codable {
     var correctAnswer: Int
     var happyFlow: String
     var negativeFlow: String
+    var meaning: String
 }
 
 struct QuizChoice: Codable {
