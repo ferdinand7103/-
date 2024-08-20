@@ -12,7 +12,7 @@ class RecordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let recordView = RecordView()
+        let recordView = RecordView(frame: .zero, mode: .conversation)
         recordView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(recordView)
