@@ -18,18 +18,9 @@ struct StoryView: View {
             case .flashcard:
                 FlashcardSwipeView(isShowingFlashcard: .constant(false), viewModel: viewModel)
             case .quiz1:
-                QuizNavigate1(viewModel: viewModel)
+                QuizPage(viewModel: viewModel)
             case .quiz2:
-                Text(viewModel.currentStory.quiz2.text)
-                Text(viewModel.currentStory.quiz2.speak)
-                ForEach(viewModel.currentStory.quiz1.choice.indices, id: \.self) { index in
-                    VStack {
-                   
-                        Text(viewModel.currentStory.quiz2.choice[index])
-                    }
-                }
-                Text("quiz2")
-//                Quiz2View(viewModel: viewModel)
+                QuizPage2(viewModel: viewModel)
             case .toneTest:
                 Text(viewModel.currentStory.toneTest.text)
                 Text(viewModel.currentStory.toneTest.speak)
