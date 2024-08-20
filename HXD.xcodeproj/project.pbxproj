@@ -44,6 +44,8 @@
 		29B12D122C6B9409008FEAF4 /* QuizPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12D112C6B9409008FEAF4 /* QuizPage.swift */; };
 		29B12D142C6B9E7A008FEAF4 /* HandleButtonClick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12D132C6B9E7A008FEAF4 /* HandleButtonClick.swift */; };
 		29B12D162C6C4E64008FEAF4 /* FlashcardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B12D152C6C4E64008FEAF4 /* FlashcardButton.swift */; };
+		29CBBBD92C74386600F9123A /* QuizCorrect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CBBBD82C74386600F9123A /* QuizCorrect.swift */; };
+		29CBBBDB2C74386C00F9123A /* QuizWrong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CBBBDA2C74386C00F9123A /* QuizWrong.swift */; };
 		29EBBBC62C5BAB0600AFCD60 /* HXDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBC52C5BAB0600AFCD60 /* HXDApp.swift */; };
 		29EBBBC82C5BAB0600AFCD60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */; };
 		29EBBBCA2C5BAB0700AFCD60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29EBBBC92C5BAB0700AFCD60 /* Assets.xcassets */; };
@@ -118,6 +120,8 @@
 		29B12D112C6B9409008FEAF4 /* QuizPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPage.swift; sourceTree = "<group>"; };
 		29B12D132C6B9E7A008FEAF4 /* HandleButtonClick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleButtonClick.swift; sourceTree = "<group>"; };
 		29B12D152C6C4E64008FEAF4 /* FlashcardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardButton.swift; sourceTree = "<group>"; };
+		29CBBBD82C74386600F9123A /* QuizCorrect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCorrect.swift; sourceTree = "<group>"; };
+		29CBBBDA2C74386C00F9123A /* QuizWrong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizWrong.swift; sourceTree = "<group>"; };
 		29EBBBC22C5BAB0600AFCD60 /* HXD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29EBBBC52C5BAB0600AFCD60 /* HXDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXDApp.swift; sourceTree = "<group>"; };
 		29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -277,6 +281,8 @@
 			children = (
 				29B12D112C6B9409008FEAF4 /* QuizPage.swift */,
 				293E0E912C6C64DD0062C2AD /* QuizTop.swift */,
+				29CBBBD82C74386600F9123A /* QuizCorrect.swift */,
+				29CBBBDA2C74386C00F9123A /* QuizWrong.swift */,
 			);
 			path = QuizPage;
 			sourceTree = "<group>";
@@ -597,6 +603,7 @@
 				29B12CB22C65BFF5008FEAF4 /* Wrong.swift in Sources */,
 				293E0EC32C6DB1BC0062C2AD /* HuggingFace.swift in Sources */,
 				3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */,
+				29CBBBDB2C74386C00F9123A /* QuizWrong.swift in Sources */,
 				293E0EA92C6CEDC20062C2AD /* BubbleChat.swift in Sources */,
 				293E0ED42C6EFCC00062C2AD /* HomePage.swift in Sources */,
 				293E0E9A2C6CD00D0062C2AD /* TalkingAnimationProtocol.swift in Sources */,
@@ -610,6 +617,7 @@
 				29B12C952C631A7B008FEAF4 /* SpeechRecognizer.swift in Sources */,
 				3252BDA62C6D0A4000CE8CEE /* BubbleChatNext.swift in Sources */,
 				29B12D0F2C6B2B8B008FEAF4 /* RectangleChoose.swift in Sources */,
+				29CBBBD92C74386600F9123A /* QuizCorrect.swift in Sources */,
 				323B23952C7239A200A3403E /* RecordViewController.swift in Sources */,
 				29EBBBD92C5BABFB00AFCD60 /* ViewModel.swift in Sources */,
 				293E0EC82C6DC9560062C2AD /* StoryModel.swift in Sources */,

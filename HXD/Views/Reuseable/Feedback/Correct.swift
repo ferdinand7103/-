@@ -36,7 +36,6 @@ struct Correct: View {
                     .padding(.top, 10)
                 Button(action: {
                     print("Continue")
-                    FetchJSON().readJSONFileFromBundle(filename: "quizpage")
                 }) {
                     ZStack {
                         Rectangle()
