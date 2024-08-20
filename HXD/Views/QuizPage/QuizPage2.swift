@@ -13,7 +13,7 @@ struct QuizPage2: View {
     var body: some View {
         ZStack {
             QuizTop(viewModel: viewModel, text: viewModel.currentStory.quiz2.text)
-            QuizHanzi(choice1: viewModel.currentStory.quiz2.choice[0], choice2: viewModel.currentStory.quiz2.choice[1], choice3: viewModel.currentStory.quiz2.choice[2], choice4: viewModel.currentStory.quiz2.choice[3], correctAnswerIndex: viewModel.currentStory.quiz1.correctAnswer)
+            QuizHanzi(choice1: viewModel.currentStory.quiz2.choice[0], choice2: viewModel.currentStory.quiz2.choice[1], choice3: viewModel.currentStory.quiz2.choice[2], choice4: viewModel.currentStory.quiz2.choice[3], correctAnswerIndex: viewModel.currentStory.quiz1.correctAnswer, viewModel2: viewModel)
                 .padding(.top, 550)
                 .padding([.leading, .trailing])
         }

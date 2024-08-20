@@ -18,7 +18,7 @@ struct StoryView: View {
             case .flashcard:
                 FlashcardSwipeView(isShowingFlashcard: .constant(false), viewModel: viewModel)
             case .quiz1:
-                QuizPage(viewModel: viewModel)
+                QuizNavigate1(viewModel: viewModel)
             case .quiz2:
                 Text(viewModel.currentStory.quiz2.text)
                 Text(viewModel.currentStory.quiz2.speak)
