@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A06B9E42C7437FD00226FD1 /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A06B9E32C7437FD00226FD1 /* DictionaryView.swift */; };
 		293E0E8E2C6C62A00062C2AD /* FCNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E8D2C6C62A00062C2AD /* FCNavigationButton.swift */; };
 		293E0E922C6C64DD0062C2AD /* QuizTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E912C6C64DD0062C2AD /* QuizTop.swift */; };
 		293E0E942C6C67420062C2AD /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E932C6C67420062C2AD /* ConfirmationView.swift */; };
@@ -80,6 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A06B9E32C7437FD00226FD1 /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
 		293E0E8D2C6C62A00062C2AD /* FCNavigationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCNavigationButton.swift; sourceTree = "<group>"; };
 		293E0E912C6C64DD0062C2AD /* QuizTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTop.swift; sourceTree = "<group>"; };
 		293E0E932C6C67420062C2AD /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
@@ -163,6 +165,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A06B9E22C7437DD00226FD1 /* DictionaryPage */ = {
+			isa = PBXGroup;
+			children = (
+				1A06B9E32C7437FD00226FD1 /* DictionaryView.swift */,
+			);
+			path = DictionaryPage;
+			sourceTree = "<group>";
+		};
 		293E0EA52C6CEB670062C2AD /* OnBoardingPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +340,7 @@
 		29EBBBD32C5BAB3E00AFCD60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1A06B9E22C7437DD00226FD1 /* DictionaryPage */,
 				32031F4E2C72F7840064FFBD /* SplashScreen */,
 				293E0ED32C6EFCC00062C2AD /* HomePage */,
 				293E0EA52C6CEB670062C2AD /* OnBoardingPage */,
@@ -584,6 +595,7 @@
 				32714E552C6A539A00EE6486 /* FlashcardSwipeView.swift in Sources */,
 				29B12C9B2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift in Sources */,
 				293E0EC62C6DB1CB0062C2AD /* Recorder.swift in Sources */,
+				1A06B9E42C7437FD00226FD1 /* DictionaryView.swift in Sources */,
 				293E0ECA2C6DCA470062C2AD /* FetchJSON.swift in Sources */,
 				293E0EE62C72FAD00062C2AD /* StoryViewModel.swift in Sources */,
 				293E0E942C6C67420062C2AD /* ConfirmationView.swift in Sources */,
