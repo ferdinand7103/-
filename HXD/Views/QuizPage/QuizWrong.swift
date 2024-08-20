@@ -13,7 +13,7 @@ struct QuizWrong: View {
     var body: some View {
         ZStack {
             QuizTop(viewModel: viewModel, text: viewModel.currentStory.quiz1.negativeFlow)
-            Correct(hanzi: viewModel.currentStory.quiz1.choice[viewModel.currentStory.quiz1.correctAnswer].text, pinyin: viewModel.currentStory.quiz1.choice[viewModel.currentStory.quiz1.correctAnswer].pinyin, meaning: viewModel.currentStory.quiz1.meaning)
+            Wrong(hanzi: viewModel.currentStory.quiz1.choice[viewModel.currentStory.quiz1.correctAnswer].text, pinyin: viewModel.currentStory.quiz1.choice[viewModel.currentStory.quiz1.correctAnswer].pinyin, meaning: viewModel.currentStory.quiz1.meaning, pad: 165)
                 .padding(.top, 550)
                 .padding([.leading, .trailing])
         }

@@ -11,6 +11,7 @@ struct Correct: View {
     var hanzi: String
     var pinyin: String
     var meaning: String
+    var pad: CGFloat
     
     var body: some View {
         ZStack {
@@ -31,7 +32,7 @@ struct Correct: View {
                 .padding(.bottom, 10)
                 Text("\(hanzi) (\(pinyin)) means '\(meaning)'")
                     .font(.system(size: 22, weight: .bold))
-                    .padding(.trailing, 130)
+                    .padding(.trailing, pad)
                     .padding(.bottom, 50)
                     .padding(.top, 10)
                 Button(action: {
@@ -53,5 +54,5 @@ struct Correct: View {
 }
 
 #Preview {
-    Correct(hanzi: "猫", pinyin: "Māo", meaning: "Cat")
+    Correct(hanzi: "猫", pinyin: "Māo", meaning: "Cat", pad: 130)
 }
