@@ -75,7 +75,7 @@ class RecordView: UIView {
         button.isHidden = true
         return button
     }()
-
+    
     private let transcribeLabel: UILabel = {
         let label = UILabel()
         label.text = "Transcribing..."
@@ -83,12 +83,14 @@ class RecordView: UIView {
         label.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.isHidden = true
+        
+        
         return label
     }()
     
     private let finalTranscriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Result"
+        label.text = "..."
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -111,7 +113,7 @@ class RecordView: UIView {
         super.init(frame: frame)
         setupView()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -120,7 +122,7 @@ class RecordView: UIView {
         currentMode = mode
         updateViewForState()
     }
-    
+
     private func setupView() {
         addSubview(statusLabel)
         addSubview(recordButton)
@@ -143,7 +145,7 @@ class RecordView: UIView {
         NSLayoutConstraint.activate([
             statusLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             statusLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            
+
             recordButton.widthAnchor.constraint(equalToConstant: 84),
             recordButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             recordButton.heightAnchor.constraint(equalTo: recordButton.widthAnchor),
@@ -182,23 +184,46 @@ class RecordView: UIView {
             recordButtonTopConstraint.constant = 100
         }
     }
-
+    
     @objc private func buttonTapped() {
         if currentState == .idle {
-            currentState = .recording
+            DispatchQueue.main.async {
+                AudioRecorder.instance.startRecording()
+            }
+                currentState = .recording
+            
         } else if currentState == .recording {
-            currentState = .confirming
+            DispatchQueue.main.async {
+                AudioRecorder.instance.stopRecording()
+            }
+                currentState = .confirming
         }
     }
     
     @objc private func repeatTapped() {
         currentState = .idle
+        self.finalTranscriptionLabel.text = "..."
     }
-      
+    
     @objc private func confirmTapped() {
         currentState = .confirming
+        
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let fileName = path.appendingPathComponent("recording.wav")
+        
+        Task {
+            print(fileName.path)
+            if let response = await HuggingFace.instance.getResponse(audioPath: fileName.path) {
+                print("Response: \(response)")
+                DispatchQueue.main.async {
+                    self.finalTranscriptionLabel.text = response
+                }
+            } else {
+                print("Failed to get a response.")
+            }
+        }
     }
-
+    
     private func updateViewForState() {
         switch currentState {
         case .idle:
