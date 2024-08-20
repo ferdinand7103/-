@@ -317,7 +317,6 @@
 			isa = PBXGroup;
 			children = (
 				293E0EDD2C706B230062C2AD /* quizpage.json */,
-				323B23932C72397600A3403E /* Controllers */,
 				29B12CA32C6468B5008FEAF4 /* Resources */,
 				29B12C9E2C6466D9008FEAF4 /* Services */,
 				29B12C992C632B68008FEAF4 /* Protocols */,
@@ -383,20 +382,13 @@
 			path = SplashScreen;
 			sourceTree = "<group>";
 		};
-		323B23932C72397600A3403E /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				323B23942C7239A200A3403E /* RecordViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		323B239C2C724AA900A3403E /* Recording */ = {
 			isa = PBXGroup;
 			children = (
 				323B23982C723A3300A3403E /* RecordView.swift */,
 				323B239A2C723B1200A3403E /* RecordingView.swift */,
 				323B23962C723A0700A3403E /* RecordViewWrapper.swift */,
+				323B23942C7239A200A3403E /* RecordViewController.swift */,
 			);
 			path = Recording;
 			sourceTree = "<group>";
