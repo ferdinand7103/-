@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RecordingView: View {
     var body: some View {
-        ZStack {
+         ZStack {
             Rectangle()
                 .foregroundColor(Color.white)
                 .frame(width: .infinity, height: 300)
