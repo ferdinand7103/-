@@ -12,6 +12,7 @@ struct Correct: View {
     var pinyin: String
     var meaning: String
     var pad: CGFloat
+    @ObservedObject var viewModel: StoryViewModel
     
     var body: some View {
         ZStack {
@@ -36,7 +37,7 @@ struct Correct: View {
                     .padding(.bottom, 50)
                     .padding(.top, 10)
                 Button(action: {
-                    print("Continue")
+                    viewModel.moveToNextStage()
                 }) {
                     ZStack {
                         Rectangle()
@@ -54,5 +55,5 @@ struct Correct: View {
 }
 
 #Preview {
-    Correct(hanzi: "猫", pinyin: "Māo", meaning: "Cat", pad: 130)
+    Correct(hanzi: "猫", pinyin: "Māo", meaning: "Cat", pad: 130, viewModel: StoryViewModel())
 }

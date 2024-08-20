@@ -12,6 +12,7 @@ class HandleButtonClick: ObservableObject {
     var correctAnswerIndex: Int
     
     @Published var foregroundColors: [Color] = [.black, .black, .black, .black]
+    @Published var isCorrect: Bool? = nil
 
     init(correctAnswerIndex: Int) {
         self.correctAnswerIndex = correctAnswerIndex
@@ -24,18 +25,11 @@ class HandleButtonClick: ObservableObject {
         }
         colors[index - 1] = .orange3
         foregroundColors[index - 1] = .white
-//        guard !clicked else { return }
-//        
-//        clicked = true
-//        
-//        if index == correctAnswerIndex {
-//            colors[index - 1] = .orange3
-//            foregroundColors[index - 1] = .white
-//        } else {
-//            colors[index - 1] = .red
-//            foregroundColors[index - 1] = .white
-//            colors[correctAnswerIndex - 1] = .green
-//            foregroundColors[correctAnswerIndex - 1] = .white
-//        }
+        
+        if ((index - 1) == correctAnswerIndex) {
+            isCorrect = true
+        } else {
+            isCorrect = false
+        }
     }
 }

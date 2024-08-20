@@ -12,6 +12,7 @@ struct Wrong: View {
     var pinyin: String
     var meaning: String
     var pad: CGFloat
+    @ObservedObject var viewModel: StoryViewModel
     
     var body: some View {
         ZStack {
@@ -59,7 +60,7 @@ struct Wrong: View {
                         }
                     }
                     Button(action: {
-                        print("Continue")
+                        viewModel.moveToNextStage()
                     }) {
                         ZStack {
                             Rectangle()
@@ -78,5 +79,5 @@ struct Wrong: View {
 }
 
 #Preview {
-    Wrong(hanzi: "猫", pinyin: "Māo", meaning: "Cat", pad: 200)
+    Wrong(hanzi: "猫", pinyin: "Māo", meaning: "Cat", pad: 200, viewModel: StoryViewModel())
 }
