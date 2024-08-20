@@ -32,7 +32,7 @@ class AudioRecorder: NSObject , ObservableObject , AVAudioPlayerDelegate  {
         
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let fileName = path.appendingPathComponent("recording.wav")
-
+        
         let settings = [
             AVFormatIDKey: Int(kAudioFormatLinearPCM),
             AVSampleRateKey: 44100,
@@ -46,6 +46,7 @@ class AudioRecorder: NSObject , ObservableObject , AVAudioPlayerDelegate  {
             audioRecorder = try AVAudioRecorder(url: fileName, settings: settings)
             audioRecorder.prepareToRecord()
             audioRecorder.record()
+            print(audioRecorder.url)
         } catch let error {
             fatalError("Failed to Setup the Recording: \(error.localizedDescription)")
         }
@@ -54,9 +55,14 @@ class AudioRecorder: NSObject , ObservableObject , AVAudioPlayerDelegate  {
     
     func stopRecording(){
         audioRecorder.stop()
+        do {
+            try session.setActive(false)
+        } catch _ {
+        }
     }
     
     func playSong() {
+        print("HI")
         do {
             try session.setCategory(.soloAmbient, mode: .default, options: .duckOthers)
             try session.setActive(true)
@@ -66,7 +72,7 @@ class AudioRecorder: NSObject , ObservableObject , AVAudioPlayerDelegate  {
         
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let fileName = path.appendingPathComponent("recording.wav")
-
+        
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: fileName)
             audioPlayer.prepareToPlay()

@@ -1,7 +1,7 @@
 import Foundation
 
 class HuggingFace {
-    
+    static let instance = HuggingFace()
     // Convert audio file to Data
     func convertAudioToData(audioPath: String) -> Data? {
         let url = URL(fileURLWithPath: audioPath)
@@ -32,6 +32,7 @@ class HuggingFace {
         var request = URLRequest(url: URL(string: "https://api-inference.huggingface.co/models/jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn")!, timeoutInterval: Double.infinity)
         let apiKey = getApiKey()
         request.addValue("\(apiKey)", forHTTPHeaderField: "Authorization")
+//        request.addValue("ASK JH FOR API KEY", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
         request.httpBody = audioData

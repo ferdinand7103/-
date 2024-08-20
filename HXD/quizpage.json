@@ -18,7 +18,8 @@
             ],
             "correctAnswer": 2,
             "happyFlow": "Amazing! let’s move on to next question",
-            "negativeFlow": "It’s okay! You can try again"
+            "negativeFlow": "It’s okay! You can try again",
+            "meaning": "Hello"
         },
         "quiz2": {
             "text": "Listen to me. What does it mean?",
@@ -59,7 +60,8 @@
             ],
             "correctAnswer": 0,
             "happyFlow": "Amazing! let’s move on to next question",
-            "negativeFlow": "It’s okay! You can try again"
+            "negativeFlow": "It’s okay! You can try again",
+            "meaning": "How many"
         },
         "quiz2": {
             "text": "Listen to me. What does it mean?",
@@ -100,7 +102,8 @@
             ],
             "correctAnswer": 0,
             "happyFlow": "Amazing! let’s move on to next question",
-            "negativeFlow": "It’s okay! You can try again"
+            "negativeFlow": "It’s okay! You can try again",
+            "meaning": "Order"
         },
         "quiz2": {
             "text": "Listen to me. What does it mean?",
@@ -142,7 +145,8 @@
             ],
             "correctAnswer": 2,
             "happyFlow": "Amazing! let’s move on to next question",
-            "negativeFlow": "It’s okay! You can try again"
+            "negativeFlow": "It’s okay! You can try again",
+            "meaning": "Princess"
         },
         "quiz2": {
             "text": "Listen to me. What does it mean?",

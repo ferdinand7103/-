@@ -11,6 +11,7 @@ struct Wrong: View {
     var hanzi: String
     var pinyin: String
     var meaning: String
+    var pad: CGFloat
     
     var body: some View {
         ZStack {
@@ -36,7 +37,7 @@ struct Wrong: View {
                     Text("\(hanzi)  |  \(pinyin)  |  \(meaning)")
                         .font(.system(size: 20))
                 }
-                .padding(.trailing, 200)
+                .padding(.trailing, pad)
                 .padding(.bottom, 20)
                 HStack(spacing: 16) {
                     Button(action: {
@@ -77,5 +78,5 @@ struct Wrong: View {
 }
 
 #Preview {
-    Wrong(hanzi: "猫", pinyin: "Māo", meaning: "Cat")
+    Wrong(hanzi: "猫", pinyin: "Māo", meaning: "Cat", pad: 200)
 }
