@@ -21,7 +21,7 @@ struct RecallView: View {
                         Spacer()
                         CompleteStatusLabel(isComplete: false)
                     }
-                    
+
                     Text("Go to Chinese Hotpot Restaurant")
                         .fontWeight(.bold)
                         .font(.system(size: 28))
@@ -38,8 +38,6 @@ struct RecallView: View {
                     Rectangle()
                         .foregroundStyle(Color(.white))
                         .clipShape(.rect(cornerRadius: 32))
-//                        .position(x: geometry.size.width / 2, y: geometry.size.height * 0.46)
-//                        .frame(height: geometry.size.height)
                         .frame(maxHeight: .infinity)
 
                     ZStack {
@@ -49,7 +47,7 @@ struct RecallView: View {
                                 ChapterCard(
                                     imageName: "SchoolChapter",
                                     chapterNumber: 1,
-                                    chapterTitle: "At The School",
+                                    chapterTitle: "At the School",
                                     options: ["Vocabulary", "Quiz", "Conversation"],
                                     selectedOption: 0, // Selected option for Vocabulary,
                                     isInactive: .constant(false),
@@ -69,7 +67,7 @@ struct RecallView: View {
                                 ChapterCard(
                                     imageName: "OrderChapter",
                                     chapterNumber: 3,
-                                    chapterTitle: "Arrive at Restaurant",
+                                    chapterTitle: "Ready to Order",
                                     options: ["Vocabulary", "Quiz", "Conversation"],
                                     selectedOption: 0, // Selected option for Vocabulary,
                                     isInactive: .constant(true),
@@ -86,21 +84,18 @@ struct RecallView: View {
                                     isFinished: .constant(false)
                                 )
                             }
-                            
+
                             .frame(minHeight: geometry.size.height * 0.7)
                         }
-                        
                     }
                     .padding(.horizontal, 16)
                     .padding(.top, 36)
                     .padding(.bottom, 56)
                     .frame(height: geometry.size.height * 0.78)
                 }
-                
             }
         }
         .background(Image(.homeBackground))
-       
     }
 }
 
