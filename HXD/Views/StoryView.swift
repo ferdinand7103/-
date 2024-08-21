@@ -24,11 +24,7 @@ struct StoryView: View {
             case .toneTest:
                 ToneView(viewModel: viewModel)
             case .conversation:
-                Text("convo")
-                Text(viewModel.currentStory.conversation[viewModel.currentConversationIndex].hanzi)
-                Text(viewModel.currentStory.conversation[viewModel.currentConversationIndex].pinyin)
-                Text(viewModel.currentStory.conversation[viewModel.currentConversationIndex].meaning)
-//                ConversationView(viewModel: viewModel)
+                ConversationView(viewModel: viewModel)
             case .completed:
                 Text("Story Completed")
             }

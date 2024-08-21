@@ -19,20 +19,21 @@ struct BubbleChatSoundOption: View {
     var body: some View {
         VStack(spacing: 0) {
             VStack(alignment: .leading) {
-                VStack {
+                VStack(alignment: .leading) {
                     if (pinyin != nil){
                         Text(hanzi)
-                            .padding()
+                            .padding([.top, .leading], 15)
                             .foregroundColor(textColor)
                             .font(.system(size: 20, weight: .semibold))
                         Text(pinyin ?? "")
-                            .padding()
+                            .padding(.leading, 15)
                             .foregroundColor(textColor)
-                            .font(.system(size: 20, weight: .semibold))
+                            .font(.system(size: 18, weight: .semibold))
                         Text(meaning ?? "")
-                            .padding()
+                            .padding(.leading, 15)
+                            .padding(.bottom, 10)
                             .foregroundColor(textColor)
-                            .font(.system(size: 20, weight: .semibold))
+                            .font(.system(size: 18, weight: .semibold))
                     } else {
                         Text(hanzi)
                             .padding()

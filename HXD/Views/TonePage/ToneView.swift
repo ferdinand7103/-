@@ -14,7 +14,7 @@ struct ToneView: View {
         ZStack {
             if viewModel.toneView == "Quiz" {
                 ToneTop(viewModel: viewModel, hanzi: viewModel.currentStory.toneTest.text, speak: viewModel.currentStory.toneTest.speak)
-                RecordingView(mode: .pinyin)
+                RecordingView(mode: .pinyin, viewModel: viewModel)
                     .padding(.top, 550)
                     .padding([.leading, .trailing])
             } else if viewModel.toneView == "Correct" {

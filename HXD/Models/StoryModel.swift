@@ -19,6 +19,7 @@ struct Story: Codable {
     var quiz2: Quiz2
     var toneTest: ToneTest
     var conversation: [ConversationPart]
+    var conversationValidate: String
 }
 
 struct OnboardingEntry: Codable {
