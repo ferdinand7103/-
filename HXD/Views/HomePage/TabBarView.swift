@@ -11,6 +11,12 @@ struct TabBarView: View {
     @State private var selectedTab = 0
     @State private var isTabDisabled = true
 
+    init() {
+//        UITabBar.appearance().backgroundColor = UIColor.systemBackground
+        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
+        UITabBar.appearance().tintColor = UIColor.orange
+    }
+
     var body: some View {
         TabView(selection: $selectedTab) {
             HomePage()
@@ -38,24 +44,39 @@ struct TabBarView: View {
                             .foregroundStyle(selectedTab == 0 ? Color.orange3 : Color.gray)
                     }
                 }
-            InformationButton()
-                .tabItem {
-                    Label("Challenge", image: "challenge")
-                }
-                .onAppear {
-                    if isTabDisabled {
-                        selectedTab = 0
-                    }
-                }
-
-            HomePage()
-                .tabItem {
-                    Label("Profile", image: "profile")
-                }
+//            ComingSoonView()
+//                .tabItem {
+//                    Label {
+//                        Text("Challenge")
+//                            .foregroundStyle(selectedTab == 0 ? Color.orange3 : Color.gray)
+//                    } icon: {
+//                        Image("challenge")
+//                            .resizable()
+//                            .renderingMode(/*@START_MENU_TOKEN@*/ .template/*@END_MENU_TOKEN@*/)
+//                            .foregroundStyle(selectedTab == 0 ? Color.orange3 : Color.gray)
+//                    }
+//                }
+//                .onAppear {
+//                    if isTabDisabled {
+//                        selectedTab = 0
+//                    }
+//                }
+//
+//            ComingSoonView()
+//                .tabItem {
+//                    Label {
+//                        Text("Profile")
+//                            .foregroundStyle(selectedTab == 0 ? Color.orange3 : Color.gray)
+//                    } icon: {
+//                        Image("profile")
+//                            .resizable()
+//                            .renderingMode(/*@START_MENU_TOKEN@*/ .template/*@END_MENU_TOKEN@*/)
+//                            .foregroundStyle(selectedTab == 0 ? Color.orange3 : Color.gray)
+//                    }
+//                }
                 .disabled(isTabDisabled)
         }
         .tint(.orange3)
-        
     }
 }
 

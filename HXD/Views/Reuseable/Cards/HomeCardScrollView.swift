@@ -15,7 +15,7 @@ struct HomeCardScrollView: View {
                 HomeCard(homeCard: .story1Thumbnail, story: "Story 2", storyName: "Go to Market\n", isDisabled: true)
             }
             .frame(height: 600)
-            .padding(.leading, 16)
+            .padding(.horizontal, 16)
         }
     }
 }

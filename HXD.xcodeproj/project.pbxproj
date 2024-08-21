@@ -66,6 +66,7 @@
 		32031F622C75D8FD0064FFBD /* CardMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F612C75D8FD0064FFBD /* CardMenuButton.swift */; };
 		32031F642C75E87E0064FFBD /* HomeCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F632C75E87E0064FFBD /* HomeCardScrollView.swift */; };
 		32031F682C76144D0064FFBD /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F672C76144D0064FFBD /* TabBarView.swift */; };
+		32031F6B2C7640CA0064FFBD /* ComingSoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F6A2C7640CA0064FFBD /* ComingSoonView.swift */; };
 		323B23952C7239A200A3403E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B23942C7239A200A3403E /* RecordViewController.swift */; };
 		323B23972C723A0700A3403E /* RecordViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B23962C723A0700A3403E /* RecordViewWrapper.swift */; };
 		323B23992C723A3300A3403E /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B23982C723A3300A3403E /* RecordView.swift */; };
@@ -152,6 +153,7 @@
 		32031F612C75D8FD0064FFBD /* CardMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMenuButton.swift; sourceTree = "<group>"; };
 		32031F632C75E87E0064FFBD /* HomeCardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardScrollView.swift; sourceTree = "<group>"; };
 		32031F672C76144D0064FFBD /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		32031F6A2C7640CA0064FFBD /* ComingSoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonView.swift; sourceTree = "<group>"; };
 		323B23942C7239A200A3403E /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		323B23962C723A0700A3403E /* RecordViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewWrapper.swift; sourceTree = "<group>"; };
 		323B23982C723A3300A3403E /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 		29EBBBD32C5BAB3E00AFCD60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				32031F692C7640BB0064FFBD /* ComingSoonPage */,
 				32031F552C758D9F0064FFBD /* RecallPage */,
 				1A06B9E22C7437DD00226FD1 /* DictionaryPage */,
 				32031F4E2C72F7840064FFBD /* SplashScreen */,
@@ -418,6 +421,14 @@
 				32031F632C75E87E0064FFBD /* HomeCardScrollView.swift */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		32031F692C7640BB0064FFBD /* ComingSoonPage */ = {
+			isa = PBXGroup;
+			children = (
+				32031F6A2C7640CA0064FFBD /* ComingSoonView.swift */,
+			);
+			path = ComingSoonPage;
 			sourceTree = "<group>";
 		};
 		323B239C2C724AA900A3403E /* Recording */ = {
@@ -654,6 +665,7 @@
 				32031F502C72F7A60064FFBD /* SplashScreenView.swift in Sources */,
 				32031F522C7444600064FFBD /* BubbleChatSoundOption.swift in Sources */,
 				29B12CB22C65BFF5008FEAF4 /* Wrong.swift in Sources */,
+				32031F6B2C7640CA0064FFBD /* ComingSoonView.swift in Sources */,
 				293E0EC32C6DB1BC0062C2AD /* HuggingFace.swift in Sources */,
 				3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */,
 				293E0EA92C6CEDC20062C2AD /* BubbleChat.swift in Sources */,

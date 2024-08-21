@@ -29,7 +29,6 @@ struct HomePage: View {
                     Rectangle()
                         .foregroundStyle(Color(.white))
                         .clipShape(.rect(cornerRadius: 32))
-//                        .position(x: geometry.size.width / 2, y: geometry.size.height * 0.42)
                         .frame(maxHeight: .infinity)
                     ZStack {
                         HomeCardScrollView()
