@@ -21,7 +21,7 @@ struct ChapterCard: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack(spacing: 16) {
-                Image("HaidilaoChapter")
+                Image(imageName)
                     .resizable()
                     .frame(width: 86, height: 86)
                     .cornerRadius(12)
@@ -70,7 +70,7 @@ struct ChapterCard: View {
 }
 
 #Preview {
-    ChapterCard(imageName: "chapter2Image",
+    ChapterCard(imageName: "SchoolChapter",
                 chapterNumber: 2,
                 chapterTitle: "Arrive at Haidilao",
                 options: ["Vocabulary", "Quiz", "Conversation"],

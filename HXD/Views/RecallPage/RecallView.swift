@@ -8,80 +8,108 @@
 import SwiftUI
 
 struct RecallView: View {
+    @StateObject var viewModel = StoryViewModel()
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            // Back Button and Not Completed Label
-            HStack {
-                Button(action: {
-                    // Back action
-                }) {
+        GeometryReader { geometry in
+            VStack(alignment: .leading) {
+                VStack(alignment: .leading) {
                     HStack {
-                        Image(systemName: "chevron.left")
-                        Text("Back")
-                            .font(.system(size: 18, weight: .medium))
+                        Text("Story 1")
+                            .font(.system(size: 20))
+                            .foregroundStyle(.white)
+    
+                        Spacer()
+                        Text("Not Completed")
+                            .foregroundStyle(.red)
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .font(.system(size: 16))
+                            .padding([.top,.bottom],8)
+                            .padding([.trailing,.leading],12)
+                            .background(.redLight)
+                            .clipShape(.rect(cornerRadius: 24))
+                            .padding(2)
+                    }
+                    
+                    Text("Go to Chinese Hotpot Restaurant")
+                        .fontWeight(.bold)
+                        .font(.system(size: 28))
+                        .foregroundStyle(.white)
+                        .padding(.top, 2)
+                    HStack {
+                        InformationButton()
+                            .padding(.top, 2)
                     }
                 }
-                Spacer()
-                Text("Not Completed")
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 4)
-                    .background(Color.red)
-                    .cornerRadius(8)
-            }
-            
-            // Story Title
-            Text("Story 1")
-                .font(.system(size: 20, weight: .medium))
-                .foregroundColor(Color.orange)
-            
-            Text("Go to Chinese Hotpot Restaurant")
-                .font(.system(size: 26, weight: .bold))
-                .foregroundColor(Color.primary)
-            
-            // Dictionary Button
-            Button(action: {
-                // Dictionary action
-            }) {
-                HStack {
-                    Image(systemName: "book")
-                    Text("Dictionary")
-                        .font(.system(size: 18, weight: .bold))
-                }
                 .padding()
-                .foregroundColor(.orange)
-                .background(RoundedRectangle(cornerRadius: 12).fill(Color.yellow))
-            }
-            .padding(.top, 16)
-            
-            // List of Chapters
-            VStack(spacing: 24) {
-                ChapterCard(
-                    imageName: "chapter1Image",
-                    chapterNumber: 1,
-                    chapterTitle: "At The School",
-                    options: ["Vocabulary", "Quiz", "Conversation"],
-                    selectedOption: 0, // Selected option for Vocabulary,
-                    isInactive: .constant(false),
-                    isFinished : .constant(true)
-                )
+                .frame(height: geometry.size.height * 0.30)
+                ZStack {
+                    Rectangle()
+                        .foregroundStyle(Color(.white))
+                        .clipShape(.rect(cornerRadius: 32))
+//                        .position(x: geometry.size.width / 2, y: geometry.size.height * 0.46)
+//                        .frame(height: geometry.size.height)
+                        .frame(maxHeight: .infinity)
+
+                    ZStack {
+                        // List of Chapters
+                        ScrollView(.vertical, showsIndicators: false) {
+                            VStack(spacing: 24) {
+                                ChapterCard(
+                                    imageName: "SchoolChapter",
+                                    chapterNumber: 1,
+                                    chapterTitle: "At The School",
+                                    options: ["Vocabulary", "Quiz", "Conversation"],
+                                    selectedOption: 0, // Selected option for Vocabulary,
+                                    isInactive: .constant(false),
+                                    isFinished: .constant(true)
+                                )
+
+                                ChapterCard(
+                                    imageName: "HaidilaoChapter",
+                                    chapterNumber: 2,
+                                    chapterTitle: "Arrive at Haidilao",
+                                    options: ["Vocabulary", "Quiz", "Conversation"],
+                                    selectedOption: 0, // Selected option for Vocabulary,
+                                    isInactive: .constant(true),
+                                    isFinished: .constant(false)
+                                )
+
+                                ChapterCard(
+                                    imageName: "OrderChapter",
+                                    chapterNumber: 3,
+                                    chapterTitle: "Arrive at Restaurant",
+                                    options: ["Vocabulary", "Quiz", "Conversation"],
+                                    selectedOption: 0, // Selected option for Vocabulary,
+                                    isInactive: .constant(true),
+                                    isFinished: .constant(false)
+                                )
+
+                                ChapterCard(
+                                    imageName: "SecretCodeChapter",
+                                    chapterNumber: 4,
+                                    chapterTitle: "Arrive at Restaurant",
+                                    options: ["Vocabulary", "Quiz", "Conversation"],
+                                    selectedOption: 0, // Selected option for Vocabulary,
+                                    isInactive: .constant(true),
+                                    isFinished: .constant(false)
+                                )
+                            }
+                            
+                            .frame(minHeight: geometry.size.height * 0.7)
+                        }
+                        
+                    }
+                    .padding(.horizontal, 16)
+                    .padding(.top, 36)
+                    .padding(.bottom, 56)
+                    .frame(height: geometry.size.height * 0.78)
+                }
                 
-                ChapterCard(
-                    imageName: "chapter2Image",
-                    chapterNumber: 2,
-                    chapterTitle: "Arrive at Haidilao",
-                    options: ["Vocabulary", "Quiz", "Conversation"],
-                    selectedOption: 0, // Selected option for Vocabulary,
-                    isInactive: .constant(true),
-                    isFinished : .constant(false)
-                )
             }
-            
-            Spacer()
         }
-        .padding()
-        .background(Color.orange.opacity(0.1))
+        .background(Image(.homeBackground))
+       
     }
 }
 

@@ -17,7 +17,7 @@ struct HomePage: View {
                         .font(.system(size:20))
                         .foregroundStyle(.white)
                     Text("Explore today?")
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .fontWeight(.bold)
                         .font(.system(size:48))
                         .foregroundStyle(.white)
                     HStack{

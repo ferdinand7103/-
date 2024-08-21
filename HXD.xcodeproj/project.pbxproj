@@ -61,6 +61,7 @@
 		32031F542C74466F0064FFBD /* BubbleSoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F532C74466F0064FFBD /* BubbleSoundButton.swift */; };
 		32031F572C758DB10064FFBD /* RecallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F562C758DB10064FFBD /* RecallView.swift */; };
 		32031F5A2C758E8A0064FFBD /* ChapterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F592C758E8A0064FFBD /* ChapterCard.swift */; };
+		32031F5E2C75CDFE0064FFBD /* InformationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F5D2C75CDFE0064FFBD /* InformationButton.swift */; };
 		323B23952C7239A200A3403E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B23942C7239A200A3403E /* RecordViewController.swift */; };
 		323B23972C723A0700A3403E /* RecordViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B23962C723A0700A3403E /* RecordViewWrapper.swift */; };
 		323B23992C723A3300A3403E /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B23982C723A3300A3403E /* RecordView.swift */; };
@@ -142,6 +143,7 @@
 		32031F532C74466F0064FFBD /* BubbleSoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSoundButton.swift; sourceTree = "<group>"; };
 		32031F562C758DB10064FFBD /* RecallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallView.swift; sourceTree = "<group>"; };
 		32031F592C758E8A0064FFBD /* ChapterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCard.swift; sourceTree = "<group>"; };
+		32031F5D2C75CDFE0064FFBD /* InformationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationButton.swift; sourceTree = "<group>"; };
 		323B23942C7239A200A3403E /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		323B23962C723A0700A3403E /* RecordViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewWrapper.swift; sourceTree = "<group>"; };
 		323B23982C723A3300A3403E /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
@@ -278,7 +280,6 @@
 				323B239E2C724B5800A3403E /* Animation */,
 				323B239D2C724B2500A3403E /* Bubble */,
 				323B239C2C724AA900A3403E /* Recording */,
-				293E0ED72C6EFCD20062C2AD /* RectangleButton.swift */,
 				293E0E932C6C67420062C2AD /* ConfirmationView.swift */,
 			);
 			path = Reuseable;
@@ -469,12 +470,14 @@
 		32714E502C6A4F4700EE6486 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				293E0ED72C6EFCD20062C2AD /* RectangleButton.swift */,
 				32714E512C6A4F6E00EE6486 /* SoundButton.swift */,
 				293E0E8D2C6C62A00062C2AD /* FCNavigationButton.swift */,
 				29B12D092C6B2909008FEAF4 /* BackButton.swift */,
 				3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */,
 				29B12D152C6C4E64008FEAF4 /* FlashcardButton.swift */,
 				32031F532C74466F0064FFBD /* BubbleSoundButton.swift */,
+				32031F5D2C75CDFE0064FFBD /* InformationButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */,
 				29CBBBDE2C743B4B00F9123A /* AudioRecorder.swift in Sources */,
 				293E0EAB2C6CF8A30062C2AD /* BubbleChatTail.swift in Sources */,
+				32031F5E2C75CDFE0064FFBD /* InformationButton.swift in Sources */,
 				32714E4D2C6A46FC00EE6486 /* FlashcardViewModel.swift in Sources */,
 				32031F572C758DB10064FFBD /* RecallView.swift in Sources */,
 				3252BDA42C6CFB8A00CE8CEE /* OnboardingPage.swift in Sources */,

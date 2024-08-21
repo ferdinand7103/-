@@ -21,12 +21,13 @@ struct HXDApp: App {
 //            SplashScreenView()
 //            Correct(hanzi: "猫", pinyin: "Māo", meaning: "Cat")
 //            StoryView()
-            ChapterCard(imageName: "chapter2Image",
-                        chapterNumber: 2,
-                        chapterTitle: "Arrive at Haidilao",
-                        options: ["Vocabulary", "Quiz", "Conversation"],
-                        selectedOption: nil, isInactive: .constant(false), isFinished: .constant(false) )
+//            ChapterCard(imageName: "chapter2Image",
+//                        chapterNumber: 2,
+//                        chapterTitle: "Arrive at Haidilao",
+//                        options: ["Vocabulary", "Quiz", "Conversation"],
+//                        selectedOption: nil, isInactive: .constant(false), isFinished: .constant(false) )
 //            RecordingView()
+            StoryView()
         }
     }
 }
