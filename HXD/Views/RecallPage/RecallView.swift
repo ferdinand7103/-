@@ -18,7 +18,6 @@ struct RecallView: View {
                         Text("Story 1")
                             .font(.system(size: 20))
                             .foregroundStyle(.white)
-    
                         Spacer()
                         Text("Not Completed")
                             .foregroundStyle(.red)

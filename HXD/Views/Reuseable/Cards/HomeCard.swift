@@ -13,15 +13,15 @@ struct HomeCard: View {
     @State var story: String
     @State var storyName: String
     var body: some View {
-        GeometryReader{ geometry in
-            ZStack{
+//        GeometryReader{ geometry in
+//            ZStack{
                 VStack(alignment:.leading){
-                    Image(homeCard)
+                    Image("Story1Thumbnail")
                     HStack{
                         Text(story)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .font(.system(size: 16))
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.black)
                         Spacer()
                         Text("Not Completed")
                             .foregroundStyle(.red)
@@ -34,20 +34,27 @@ struct HomeCard: View {
                             .padding(2)
                            
                     }
+                    .padding(.top, 10)
                     Text(storyName)
-                        .font(.system(size: 24))
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        .foregroundStyle(.white)
-                    RectangleButton(fontsize: 20,label: "Practice",width: 300,height: 20)
+                        .font(.system(size: 28))
+                        .fontWeight(.bold)
+                        .foregroundStyle(.black)
+                    HStack {
+                        PrimaryButton()
+                        CardMenuButton()
+                    }
+                    
                 }.padding()
                     .frame(width: 350)
-                .background(.orange3)
+                .background(.white)
                 .clipShape(.rect(cornerRadius: 24))
-            }.position(x:geometry.size.width/2,y:geometry.size.height*0.32)
-        }
+                .shadow(color: Color(red: 0.42, green: 0.21, blue: 0).opacity(0.2), radius: 9, x: 0, y: 0)
+//            }
+//            .position(x:geometry.size.width/2,y:geometry.size.height*0.32)
+//        }
     }
 }
 
 #Preview {
-    HomeCard(homeCard: .homeCard1, story: "Story 1", storyName: "Go to Chinese Hotpot\nRestaurant")
+    HomeCard(homeCard: .story1Thumbnail, story: "Story 1", storyName: "Go to Chinese Hotpot\nRestaurant")
 }

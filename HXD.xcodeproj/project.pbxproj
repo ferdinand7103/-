@@ -62,6 +62,10 @@
 		32031F572C758DB10064FFBD /* RecallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F562C758DB10064FFBD /* RecallView.swift */; };
 		32031F5A2C758E8A0064FFBD /* ChapterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F592C758E8A0064FFBD /* ChapterCard.swift */; };
 		32031F5E2C75CDFE0064FFBD /* InformationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F5D2C75CDFE0064FFBD /* InformationButton.swift */; };
+		32031F602C75D8140064FFBD /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F5F2C75D8140064FFBD /* PrimaryButton.swift */; };
+		32031F622C75D8FD0064FFBD /* CardMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F612C75D8FD0064FFBD /* CardMenuButton.swift */; };
+		32031F642C75E87E0064FFBD /* HomeCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F632C75E87E0064FFBD /* HomeCardScrollView.swift */; };
+		32031F682C76144D0064FFBD /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F672C76144D0064FFBD /* TabBarView.swift */; };
 		323B23952C7239A200A3403E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B23942C7239A200A3403E /* RecordViewController.swift */; };
 		323B23972C723A0700A3403E /* RecordViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B23962C723A0700A3403E /* RecordViewWrapper.swift */; };
 		323B23992C723A3300A3403E /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B23982C723A3300A3403E /* RecordView.swift */; };
@@ -144,6 +148,10 @@
 		32031F562C758DB10064FFBD /* RecallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallView.swift; sourceTree = "<group>"; };
 		32031F592C758E8A0064FFBD /* ChapterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCard.swift; sourceTree = "<group>"; };
 		32031F5D2C75CDFE0064FFBD /* InformationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationButton.swift; sourceTree = "<group>"; };
+		32031F5F2C75D8140064FFBD /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		32031F612C75D8FD0064FFBD /* CardMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMenuButton.swift; sourceTree = "<group>"; };
+		32031F632C75E87E0064FFBD /* HomeCardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardScrollView.swift; sourceTree = "<group>"; };
+		32031F672C76144D0064FFBD /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		323B23942C7239A200A3403E /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		323B23962C723A0700A3403E /* RecordViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewWrapper.swift; sourceTree = "<group>"; };
 		323B23982C723A3300A3403E /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
@@ -213,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				293E0ED22C6EFCC00062C2AD /* HomePage.swift */,
+				32031F672C76144D0064FFBD /* TabBarView.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -406,6 +415,7 @@
 			children = (
 				293E0ED52C6EFCC90062C2AD /* HomeCard.swift */,
 				32031F592C758E8A0064FFBD /* ChapterCard.swift */,
+				32031F632C75E87E0064FFBD /* HomeCardScrollView.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -478,6 +488,8 @@
 				29B12D152C6C4E64008FEAF4 /* FlashcardButton.swift */,
 				32031F532C74466F0064FFBD /* BubbleSoundButton.swift */,
 				32031F5D2C75CDFE0064FFBD /* InformationButton.swift */,
+				32031F5F2C75D8140064FFBD /* PrimaryButton.swift */,
+				32031F612C75D8FD0064FFBD /* CardMenuButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -602,6 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32031F642C75E87E0064FFBD /* HomeCardScrollView.swift in Sources */,
 				32031F492C72ED4C0064FFBD /* LogoAnimationView.swift in Sources */,
 				29B12D162C6C4E64008FEAF4 /* FlashcardButton.swift in Sources */,
 				293E0E962C6C701A0062C2AD /* TalkingView.swift in Sources */,
@@ -613,11 +626,13 @@
 				32031F542C74466F0064FFBD /* BubbleSoundButton.swift in Sources */,
 				29B12CA22C6467D0008FEAF4 /* PinyinFormatter.swift in Sources */,
 				32714E4B2C6A443500EE6486 /* FlashcardView.swift in Sources */,
+				32031F622C75D8FD0064FFBD /* CardMenuButton.swift in Sources */,
 				29B12CAE2C64CABD008FEAF4 /* TextToSpeech.swift in Sources */,
 				29B12D0A2C6B2909008FEAF4 /* BackButton.swift in Sources */,
 				29EBBBDB2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift in Sources */,
 				29B12D0D2C6B2A53008FEAF4 /* QuizHanzi.swift in Sources */,
 				29EBBBC82C5BAB0600AFCD60 /* ContentView.swift in Sources */,
+				32031F602C75D8140064FFBD /* PrimaryButton.swift in Sources */,
 				29B12C9D2C6466AE008FEAF4 /* HanziToPinyin.swift in Sources */,
 				29B12D122C6B9409008FEAF4 /* QuizPage.swift in Sources */,
 				32714E552C6A539A00EE6486 /* FlashcardSwipeView.swift in Sources */,
@@ -627,6 +642,7 @@
 				293E0EE62C72FAD00062C2AD /* StoryViewModel.swift in Sources */,
 				293E0E942C6C67420062C2AD /* ConfirmationView.swift in Sources */,
 				32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */,
+				32031F682C76144D0064FFBD /* TabBarView.swift in Sources */,
 				29CBBBDE2C743B4B00F9123A /* AudioRecorder.swift in Sources */,
 				293E0EAB2C6CF8A30062C2AD /* BubbleChatTail.swift in Sources */,
 				32031F5E2C75CDFE0064FFBD /* InformationButton.swift in Sources */,
