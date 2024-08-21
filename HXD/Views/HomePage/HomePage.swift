@@ -13,6 +13,7 @@ struct HomePage: View {
         GeometryReader { geometry in
             VStack {
                 VStack(alignment: .leading) {
+                    Spacer()
                     Text("Which story will you")
                         .font(.system(size: 20))
                         .foregroundStyle(.white)
@@ -21,7 +22,9 @@ struct HomePage: View {
                         .font(.system(size: 48))
                         .foregroundStyle(.white)
                 }
-                .frame(height: geometry.size.height * 0.25)
+                .frame(width: .infinity, height: geometry.size.height * 0.18)
+                .padding(.trailing, 32)
+                .padding(.bottom, 16)
                 ZStack {
                     Rectangle()
                         .foregroundStyle(Color(.white))
@@ -31,10 +34,10 @@ struct HomePage: View {
                     ZStack {
                         HomeCardScrollView()
                     }
+                    .padding(.bottom, 64)
                     .ignoresSafeArea()
                 }
             }
-            .ignoresSafeArea(.all)
         }
         .background(Image(.homeBackground))
         .ignoresSafeArea()
