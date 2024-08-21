@@ -70,7 +70,7 @@ class StoryViewModel: ObservableObject {
                 // Move to next story or reset if done
                 if currentStoryIndex < stories.count - 1 {
                     currentStoryIndex += 1
-                    currentStage = .onboarding
+                    currentStage = .completed
                 } else {
                     // Handle end of all stories
                 }
@@ -86,7 +86,7 @@ class StoryViewModel: ObservableObject {
         print(stories)
     }
     
-    private func loadStories() {
+    func loadStories() {
         // Locate the JSON file in the bundle
         guard let url = Bundle.main.url(forResource: "quizpage", withExtension: "json") else {
             print("File not found")
