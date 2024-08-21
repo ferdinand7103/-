@@ -8,7 +8,6 @@
 import UIKit
 
 class RecordViewController: UIViewController {
-    
     private var viewModel = StoryViewModel()
 
     override func viewDidLoad() {
