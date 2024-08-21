@@ -108,8 +108,11 @@ class RecordView: UIView {
         }
     }
     
-    init(frame: CGRect, mode: RecordingMode) {
+    var viewModel: StoryViewModel
+    
+    init(frame: CGRect, mode: RecordingMode, viewModel: StoryViewModel) {
         self.currentMode = mode
+        self.viewModel = viewModel
         super.init(frame: frame)
         setupView()
     }
@@ -197,6 +200,8 @@ class RecordView: UIView {
                 AudioRecorder.instance.stopRecording()
             }
                 currentState = .confirming
+        } else if currentState == .confirming {
+            self.viewModel.moveToNextStage()
         }
     }
     
@@ -212,6 +217,7 @@ class RecordView: UIView {
         let fileName = path.appendingPathComponent("recording.wav")
         
         Task {
+            self.viewModel.moveToNextStage()
             print(fileName.path)
             if let response = await HuggingFace.instance.getResponse(audioPath: fileName.path) {
                 print("Response: \(response)")

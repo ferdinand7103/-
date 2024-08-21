@@ -22,16 +22,9 @@ struct StoryView: View {
             case .quiz2:
                 QuizPage2(viewModel: viewModel)
             case .toneTest:
-                Text(viewModel.currentStory.toneTest.text)
-                Text(viewModel.currentStory.toneTest.speak)
-                Text("tone")
-//                ToneTestView(viewModel: viewModel)
+                ToneView(viewModel: viewModel)
             case .conversation:
-                Text("convo")
-                Text(viewModel.currentStory.conversation[viewModel.currentConversationIndex].hanzi)
-                Text(viewModel.currentStory.conversation[viewModel.currentConversationIndex].pinyin)
-                Text(viewModel.currentStory.conversation[viewModel.currentConversationIndex].meaning)
-//                ConversationView(viewModel: viewModel)
+                ConversationView(viewModel: viewModel)
             case .completed:
                 Text("Story Completed")
             }

@@ -8,11 +8,13 @@
 import UIKit
 
 class RecordViewController: UIViewController {
+    
+    private var viewModel = StoryViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let recordView = RecordView(frame: .zero, mode: .conversation)
+        let recordView = RecordView(frame: .zero, mode: .conversation, viewModel: StoryViewModel())
         recordView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(recordView)

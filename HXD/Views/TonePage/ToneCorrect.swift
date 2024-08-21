@@ -1,16 +1,14 @@
 //
-//  View.swift
+//  ToneCorrect.swift
 //  HXD
 //
-//  Created by Ferdinand Jacques on 01/08/24.
+//  Created by Ferdinand Jacques on 21/08/24.
 //
 
 import SwiftUI
 
-struct Correct: View {
-    var hanzi: String
-    var pinyin: String
-    var meaning: String
+struct ToneCorrect: View {
+    var text: String
     var pad: CGFloat
     @ObservedObject var viewModel: StoryViewModel
     
@@ -31,9 +29,8 @@ struct Correct: View {
                 }
                 .padding(.trailing, 220)
                 .padding(.bottom, 10)
-                Text("\(hanzi) (\(pinyin)) means '\(meaning)'")
+                Text(text)
                     .font(.system(size: 22, weight: .bold))
-                    .foregroundStyle(.black)
                     .padding(.trailing, pad)
                     .padding(.bottom, 50)
                     .padding(.top, 10)
@@ -56,5 +53,5 @@ struct Correct: View {
 }
 
 #Preview {
-    Correct(hanzi: "猫", pinyin: "Māo", meaning: "Cat", pad: 130, viewModel: StoryViewModel())
+    ToneCorrect(text: "", pad: 130, viewModel: StoryViewModel())
 }

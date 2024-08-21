@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct BubbleChatSoundOption: View {
-    var text: String
+    @State var hanzi: String
+    @State var pinyin: String? = nil
+    @State var meaning: String? = nil
+    var speak: String
     var bubbleColor: Color = .white
     var textColor: Color = .black
     let tts = TextToSpeechServices()
@@ -16,18 +19,35 @@ struct BubbleChatSoundOption: View {
     var body: some View {
         VStack(spacing: 0) {
             VStack(alignment: .leading) {
-                Text(text)
-                    .padding()
-                    .foregroundColor(textColor)
-                    .font(.system(size: 20, weight: .semibold))
-
+                VStack(alignment: .leading) {
+                    if (pinyin != nil){
+                        Text(hanzi)
+                            .padding([.top, .leading], 15)
+                            .foregroundColor(textColor)
+                            .font(.system(size: 20, weight: .semibold))
+                        Text(pinyin ?? "")
+                            .padding(.leading, 15)
+                            .foregroundColor(textColor)
+                            .font(.system(size: 18, weight: .semibold))
+                        Text(meaning ?? "")
+                            .padding(.leading, 15)
+                            .padding(.bottom, 10)
+                            .foregroundColor(textColor)
+                            .font(.system(size: 18, weight: .semibold))
+                    } else {
+                        Text(hanzi)
+                            .padding()
+                            .foregroundColor(textColor)
+                            .font(.system(size: 20, weight: .semibold))
+                    }
+                }
                 HStack {
                     BubbleSoundButton(icon: "sound") {
-                        tts.speak(text: text)
+                        tts.speak(text: speak)
                     }
                         .padding(.trailing, 10)
                     BubbleSoundButton(icon: "soundSlow") {
-                        tts.speakSlow(text: text)
+                        tts.speakSlow(text: speak)
                     }
                 }
                 .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
@@ -49,12 +69,5 @@ struct BubbleChatSoundOption: View {
 }
 
 #Preview {
-    BubbleChatSoundOption(
-        text: """
-        你好，请问，你们几位？
-        Nǐ hǎo, qǐng wèn, nǐmen jǐ wèi?
-        Hi, may I ask, how many people are you?
-        """,
-        bubbleColor: .redLight
-    )
+    BubbleChatSoundOption(hanzi: "你好，请问，你们几位？", pinyin: "Nǐ hǎo, qǐng wèn, nǐmen jǐ wèi?", meaning: "Hi, may I ask, how many people are you?", speak: "你好", bubbleColor: .redLight)
 }
