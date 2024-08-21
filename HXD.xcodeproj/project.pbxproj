@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1A06B9E42C7437FD00226FD1 /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A06B9E32C7437FD00226FD1 /* DictionaryView.swift */; };
+		1A06B9F02C75AE0C00226FD1 /* pinyin.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A06B9EF2C75AE0C00226FD1 /* pinyin.json */; };
+		1A06B9F22C75AE1D00226FD1 /* LearnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A06B9F12C75AE1D00226FD1 /* LearnViewModel.swift */; };
+		1A06B9F42C75AE2A00226FD1 /* LearnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A06B9F32C75AE2A00226FD1 /* LearnModel.swift */; };
 		293E0E8E2C6C62A00062C2AD /* FCNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E8D2C6C62A00062C2AD /* FCNavigationButton.swift */; };
 		293E0E922C6C64DD0062C2AD /* QuizTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E912C6C64DD0062C2AD /* QuizTop.swift */; };
 		293E0E942C6C67420062C2AD /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E932C6C67420062C2AD /* ConfirmationView.swift */; };
@@ -91,6 +94,9 @@
 
 /* Begin PBXFileReference section */
 		1A06B9E32C7437FD00226FD1 /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
+		1A06B9EF2C75AE0C00226FD1 /* pinyin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pinyin.json; sourceTree = "<group>"; };
+		1A06B9F12C75AE1D00226FD1 /* LearnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewModel.swift; sourceTree = "<group>"; };
+		1A06B9F32C75AE2A00226FD1 /* LearnModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnModel.swift; sourceTree = "<group>"; };
 		293E0E8D2C6C62A00062C2AD /* FCNavigationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCNavigationButton.swift; sourceTree = "<group>"; };
 		293E0E912C6C64DD0062C2AD /* QuizTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTop.swift; sourceTree = "<group>"; };
 		293E0E932C6C67420062C2AD /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
@@ -351,6 +357,7 @@
 		29EBBBC42C5BAB0600AFCD60 /* HXD */ = {
 			isa = PBXGroup;
 			children = (
+				1A06B9EF2C75AE0C00226FD1 /* pinyin.json */,
 				293E0EDD2C706B230062C2AD /* quizpage.json */,
 				29B12CA32C6468B5008FEAF4 /* Resources */,
 				29B12C9E2C6466D9008FEAF4 /* Services */,
@@ -399,6 +406,7 @@
 				29EBBBD82C5BABFB00AFCD60 /* ViewModel.swift */,
 				32714E4C2C6A46FC00EE6486 /* FlashcardViewModel.swift */,
 				293E0EE52C72FAD00062C2AD /* StoryViewModel.swift */,
+				1A06B9F12C75AE1D00226FD1 /* LearnViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -409,6 +417,7 @@
 				293E0EBF2C6DB1B20062C2AD /* APIResponse.swift */,
 				29EBBBDA2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift */,
 				293E0EC72C6DC9560062C2AD /* StoryModel.swift */,
+				1A06B9F32C75AE2A00226FD1 /* LearnModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -590,6 +599,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29B12CA92C646AE9008FEAF4 /* unicode_to_hanyu_pinyin.txt in Resources */,
+				1A06B9F02C75AE0C00226FD1 /* pinyin.json in Resources */,
 				29EBBBCD2C5BAB0700AFCD60 /* Preview Assets.xcassets in Resources */,
 				29EBBBCA2C5BAB0700AFCD60 /* Assets.xcassets in Resources */,
 				293E0EDE2C706B230062C2AD /* quizpage.json in Resources */,
@@ -634,6 +644,7 @@
 				32714E552C6A539A00EE6486 /* FlashcardSwipeView.swift in Sources */,
 				29B12C9B2C632B85008FEAF4 /* SpeechRecognizerProtocol.swift in Sources */,
 				1A06B9E42C7437FD00226FD1 /* DictionaryView.swift in Sources */,
+				1A06B9F22C75AE1D00226FD1 /* LearnViewModel.swift in Sources */,
 				293E0ECA2C6DCA470062C2AD /* FetchJSON.swift in Sources */,
 				293E0EE62C72FAD00062C2AD /* StoryViewModel.swift in Sources */,
 				293E0E942C6C67420062C2AD /* ConfirmationView.swift in Sources */,
@@ -664,6 +675,7 @@
 				323B23992C723A3300A3403E /* RecordView.swift in Sources */,
 				29CBBBEB2C75850400F9123A /* ToneWrong.swift in Sources */,
 				29B12C952C631A7B008FEAF4 /* SpeechRecognizer.swift in Sources */,
+				1A06B9F42C75AE2A00226FD1 /* LearnModel.swift in Sources */,
 				3252BDA62C6D0A4000CE8CEE /* BubbleChatNext.swift in Sources */,
 				29B12D0F2C6B2B8B008FEAF4 /* RectangleChoose.swift in Sources */,
 				323B23952C7239A200A3403E /* RecordViewController.swift in Sources */,

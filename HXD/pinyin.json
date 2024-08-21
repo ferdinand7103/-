@@ -1,0 +1,152 @@
+{
+    "pinyininit": [
+        {
+            "pinyin": "B",
+            "sound": "B"
+        },
+        {
+            "pinyin": "P",
+            "sound": "P"
+        },
+        {
+            "pinyin": "M",
+            "sound": "M"
+        },
+        {
+            "pinyin": "F",
+            "sound": "F"
+        },
+        {
+            "pinyin": "D",
+            "sound": "D"
+        },
+        {
+            "pinyin": "T",
+            "sound": "T"
+        },
+        {
+            "pinyin": "N",
+            "sound": "N"
+        },
+        {
+            "pinyin": "L",
+            "sound": "L"
+        },
+        {
+            "pinyin": "G",
+            "sound": "G"
+        },
+        {
+            "pinyin": "K",
+            "sound": "K"
+        },
+        {
+            "pinyin": "H",
+            "sound": "H"
+        },
+        {
+            "pinyin": "J",
+            "sound": "J"
+        },
+        {
+            "pinyin": "Q",
+            "sound": "Q"
+        },
+        {
+            "pinyin": "X",
+            "sound": "X"
+        },
+        {
+            "pinyin": "Z",
+            "sound": "Z"
+        },
+        {
+            "pinyin": "CH",
+            "sound": "CH"
+        },
+        {
+            "pinyin": "SH",
+            "sound": "SH"
+        },
+        {
+            "pinyin": "ZH",
+            "sound": "ZH"
+        },
+        {
+            "pinyin": "R",
+            "sound": "R"
+        },
+        {
+            "pinyin": "S",
+            "sound": "S"
+        },
+        {
+            "pinyin": "Y",
+            "sound": "Y"
+        },
+        {
+            "pinyin": "W",
+            "sound": "W"
+        }
+    ],
+    "pinyinfinal": [
+        {
+            "pinyin": "A",
+            "sound": "A"
+        },
+        {
+            "pinyin": "E",
+            "sound": "E"
+        },
+        {
+            "pinyin": "I",
+            "sound": "I"
+        },
+        {
+            "pinyin": "O",
+            "sound": "O"
+        },
+        {
+            "pinyin": "U",
+            "sound": "U"
+        },
+        {
+            "pinyin": "ü",
+            "sound": "ü"
+        }
+    ],
+    "tone": [
+        {
+            "jenis": "First Tone",
+            "desc": "Say “Ahhh” like at the dentist",
+            "hanzi": "妈",
+            "pinyin": "mā",
+            "mean": "Mom",
+            "soundtone": "Mom"
+        },
+        {
+            "jenis": "Second Tone",
+            "desc": "It starts low and goes up, as in “What?!?”",
+            "hanzi": "麻",
+            "pinyin": "má",
+            "mean": "Weed",
+            "soundtone": "Weed"
+        },
+        {
+            "jenis": "Third Tone",
+            "desc": "Starts low, dips lower, then rises, like asking “Really??”",
+            "hanzi": "马",
+            "pinyin": "mǎ",
+            "mean": "Horse",
+            "soundtone": "Horse"
+        },
+        {
+            "jenis": "Four Tone",
+            "desc": "High and drops fast, like yelling “NO!”",
+            "hanzi": "骂",
+            "pinyin": "mà",
+            "mean": "Swearing",
+            "soundtone": "Swearing"
+        }
+    ]
+}
