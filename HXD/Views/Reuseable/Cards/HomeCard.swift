@@ -17,7 +17,7 @@ struct HomeCard: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Image("Story1Thumbnail")
+            Image(homeCard)
             HStack {
                 Text(story)
                     .fontWeight(/*@START_MENU_TOKEN@*/ .bold/*@END_MENU_TOKEN@*/)
