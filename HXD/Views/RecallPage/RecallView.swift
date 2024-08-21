@@ -87,7 +87,7 @@ struct RecallView: View {
                                 ChapterCard(
                                     imageName: "SecretCodeChapter",
                                     chapterNumber: 4,
-                                    chapterTitle: "Arrive at Restaurant",
+                                    chapterTitle: "Secret Code",
                                     options: ["Vocabulary", "Quiz", "Conversation"],
                                     selectedOption: 0, // Selected option for Vocabulary,
                                     isInactive: .constant(true),
