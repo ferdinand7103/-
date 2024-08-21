@@ -18,9 +18,11 @@ class StoryViewModel: ObservableObject {
     @Published var currentQuiz2Index = 0
     @Published var currentToneTestIndex = 0
     @Published var currentConversationIndex = 0
+    @Published var currentConversationIndex2 = 0
     @Published var quizView: String = "Quiz"
     @Published var quizView2: String = "Quiz"
     @Published var toneView: String = "Quiz"
+    @Published var convView: String = "Quiz"
     
     enum StoryStage {
         case onboarding
@@ -64,13 +66,15 @@ class StoryViewModel: ObservableObject {
         case .conversation:
             if currentConversationIndex < currentStory.conversation.count - 1 {
                 currentConversationIndex += 1
+                currentConversationIndex2 += 1
             } else {
                 currentStage = .completed
                 currentConversationIndex = 0
+                currentConversationIndex2 = 0
                 // Move to next story or reset if done
                 if currentStoryIndex < stories.count - 1 {
                     currentStoryIndex += 1
-                    currentStage = .completed
+                    currentStage = .onboarding
                 } else {
                     // Handle end of all stories
                 }

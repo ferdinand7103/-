@@ -24,7 +24,7 @@
         "quiz2": {
             "text": "Listen to me. What does it mean?",
             "speak": "你好",
-            "pinyin" : "Nǐ hǎo",
+            "pinyin": "Nǐ hǎo",
             "meaning": "Hello",
             "choice": ["Hello", "May I Ask", "Welcome", "Thank You"],
             "correctAnswer": 0,
@@ -40,11 +40,13 @@
             "negativeDown": "Try Again"
         },
         "conversation": [
-            { "identifier": "A", "hanzi": "你好，我饿了，我们去吃饭吧。", "pinyin": "Nǐ hǎo, wǒ è le, wǒmen qù chīfàn ba.", "meaning": "Hello, I'm hungry, let's go eat." },
-            { "identifier": "B", "hanzi": "好啊，我也饿了，去海底捞吧。", "pinyin": "Hǎo a, wǒ yě è le, qù Hǎidǐlāo ba.", "meaning": "Sure, I'm hungry too, let's go to Haidilao." },
-            { "identifier": "A", "hanzi": "好的。", "pinyin": "Hǎo de", "meaning": "Okay" }
+            { "identifier": "A", "hanzi": "你好，我饿了。", "pinyin": "nǐ hǎo, wǒ è le.", "meaning": "Hello, I'm hungry." },
+            { "identifier": "A", "hanzi": "好的。", "pinyin": "hǎo de", "meaning": "Okay" }
         ],
-        "conversationValidate": "Wow, you're really great at Mandarin! Your word choices are spot on!"
+        "conversationValidate": "Wow, you're really great at Mandarin! Your word choices are spot on!",
+        "user": [
+            { "identifier": "B", "hanzi": "我也饿了，我们吃吧。", "pinyin": "wǒ yě è le, wǒ men chī ba.", "meaning": "I'm hungry too, let's eat." }
+        ]
     },
     {
         "background": "Haidilao",
@@ -71,7 +73,7 @@
         "quiz2": {
             "text": "Listen to me. What does it mean?",
             "speak": "几位",
-            "pinyin" : "jǐ wèi",
+            "pinyin": "jǐ wèi",
             "meaning": "How many people",
             "choice": ["How many people", "Three", "Welcome", "Friend"],
             "correctAnswer": 0,
@@ -87,11 +89,13 @@
             "negativeDown": "Try Again"
         },
         "conversation": [
-            { "identifier": "A", "hanzi": "你好，请问，你们几位？", "pinyin": "Nǐ hǎo, qǐng wèn, nǐmen jǐ wèi?", "meaning": "Hi, may I ask, how many people are you?" },
-            { "identifier": "B", "hanzi": "我们有三个人。", "pinyin": "Wǒmen yǒu sān gè rén.", "meaning": "We have three people." },
-            { "identifier": "A", "hanzi": "欢迎光临", "pinyin": "Huānyíng guānglín!", "meaning": "Welcome!" }
+            { "identifier": "A", "hanzi": "你好，你们几位?", "pinyin": "nǐ hǎo, nǐ men jǐ wèi", "meaning": "Hi, may I ask, how many people are you?" },
+            { "identifier": "A", "hanzi": "欢迎", "pinyin": "huān yíng!", "meaning": "Welcome!" }
         ],
-        "conversationValidate": "Wow, you're really great at Mandarin! Your word choices are spot on!"
+        "conversationValidate": "Wow, you're really great at Mandarin! Your word choices are spot on!",
+        "user": [
+            { "identifier": "B", "hanzi": "我们有三个人。", "pinyin": "wǒ men yǒu sān gè rén.", "meaning": "We have three people." }
+        ]
     },
     {
         "background": "Order",
@@ -118,7 +122,7 @@
         "quiz2": {
             "text": "Listen to me. What does it mean?",
             "speak": "点菜",
-            "pinyin" : "diǎn cài",
+            "pinyin": "diǎn cài",
             "meaning": "Order",
             "choice": ["Order", "Drink Water", "What", "Hungry"],
             "correctAnswer": 0,
@@ -134,12 +138,14 @@
             "negativeDown": "Try Again"
         },
         "conversation": [
-            { "identifier": "A", "hanzi": "你好，你们要点了吗？", "pinyin": "Nǐ hǎo, nǐmen yào diǎn le ma?", "meaning": "Hello, are you ready to order?" },
-            { "identifier": "B", "hanzi": "对，我们要点了。", "pinyin": "Duì, wǒmen yào diǎn le.", "meaning": "Yes, we’re ready to order." },
-            { "identifier": "A", "hanzi": "好的，你想点什么？", "pinyin": "Hǎo de, nǐ xiǎng diǎn shénme?", "meaning": "Yes, what do you want to order?" },
-            { "identifier": "B", "hanzi": "我想点菜和羊肉。", "pinyin": "Wǒ xiǎng diǎn cài hé yáng ròu.", "meaning": "I want to order vegetables and lamb." }
+            { "identifier": "A", "hanzi": "你好，你们要点了吗？", "pinyin": "nǐ hǎo, nǐ men yào diǎn le ma?", "meaning": "Hello, are you ready to order?" },
+            { "identifier": "A", "hanzi": "好的，你想点什么？", "pinyin": "hǎo de, nǐ xiǎng diǎn shén me?", "meaning": "Yes, what do you want to order?" }
         ],
-        "conversationValidate": "Wow, you're really great at Mandarin! Your word choices are spot on!"
+        "conversationValidate": "Wow, you're really great at Mandarin! Your word choices are spot on!",
+        "user": [
+            { "identifier": "B", "hanzi": "我们要点了。", "pinyin": "wǒ men yào diǎn le.", "meaning": "We’re ready to order." },
+            { "identifier": "B", "hanzi": "我想点菜和羊肉。", "pinyin": "wǒ xiǎng diǎn cài hé yáng ròu.", "meaning": "I want to order vegetables and lamb." }
+        ]
     },
     {
         "background": "SecretCode",
@@ -166,7 +172,7 @@
         "quiz2": {
             "text": "Listen to me. What does it mean?",
             "speak": "公主",
-            "pinyin" : "gōng zhǔ",
+            "pinyin": "gōng zhǔ",
             "meaning": "Princess",
             "choice": ["Open", "Book", "Princess", "Rice"],
             "correctAnswer": 2,
@@ -182,11 +188,14 @@
             "negativeDown": "Try Again"
         },
         "conversation": [
-            { "identifier": "B", "hanzi": "你好，我是公主。", "pinyin": "Nǐ hǎo, wǒ shì gōngzhǔ", "meaning": "Hi, I'm a princess" },
-            { "identifier": "A", "hanzi": "你好，公主，这是你的礼物", "pinyin": "Nǐ hǎo, gōngzhǔ, zhè shì nǐ de lǐwù。", "meaning": "Hi Princess, here is your gift." },
-            { "identifier": "B", "hanzi": "我很开心，谢谢你。", "pinyin": "Wǒ hěn kāixīn, xièxiè nǐ.", "meaning": "I'm so happy, thank you." },
-            { "identifier": "A", "hanzi": "不客气", "pinyin": "Bù kèqì", "meaning": "Welcome" }
+            { "identifier": "A", "hanzi": "你好。", "pinyin": "nǐ hǎo", "meaning": "Hello"},
+            { "identifier": "A", "hanzi": "你好，公主，这是你的礼物", "pinyin": "nǐ hǎo, gōng zhǔ, zhè shì nǐ de lǐ wù。", "meaning": "Hi Princess, here is your gift." },
+            { "identifier": "A", "hanzi": "不客气", "pinyin": "bù kè qì", "meaning": "Your Welcome" }
         ],
-        "conversationValidate": "Wow, you're really great at Mandarin! Your word choices are spot on!"
+        "conversationValidate": "Wow, you're really great at Mandarin! Your word choices are spot on!",
+        "user" : [
+            { "identifier": "B", "hanzi": "我是公主。", "pinyin": "wǒ shì gōngzhǔ", "meaning": "I'm a princess" },
+            { "identifier": "B", "hanzi": "谢谢。", "pinyin": "xiè xiè.", "meaning": "thank you." }
+        ]
     }
 ]

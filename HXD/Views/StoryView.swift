@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StoryView: View {
     @StateObject private var viewModel = StoryViewModel()
+    @StateObject private var learnVM = LearnViewModel()
     
     var body: some View {
         VStack {

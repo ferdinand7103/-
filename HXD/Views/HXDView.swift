@@ -8,10 +8,20 @@
 import SwiftUI
 
 struct HXDView: View {
+    @State var Opacity: Double = 0.0
+    
     var body: some View {
         ZStack {
-            HomePage()
             SplashScreenView()
+            HomePage()
+                .opacity(Opacity)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        withAnimation(.easeIn(duration: 0.5)) {
+                            Opacity = 1.0
+                        }
+                    }
+                }
         }
     }
 }
