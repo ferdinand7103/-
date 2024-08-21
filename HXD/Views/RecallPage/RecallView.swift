@@ -19,15 +19,7 @@ struct RecallView: View {
                             .font(.system(size: 20))
                             .foregroundStyle(.white)
                         Spacer()
-                        Text("Not Completed")
-                            .foregroundStyle(.red)
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                            .font(.system(size: 16))
-                            .padding([.top,.bottom],8)
-                            .padding([.trailing,.leading],12)
-                            .background(.redLight)
-                            .clipShape(.rect(cornerRadius: 24))
-                            .padding(2)
+                        CompleteStatusLabel(isComplete: false)
                     }
                     
                     Text("Go to Chinese Hotpot Restaurant")
