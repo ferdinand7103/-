@@ -13,7 +13,7 @@ struct RecordViewWrapper: UIViewRepresentable {
     var viewModel: StoryViewModel
 
     func makeUIView(context: Context) -> RecordView{
-        return RecordView(frame: .zero, mode: mode, viewModel: StoryViewModel())
+        return RecordView(frame: .zero, mode: mode, viewModel: viewModel)
     }
 
     func updateUIView(_ uiView: RecordView, context: Context) {

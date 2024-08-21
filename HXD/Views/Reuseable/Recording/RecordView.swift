@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 enum RecordingMode {
     case pinyin
@@ -108,7 +109,7 @@ class RecordView: UIView {
         }
     }
     
-    var viewModel: StoryViewModel
+    private var viewModel: StoryViewModel
     
     init(frame: CGRect, mode: RecordingMode, viewModel: StoryViewModel) {
         self.currentMode = mode

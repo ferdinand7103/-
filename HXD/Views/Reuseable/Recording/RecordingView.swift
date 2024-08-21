@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RecordingView: View {
     var mode: RecordingMode
-    var viewModel: StoryViewModel
+    @ObservedObject var viewModel: StoryViewModel
     
     var body: some View {
          ZStack {

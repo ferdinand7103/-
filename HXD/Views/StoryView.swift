@@ -28,11 +28,6 @@ struct StoryView: View {
             case .completed:
                 Text("Story Completed")
             }
-//            Button(action: {
-//                viewModel.moveToNextStage()
-//            }) {
-//                Text("Next")
-//            }
         }
     }
 }
