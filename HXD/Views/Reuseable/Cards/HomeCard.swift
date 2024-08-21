@@ -12,6 +12,8 @@ struct HomeCard: View {
     @State var homeCard : ImageResource
     @State var story: String
     @State var storyName: String
+    @State var isDisabled: Bool
+    
     var body: some View {
 //        GeometryReader{ geometry in
 //            ZStack{
@@ -40,8 +42,8 @@ struct HomeCard: View {
                         .fontWeight(.bold)
                         .foregroundStyle(.black)
                     HStack {
-                        PrimaryButton()
-                        CardMenuButton()
+                        PrimaryButton(isDisabled: isDisabled)
+                        CardMenuButton(isDisabled: isDisabled)
                     }
                     
                 }.padding()
@@ -56,5 +58,5 @@ struct HomeCard: View {
 }
 
 #Preview {
-    HomeCard(homeCard: .story1Thumbnail, story: "Story 1", storyName: "Go to Chinese Hotpot\nRestaurant")
+    HomeCard(homeCard: .story1Thumbnail, story: "Story 1", storyName: "Go to Chinese Hotpot\nRestaurant", isDisabled: false)
 }

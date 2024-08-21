@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct PrimaryButton: View {
+    var isDisabled: Bool = false
+
     var body: some View {
-        Button(action: {
-        }) {
+        Button(action: {}) {
             ZStack {
                 Rectangle()
-                    .foregroundColor(Color.orange3)
+                    .foregroundColor(isDisabled ? Color.lighterGray : Color.orange3)
                     .frame(width: 233, height: 64)
                     .cornerRadius(12)
                 Text("Practice")
-                    .foregroundStyle(Color.white)
+                    .foregroundStyle(isDisabled ? Color.lightGray : Color.white)
                     .font(.system(size: 20, weight: .bold))
             }
         }
+        .disabled(isDisabled)
     }
 }
 
