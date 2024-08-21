@@ -56,6 +56,8 @@ struct ToneTest: Codable {
     var speak: String
     var happyFlow: String
     var negativeFlow: String
+    var happyDown: String
+    var negativeDown: String
 }
 
 struct ConversationPart: Codable {

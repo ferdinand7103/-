@@ -1,18 +1,21 @@
 //
-//  QuizTop.swift
+//  ToneView.swift
 //  HXD
 //
-//  Created by Ferdinand Jacques on 14/08/24.
+//  Created by Ferdinand Jacques on 21/08/24.
 //
 
 import SwiftUI
 
-struct QuizTop: View {
+struct ToneTop: View {
     @State private var isShowingConfirmation: Bool = false
     @State private var isShowingFlashcard: Bool = false
     @StateObject private var talkingAnimation = TalkingAnimation()
     @ObservedObject var viewModel: StoryViewModel
-    @State var text: String
+    @State var hanzi: String
+    @State var pinyin: String? = nil
+    @State var meaning: String? = nil
+    @State var speak: String? = nil
     
     var body: some View {
         ZStack{
@@ -52,13 +55,13 @@ struct QuizTop: View {
                 .frame(width: 200, height: 200)
                 .padding(.leading, 190)
                 .padding(.bottom, 50)
-            BubbleChat(text: text)
-                .padding(.bottom, 330)
+            BubbleChatSoundOption(hanzi: hanzi, pinyin: pinyin, meaning: meaning, speak: speak ?? "")
+                .padding(.bottom, 380)
         }
         .animation(.easeInOut, value: isShowingConfirmation)
     }
 }
 
 #Preview {
-    QuizTop(viewModel: StoryViewModel(), text: "Ok, you already know some words! Do you know how to say “Hello” in Mandarin?")
+    ToneTop(viewModel: StoryViewModel(), hanzi: "你好，请问，你们几位？", pinyin: "Nǐ hǎo, qǐng wèn, nǐmen jǐ wèi?", meaning: "Hi, may I ask, how many people are you?", speak: "")
 }

@@ -35,7 +35,9 @@
             "text": "Now, repeat after me: '你好' (Nǐ hǎo).",
             "speak": "你好",
             "happyFlow": "Great! Now we're ready to head to Haidilao and get that discount!",
-            "negativeFlow": "It’s okay! You can try again"
+            "negativeFlow": "It’s okay! You can try again",
+            "happyDown": "Your pin yin tone sounds like native!",
+            "negativeDown": "Try Again"
         },
         "conversation": [
             { "identifier": "A", "hanzi": "你好，我饿了，我们去吃饭吧。", "pinyin": "Nǐ hǎo, wǒ è le, wǒmen qù chīfàn ba.", "meaning": "Hello, I'm hungry, let's go eat." },
@@ -79,7 +81,9 @@
             "text": "Now, repeat after me: '几位' (jǐ wèi).",
             "speak": "几位",
             "happyFlow": "Great! Now we’re ready to answer the receptionist!",
-            "negativeFlow": "It’s okay! You can try again"
+            "negativeFlow": "It’s okay! You can try again",
+            "happyDown": "Your pin yin tone sounds like native!",
+            "negativeDown": "Try Again"
         },
         "conversation": [
             { "identifier": "A", "hanzi": "你好，请问，你们几位？", "pinyin": "Nǐ hǎo, qǐng wèn, nǐmen jǐ wèi?", "meaning": "Hi, may I ask, how many people are you?" },
@@ -123,7 +127,9 @@
             "text": "Now, repeat after me: '点菜' (diǎn cài).",
             "speak": "点菜",
             "happyFlow": "Great! Now we're ready to order!",
-            "negativeFlow": "It’s okay! You can try again"
+            "negativeFlow": "It’s okay! You can try again",
+            "happyDown": "Your pin yin tone sounds like native!",
+            "negativeDown": "Try Again"
         },
         "conversation": [
             { "identifier": "A", "hanzi": "你好，你们要点了吗？", "pinyin": "Nǐ hǎo, nǐmen yào diǎn le ma?", "meaning": "Hello, are you ready to order?" },
@@ -168,7 +174,9 @@
             "text": "Now, repeat after me: '公主' (gōngzhǔ).",
             "speak": "公主",
             "happyFlow": "Great! Now we're ready to get the special treat!",
-            "negativeFlow": "It’s okay! You can try again"
+            "negativeFlow": "It’s okay! You can try again",
+            "happyDown": "Your pin yin tone sounds like native!",
+            "negativeDown": "Try Again"
         },
         "conversation": [
             { "identifier": "B", "hanzi": "你好，我是公主。", "pinyin": "Nǐ hǎo, wǒ shì gōngzhǔ", "meaning": "Hi, I'm a princess" },

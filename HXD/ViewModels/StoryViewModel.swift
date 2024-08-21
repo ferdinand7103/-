@@ -20,6 +20,7 @@ class StoryViewModel: ObservableObject {
     @Published var currentConversationIndex = 0
     @Published var quizView: String = "Quiz"
     @Published var quizView2: String = "Quiz"
+    @Published var toneView: String = "Quiz"
     
     enum StoryStage {
         case onboarding
@@ -33,6 +34,10 @@ class StoryViewModel: ObservableObject {
     
     var currentStory: Story {
         stories[currentStoryIndex]
+    }
+    
+    func setcurrentStory(index: Int) {
+        stories[index]
     }
     
     // Method to move to the next stage or story
@@ -52,6 +57,7 @@ class StoryViewModel: ObservableObject {
             quizView2 = "Quiz"
             currentStage = .quiz2
         case .quiz2:
+            toneView = "Quiz"
             currentStage = .toneTest
         case .toneTest:
             currentStage = .conversation

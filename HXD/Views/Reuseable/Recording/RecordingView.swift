@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RecordingView: View {
+    var mode: RecordingMode
+    
     var body: some View {
          ZStack {
             Rectangle()
@@ -15,7 +17,7 @@ struct RecordingView: View {
                 .frame(width: .infinity, height: 300)
                 .cornerRadius(24)
             VStack {
-                RecordViewWrapper(mode: .conversation)
+                RecordViewWrapper(mode: mode)
                     .frame(width: 300, height: 250)
             }
             .padding()
@@ -24,5 +26,5 @@ struct RecordingView: View {
 }
 
 #Preview {
-    RecordingView()
+    RecordingView(mode: .conversation)
 }

@@ -1,16 +1,14 @@
 //
-//  TryAgainHanzi.swift
+//  ToneWrong.swift
 //  HXD
 //
-//  Created by Ferdinand Jacques on 09/08/24.
+//  Created by Ferdinand Jacques on 21/08/24.
 //
 
 import SwiftUI
 
-struct Wrong: View {
-    var hanzi: String
-    var pinyin: String
-    var meaning: String
+struct ToneWrong: View {
+    var text: String
     var pad: CGFloat
     @ObservedObject var viewModel: StoryViewModel
     
@@ -32,16 +30,10 @@ struct Wrong: View {
                 }
                 .padding(.trailing, 255)
                 .padding(.bottom, 20)
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Correct Answer:")
-                        .font(.system(size: 20, weight: .bold))
-                        .foregroundStyle(.black)
-                    Text("\(hanzi)  |  \(pinyin)  |  \(meaning)")
-                        .font(.system(size: 20))
-                        .foregroundStyle(.black)
-                }
-                .padding(.trailing, pad)
-                .padding(.bottom, 20)
+                Text(text)
+                    .font(.system(size: 20, weight: .bold))
+                    .padding(.trailing, pad)
+                    .padding(.bottom, 20)
                 HStack(spacing: 16) {
                     Button(action: {
                         viewModel.quizView = "Quiz"
@@ -82,5 +74,5 @@ struct Wrong: View {
 }
 
 #Preview {
-    Wrong(hanzi: "猫", pinyin: "Māo", meaning: "Cat", pad: 200, viewModel: StoryViewModel())
+    ToneWrong(text: "", pad: 200, viewModel: StoryViewModel())
 }
