@@ -48,7 +48,7 @@ struct Correct: View {
                             .cornerRadius(12)
                         Text("Continue")
                             .foregroundStyle(Color.white)
-                            .font(.system(size: 30, weight: .bold))
+                            .font(.system(size: 20, weight: .bold))
                     }
                 }
             }
