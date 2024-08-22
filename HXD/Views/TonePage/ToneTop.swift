@@ -37,10 +37,9 @@ struct ToneTop: View {
                     .edgesIgnoringSafeArea(.all)
                 
                 DictionaryView(isShowingDict: $isShowingDict, viewModel: viewModel)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height)
                     .transition(.scale)
                     .zIndex(100)
-                    .padding(.bottom, 85)
             }
             UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict)
                 .padding(.bottom, 680)
