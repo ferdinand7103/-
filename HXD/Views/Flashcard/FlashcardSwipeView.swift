@@ -45,7 +45,7 @@ struct FlashcardSwipeView: View {
                             VStack {
                                 HStack (alignment: .top) {
                                     BackButton(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict)
-                                        .position(x:0,y:0)
+                                        .position(x:6,y:-8)
                                     Spacer()
                                 }
                                 .frame(height:20)
