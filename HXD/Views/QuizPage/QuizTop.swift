@@ -12,6 +12,7 @@ struct QuizTop: View {
     @State private var isShowingFlashcard: Bool = false
     @StateObject private var talkingAnimation = TalkingAnimation()
     @ObservedObject var viewModel: StoryViewModel
+    @ObservedObject var homeViewModel: HomeViewModel
     @State var text: String
     
     var body: some View {
@@ -32,7 +33,7 @@ struct QuizTop: View {
                 Color.black.opacity(0.4)
                     .edgesIgnoringSafeArea(.all)
                 
-                FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard, viewModel: StoryViewModel())
+                FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard, viewModel: StoryViewModel(), homeViewModel: homeViewModel)
                     .frame(width: 313, height: 282)
                     .transition(.scale)
                     .zIndex(3)
@@ -60,5 +61,5 @@ struct QuizTop: View {
 }
 
 #Preview {
-    QuizTop(viewModel: StoryViewModel(), text: "Ok, you already know some words! Do you know how to say “Hello” in Mandarin?")
+    QuizTop(viewModel: StoryViewModel(), homeViewModel: HomeViewModel(), text: "Ok, you already know some words! Do you know how to say “Hello” in Mandarin?")
 }

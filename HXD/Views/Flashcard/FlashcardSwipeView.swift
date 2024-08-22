@@ -14,6 +14,7 @@ struct FlashcardSwipeView: View {
     @State private var offset: CGSize = .zero
     @State private var opacity: Double = 1.0
     @State private var done: Bool = false
+    @ObservedObject var homeViewModel: HomeViewModel
 
     var body: some View {
         ZStack {
@@ -46,6 +47,7 @@ struct FlashcardSwipeView: View {
                 if done {
                     Button(action: {
                         viewModel.moveToNextStage()
+                        homeViewModel.switchStage(to: .home)
                     }) {
                         HStack {
                             Text("I'm Ready!")
@@ -163,7 +165,7 @@ struct FlashcardSwipeView: View {
 }
 
 #Preview {
-    FlashcardSwipeView(isShowingFlashcard: .constant(false), viewModel: StoryViewModel())
+    FlashcardSwipeView(isShowingFlashcard: .constant(false), viewModel: StoryViewModel(), homeViewModel: HomeViewModel())
 }
 
 extension View {
