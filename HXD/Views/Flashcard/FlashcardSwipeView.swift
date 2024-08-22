@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FlashcardSwipeView: View {
     @Binding var isShowingFlashcard: Bool
+    @State private var isShowingConfirmation: Bool = false
+    @State private var isShowingDict: Bool = false
     @ObservedObject var viewModel: StoryViewModel
     @State private var currentIndex: Int = 0
     @State private var offset: CGSize = .zero
@@ -18,16 +20,32 @@ struct FlashcardSwipeView: View {
 
     var body: some View {
         ZStack {
+
             VStack {
                 ZStack {
                     VStack {
                         ZStack {
-                            ForEach(0 ..< viewModel.currentStory.flashcard.count, id: \.self) { index in
-                                if index >= currentIndex {
-                                    createFlashcardView(for: index)
-                                        .zIndex(Double(viewModel.currentStory.flashcard.count - index))
+                            if isShowingConfirmation {
+                                Color.black.opacity(0.4)
+                                    .edgesIgnoringSafeArea(.all)
+                                
+                                ConfirmationView(isShowingConfirmation: $isShowingConfirmation, homeVM: homeViewModel)
+                                    .frame(width: 1000, height: 1000)
+                                    .transition(.scale)
+                                    .zIndex(5)
+                                    .padding(.bottom, 85)
+                            }
+                            else{
+                                ForEach(0 ..< viewModel.currentStory.flashcard.count, id: \.self) { index in
+                                    if index >= currentIndex {
+                                        createFlashcardView(for: index)
+                                            .zIndex(Double(viewModel.currentStory.flashcard.count - index))
+                                    }
                                 }
                             }
+                            UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict)
+                                .padding(.bottom, 500)
+                         
                         }
                         HStack {
                             if currentIndex > 0 {
