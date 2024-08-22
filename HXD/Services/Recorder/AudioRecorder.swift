@@ -81,4 +81,27 @@ class AudioRecorder: NSObject , ObservableObject , AVAudioPlayerDelegate  {
             fatalError("Error playing recorded sound: \(error.localizedDescription)")
         }
     }
+    
+    func playSound(soundName: String) {
+        do {
+            try session.setCategory(.soloAmbient, mode: .default, options: .duckOthers)
+            try session.setActive(true)
+        } catch let error {
+            fatalError("Error setting up audio session: \(error.localizedDescription)")
+        }
+        
+        let soundFileName = soundName.contains(".") ? soundName : "\(soundName).m4a"
+        
+        if let fileName = Bundle.main.url(forResource: soundFileName, withExtension: nil, subdirectory: "HXD/Pinyin/Initial") {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: fileName)
+                audioPlayer?.prepareToPlay()
+                audioPlayer?.play()
+            } catch let error {
+                fatalError("Error playing sound: \(error.localizedDescription)")
+            }
+        } else {
+            fatalError("File not found: \(soundFileName)")
+        }
+    }
 }

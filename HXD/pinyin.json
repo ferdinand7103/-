@@ -1,114 +1,114 @@
 {
     "pinyininit": [
         {
-            "pinyin": "B",
-            "sound": "B"
+            "pinyin": "b",
+            "sound": "b"
         },
         {
-            "pinyin": "P",
-            "sound": "P"
+            "pinyin": "p",
+            "sound": "p"
         },
         {
-            "pinyin": "M",
-            "sound": "M"
+            "pinyin": "m",
+            "sound": "m"
         },
         {
-            "pinyin": "F",
-            "sound": "F"
+            "pinyin": "f",
+            "sound": "f"
         },
         {
-            "pinyin": "D",
-            "sound": "D"
+            "pinyin": "d",
+            "sound": "d"
         },
         {
-            "pinyin": "T",
-            "sound": "T"
+            "pinyin": "t",
+            "sound": "t"
         },
         {
-            "pinyin": "N",
-            "sound": "N"
+            "pinyin": "n",
+            "sound": "n"
         },
         {
-            "pinyin": "L",
-            "sound": "L"
+            "pinyin": "l",
+            "sound": "l"
         },
         {
-            "pinyin": "G",
-            "sound": "G"
+            "pinyin": "g",
+            "sound": "g"
         },
         {
-            "pinyin": "K",
-            "sound": "K"
+            "pinyin": "k",
+            "sound": "k"
         },
         {
-            "pinyin": "H",
-            "sound": "H"
+            "pinyin": "h",
+            "sound": "h"
         },
         {
-            "pinyin": "J",
-            "sound": "J"
+            "pinyin": "j",
+            "sound": "j"
         },
         {
-            "pinyin": "Q",
-            "sound": "Q"
+            "pinyin": "q",
+            "sound": "q"
         },
         {
-            "pinyin": "X",
-            "sound": "X"
+            "pinyin": "x",
+            "sound": "x"
         },
         {
-            "pinyin": "Z",
-            "sound": "Z"
+            "pinyin": "z",
+            "sound": "z"
         },
         {
-            "pinyin": "CH",
-            "sound": "CH"
+            "pinyin": "ch",
+            "sound": "ch"
         },
         {
-            "pinyin": "SH",
-            "sound": "SH"
+            "pinyin": "sh",
+            "sound": "sh"
         },
         {
-            "pinyin": "ZH",
-            "sound": "ZH"
+            "pinyin": "zh",
+            "sound": "zh"
         },
         {
-            "pinyin": "R",
-            "sound": "R"
+            "pinyin": "r",
+            "sound": "r"
         },
         {
-            "pinyin": "S",
-            "sound": "S"
+            "pinyin": "s",
+            "sound": "s"
         },
         {
-            "pinyin": "Y",
-            "sound": "Y"
+            "pinyin": "y",
+            "sound": "y"
         },
         {
-            "pinyin": "W",
-            "sound": "W"
+            "pinyin": "w",
+            "sound": "w"
         }
     ],
     "pinyinfinal": [
         {
-            "pinyin": "A",
-            "sound": "A"
+            "pinyin": "a",
+            "sound": "a"
         },
         {
-            "pinyin": "E",
-            "sound": "E"
+            "pinyin": "e",
+            "sound": "e"
         },
         {
-            "pinyin": "I",
-            "sound": "I"
+            "pinyin": "i",
+            "sound": "i"
         },
         {
-            "pinyin": "O",
-            "sound": "O"
+            "pinyin": "o",
+            "sound": "o"
         },
         {
-            "pinyin": "U",
-            "sound": "U"
+            "pinyin": "u",
+            "sound": "u"
         },
         {
             "pinyin": "ü",

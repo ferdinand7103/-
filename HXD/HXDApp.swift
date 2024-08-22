@@ -27,8 +27,10 @@ struct HXDApp: App {
 //                        options: ["Vocabulary", "Quiz", "Conversation"],
 //                        selectedOption: nil, isInactive: .constant(false), isFinished: .constant(false) )
 //            RecordingView()
-            StoryView()
+//            StoryView()
 //            HomePage()
+//            Initial(viewModel: LearnViewModel())
+            bpm(text: "b", speak: "b")
         }
     }
 }
