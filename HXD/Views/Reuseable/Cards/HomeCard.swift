@@ -10,6 +10,7 @@ import SwiftUI
 
 struct HomeCard: View {
     @ObservedObject var homeViewModel: HomeViewModel
+    @ObservedObject var viewModel: StoryViewModel
     @State var homeCard: ImageResource
     @State var story: String
     @State var storyName: String
@@ -34,7 +35,7 @@ struct HomeCard: View {
                 .foregroundStyle(.black)
             HStack {
                 PrimaryButton(homeViewModel: homeViewModel,isDisabled: isDisabled)
-                CardMenuButton(isDisabled: isDisabled)
+                CardMenuButton(isDisabled: isDisabled, viewModel: viewModel)
             }
 
         }.padding()
@@ -46,5 +47,5 @@ struct HomeCard: View {
 }
 
 #Preview {
-    HomeCard(homeViewModel:HomeViewModel() ,homeCard: .story1Thumbnail, story: "Story 1", storyName: "Go to Chinese Hotpot\nRestaurant", isDisabled: false, isComplete: false)
+    HomeCard(homeViewModel:HomeViewModel(), viewModel: StoryViewModel() ,homeCard: .story1Thumbnail, story: "Story 1", storyName: "Go to Chinese Hotpot\nRestaurant", isDisabled: false, isComplete: false)
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct HXDApp: App {
     var body: some Scene {
         WindowGroup {
-            HXDView(homeViewModel: HomeViewModel())
+            HXDView(homeViewModel: HomeViewModel(), viewModel: StoryViewModel())
 //            LearnView()
         }
     }

@@ -24,7 +24,7 @@ class StoryViewModel: ObservableObject {
     @Published var quizView2: String = "Quiz"
     @Published var toneView: String = "Quiz"
     @Published var convView: String = "Quiz"
-//    @StateObject var homeViewModel: HomeViewModel
+    @Published var recall: String = "Home"
     
     enum StoryStage {
         case onboarding
@@ -116,20 +116,4 @@ class StoryViewModel: ObservableObject {
             print("Failed to decode JSON: \(error.localizedDescription)")
         }
     }
-//    func resetState() {
-//            currentStoryIndex = 0
-//            currentStage = .onboarding
-//            currentOnboardingIndex = 0
-//            currentFlashcardIndex = 0
-//            currentQuiz1Index = 0
-//            currentQuiz2Index = 0
-//            currentToneTestIndex = 0
-//            currentConversationIndex = 0
-//            currentConversationIndex2 = 0
-//            quizView = "Quiz"
-//            quizView2 = "Quiz"
-//            toneView = "Quiz"
-//            convView = "Quiz"
-//        }
-
 }

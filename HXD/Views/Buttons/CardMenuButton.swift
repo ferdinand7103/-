@@ -9,9 +9,11 @@ import SwiftUI
 
 struct CardMenuButton: View {
     var isDisabled: Bool = false
+    @ObservedObject var viewModel: StoryViewModel
+    
     var body: some View {
         Button(action: {
-
+            viewModel.recall = "recall"
         }) {
             Rectangle()
                 .fill(isDisabled ? Color(red: 0.9, green: 0.9, blue: 0.9) : Color.gold2)
@@ -32,5 +34,5 @@ struct CardMenuButton: View {
 }
 
 #Preview {
-    CardMenuButton()
+    CardMenuButton(viewModel: StoryViewModel())
 }

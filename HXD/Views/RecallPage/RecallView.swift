@@ -13,6 +13,18 @@ struct RecallView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack(alignment: .leading) {
+                HStack {
+                    Button(action: {
+                        viewModel.recall = "Home"
+                    }) {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor(.white)
+                        Text("Back")
+                            .foregroundColor(.white)
+                    }
+                    Spacer()
+                }
+                .padding(.leading)
                 VStack(alignment: .leading) {
                     HStack {
                         Text("Story 1")
