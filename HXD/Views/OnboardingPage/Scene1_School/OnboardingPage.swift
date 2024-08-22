@@ -12,6 +12,7 @@ struct OnboardingPage: View {
     @State private var isShowingFlashcard: Bool = false
     @StateObject private var talkingAnimation = TalkingAnimation()
     @ObservedObject var viewModel: StoryViewModel
+    @ObservedObject var homeViewModel: HomeViewModel
 
 
     var body: some View {
@@ -54,7 +55,7 @@ struct OnboardingPage: View {
                 Color.black.opacity(0.4)
                     .edgesIgnoringSafeArea(.all)
 
-                FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard, viewModel: StoryViewModel())
+                FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard, viewModel: StoryViewModel(), homeViewModel: homeViewModel)
                     .frame(width: 313, height: 282)
                     .transition(.scale)
                     .zIndex(100)
@@ -65,7 +66,7 @@ struct OnboardingPage: View {
 }
 
 #Preview {
-    OnboardingPage(viewModel: StoryViewModel())
+    OnboardingPage(viewModel: StoryViewModel(), homeViewModel: HomeViewModel())
 }
 
 struct BackgroundImageModifier: ViewModifier {

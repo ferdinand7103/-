@@ -23,6 +23,7 @@ class StoryViewModel: ObservableObject {
     @Published var quizView2: String = "Quiz"
     @Published var toneView: String = "Quiz"
     @Published var convView: String = "Quiz"
+//    @StateObject var homeViewModel: HomeViewModel
     
     enum StoryStage {
         case onboarding
@@ -54,7 +55,7 @@ class StoryViewModel: ObservableObject {
             }
         case .flashcard:
             quizView = "Quiz"
-            currentStage = .quiz1
+            currentStage = .completed
         case .quiz1:
             quizView2 = "Quiz"
             currentStage = .quiz2
@@ -80,7 +81,7 @@ class StoryViewModel: ObservableObject {
                 }
             }
         case .completed:
-            // Optionally handle completion
+//            homeViewModel.switchStage(to: .home)
             break
         }
     }
@@ -106,4 +107,20 @@ class StoryViewModel: ObservableObject {
             print("Failed to decode JSON: \(error.localizedDescription)")
         }
     }
+//    func resetState() {
+//            currentStoryIndex = 0
+//            currentStage = .onboarding
+//            currentOnboardingIndex = 0
+//            currentFlashcardIndex = 0
+//            currentQuiz1Index = 0
+//            currentQuiz2Index = 0
+//            currentToneTestIndex = 0
+//            currentConversationIndex = 0
+//            currentConversationIndex2 = 0
+//            quizView = "Quiz"
+//            quizView2 = "Quiz"
+//            toneView = "Quiz"
+//            convView = "Quiz"
+//        }
+
 }

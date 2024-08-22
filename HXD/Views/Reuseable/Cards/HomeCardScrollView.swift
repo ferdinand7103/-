@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct HomeCardScrollView: View {
+    @ObservedObject var homeViewModel: HomeViewModel
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
             HStack {
-                HomeCard(homeCard: .story1Thumbnail, story: "Story 1", storyName: "Go to Chinese Hotpot\nRestaurant", isDisabled: false, isComplete: false)
-                HomeCard(homeCard: .story2Thumbnail, story: "Story 2", storyName: "Go to Market\n", isDisabled: true, isComplete: false)
+                HomeCard(homeViewModel: homeViewModel,homeCard: .story1Thumbnail, story: "Story 1", storyName: "Go to Chinese Hotpot\nRestaurant", isDisabled: false, isComplete: false)
+                HomeCard(homeViewModel:homeViewModel, homeCard: .story2Thumbnail, story: "Story 2", storyName: "Go to Market\n", isDisabled: true, isComplete: false)
             }
             .frame(height: 600)
             .padding(.horizontal, 16)
@@ -21,5 +22,5 @@ struct HomeCardScrollView: View {
 }
 
 #Preview {
-    HomeCardScrollView()
+    HomeCardScrollView(homeViewModel: HomeViewModel())
 }

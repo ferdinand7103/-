@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct HomePage: View {
+    @ObservedObject var homeViewModel: HomeViewModel
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -31,7 +32,7 @@ struct HomePage: View {
                         .clipShape(.rect(cornerRadius: 32))
                         .frame(maxHeight: .infinity)
                     ZStack {
-                        HomeCardScrollView()
+                        HomeCardScrollView(homeViewModel: homeViewModel)
                     }
                     .padding(.bottom, 64)
                     .ignoresSafeArea()
@@ -44,5 +45,5 @@ struct HomePage: View {
 }
 
 #Preview {
-    HomePage()
+    HomePage(homeViewModel: HomeViewModel())
 }

@@ -27,8 +27,8 @@ struct HXDApp: App {
 //                        options: ["Vocabulary", "Quiz", "Conversation"],
 //                        selectedOption: nil, isInactive: .constant(false), isFinished: .constant(false) )
 //            RecordingView()
-            StoryView()
-//            HomePage()
+//            StoryView()
+            HXDView(homeViewModel: HomeViewModel())
         }
     }
 }

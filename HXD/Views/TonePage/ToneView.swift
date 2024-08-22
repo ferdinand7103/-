@@ -9,19 +9,20 @@ import SwiftUI
 
 struct ToneView: View {
     @ObservedObject var viewModel: StoryViewModel
+    @ObservedObject var homeViewModel: HomeViewModel
     
     var body: some View {
         ZStack {
             if viewModel.toneView == "Quiz" {
-                ToneTop(viewModel: viewModel, hanzi: viewModel.currentStory.toneTest.text, speak: viewModel.currentStory.toneTest.speak)
+                ToneTop(viewModel: viewModel, homeViewModel: homeViewModel, hanzi: viewModel.currentStory.toneTest.text, speak: viewModel.currentStory.toneTest.speak)
                 RecordingView(mode: .pinyin, viewModel: viewModel)
                     .padding(.top, 550)
                     .padding([.leading, .trailing])
             } else if viewModel.toneView == "Correct" {
-                ToneTop(viewModel: viewModel, hanzi: viewModel.currentStory.toneTest.happyFlow)
+                ToneTop(viewModel: viewModel, homeViewModel: homeViewModel, hanzi: viewModel.currentStory.toneTest.happyFlow)
                 ToneCorrect(text: viewModel.currentStory.toneTest.happyDown, pad: 165, viewModel: viewModel)
             } else if viewModel.toneView == "Wrong" {
-                ToneTop(viewModel: viewModel, hanzi: viewModel.currentStory.toneTest.negativeFlow)
+                ToneTop(viewModel: viewModel, homeViewModel: homeViewModel, hanzi: viewModel.currentStory.toneTest.negativeFlow)
                 ToneWrong(text: viewModel.currentStory.toneTest.negativeDown, pad: 165, viewModel: viewModel)
                     .padding(.top, 550)
                     .padding([.leading, .trailing])
@@ -31,5 +32,5 @@ struct ToneView: View {
 }
 
 #Preview {
-    ToneView(viewModel: StoryViewModel())
+    ToneView(viewModel: StoryViewModel(), homeViewModel: HomeViewModel())
 }

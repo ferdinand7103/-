@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct PrimaryButton: View {
+    @ObservedObject var homeViewModel: HomeViewModel
     var isDisabled: Bool = false
 
     var body: some View {
-        Button(action: {}) {
+        Button(action: { homeViewModel.switchStage(to: .story)}) {
             ZStack {
                 Rectangle()
                     .foregroundColor(isDisabled ? Color.lighterGray : Color.orange3)
@@ -27,5 +28,5 @@ struct PrimaryButton: View {
 }
 
 #Preview {
-    PrimaryButton()
+    PrimaryButton(homeViewModel: HomeViewModel())
 }

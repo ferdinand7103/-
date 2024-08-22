@@ -12,6 +12,7 @@ struct ToneTop: View {
     @State private var isShowingFlashcard: Bool = false
     @StateObject private var talkingAnimation = TalkingAnimation()
     @ObservedObject var viewModel: StoryViewModel
+    @ObservedObject var homeViewModel: HomeViewModel
     @State var hanzi: String
     @State var pinyin: String? = nil
     @State var meaning: String? = nil
@@ -35,7 +36,7 @@ struct ToneTop: View {
                 Color.black.opacity(0.4)
                     .edgesIgnoringSafeArea(.all)
                 
-                FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard, viewModel: StoryViewModel())
+                FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard, viewModel: StoryViewModel(), homeViewModel: homeViewModel)
                     .frame(width: 313, height: 282)
                     .transition(.scale)
                     .zIndex(3)
@@ -63,5 +64,5 @@ struct ToneTop: View {
 }
 
 #Preview {
-    ToneTop(viewModel: StoryViewModel(), hanzi: "你好，请问，你们几位？", pinyin: "Nǐ hǎo, qǐng wèn, nǐmen jǐ wèi?", meaning: "Hi, may I ask, how many people are you?", speak: "")
+    ToneTop(viewModel: StoryViewModel(), homeViewModel: HomeViewModel(), hanzi: "你好，请问，你们几位？", pinyin: "Nǐ hǎo, qǐng wèn, nǐmen jǐ wèi?", meaning: "Hi, may I ask, how many people are you?", speak: "")
 }
