@@ -319,13 +319,13 @@ class RecordView: UIView {
             titleLogo.heightAnchor.constraint(equalToConstant: 25),
             titleLogo.widthAnchor.constraint(equalToConstant: 25),
             titleLogo.topAnchor.constraint(equalTo: topAnchor),
-            titleLogo.leadingAnchor.constraint(equalTo: leadingAnchor,constant: -50),
+            titleLogo.leadingAnchor.constraint(equalTo: leadingAnchor,constant: -25),
             
             titleLabel.leadingAnchor.constraint(equalTo: titleLogo.trailingAnchor,constant: 10),
             titleLabel.topAnchor.constraint(equalTo: topAnchor),
             
             
-            youSaidLabel.leadingAnchor.constraint(equalTo: leadingAnchor,constant: -50),
+            youSaidLabel.leadingAnchor.constraint(equalTo: leadingAnchor,constant: -25),
             youSaidLabel.topAnchor.constraint(equalTo: titleLogo.bottomAnchor,constant: 20),
             
             transcribeLabel.topAnchor.constraint(equalTo: youSaidLabel.bottomAnchor),
