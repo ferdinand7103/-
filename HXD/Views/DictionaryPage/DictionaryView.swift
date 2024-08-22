@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DictionaryView: View {
+    @Binding var isShowingDict : Bool
     @ObservedObject var viewModel: StoryViewModel
     
     var body: some View {
@@ -47,6 +48,7 @@ struct DictionaryView: View {
             }
             .navigationBarItems(leading: Button(action: {
                 // Handle the back button action here
+                isShowingDict = false
             }) {
                 HStack {
                     Image(systemName: "chevron.left")
@@ -61,6 +63,6 @@ struct DictionaryView: View {
 
 
 #Preview {
-        DictionaryView(viewModel: StoryViewModel())
+    DictionaryView(isShowingDict: .constant(true), viewModel: StoryViewModel())
     }
 

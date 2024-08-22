@@ -9,16 +9,18 @@ import SwiftUI
 
 struct UpperButtons: View {
     @Binding var isShowingConfirmation: Bool
-    @Binding var isShowingFlashcard: Bool
+//    @Binding var isShowingFlashcard: Bool
+    @Binding var isShowingDict: Bool
+    
 
     
     var body: some View {
         ZStack {
             VStack {
                 HStack {
-                    BackButton(isShowingConfirmation: $isShowingConfirmation, isShowingFlashcard: $isShowingFlashcard)
+                    BackButton(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict)
                     Spacer()
-                    FlashcardButton(isShowingFlashcard: $isShowingFlashcard)
+                    DictButton(isShowingDict: $isShowingDict)
 
                 }
                 .frame(width: UIScreen.main.bounds.width - 60, height: 85)
@@ -29,5 +31,5 @@ struct UpperButtons: View {
 }
 
 #Preview {
-    UpperButtons(isShowingConfirmation: .constant(false), isShowingFlashcard: .constant(false))
+    UpperButtons(isShowingConfirmation: .constant(false), isShowingDict: .constant(false))
 }
