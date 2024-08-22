@@ -31,7 +31,6 @@ struct HXDApp: App {
 //            HomePage()
             Initial(viewModel: LearnViewModel())
 //            bpm(text: "b", speak: "b")
-            
         }
     }
 }

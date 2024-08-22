@@ -29,7 +29,7 @@ struct LearnPinYinContents: View {
                         NavigationLink(destination: Final(viewModel: learnVM)) {
                             PinYinNavigationButton(labelImage: .finalIcon, title: "Final", content: "Finals are usually made up of vowels")
                         }
-                        NavigationLink(destination: PinYinTonePage()) {
+                        NavigationLink(destination: PinYinToneView(viewModel: learnVM)) {
                             PinYinNavigationButton(labelImage: .toneIcon, title: "Tone", content: "Tones differentiate word meanings")
                         }
                     }

@@ -19,7 +19,7 @@ struct Initial: View {
             Image("Initial")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 75, height: 75)
+                .frame(width: 100, height: 100)
             Text("Try to tap these character to know how to")
                 .font(.system(size: 18))
                 .foregroundStyle(.black)

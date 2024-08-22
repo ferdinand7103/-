@@ -42,7 +42,6 @@ struct Final: View {
         }
         .background(.white)
         .ignoresSafeArea()
-
     }
 }
 
