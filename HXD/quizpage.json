@@ -1,6 +1,6 @@
 [
     {
-        "background": "School",
+        "background": "school",
         "onboarding": [
             { "identifier": "A", "text": "Hey, wanna go to the new chinese hotpot resto? If you can speak Mandarin, you can get a discount!" },
             { "identifier": "B", "text": "I don't know Mandarin 😢" },
