@@ -16,7 +16,6 @@ enum RecordingMode {
 enum RecordingState {
     case idle
     case recording
-    case confirming
     case correct
     case wrong
 }
@@ -108,14 +107,29 @@ class RecordView: UIView {
     //        return button
     //    }()
     
+    
     private let repeatButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "Repeat"), for: .normal)
-        button.tintColor = .orange3
+
+        // Set the image
+        let arrowImage = UIImage(systemName: "arrow.clockwise")?.withRenderingMode(.alwaysTemplate)
+        button.setImage(arrowImage, for: .normal)
+
+        // Set the tint color
+        button.tintColor = UIColor.orange3
+
+        // Add a border
+        button.layer.borderColor = UIColor.orange3.cgColor
+        button.layer.borderWidth = 2.0  // Adjust the width as needed
+        button.layer.cornerRadius = 12  // Adjust the radius for rounded corners
+
         button.translatesAutoresizingMaskIntoConstraints = false
         button.isHidden = true
         return button
     }()
+
+
+    
     
     private let transcribeLabel: UILabel = {
         let label = UILabel()
@@ -129,9 +143,6 @@ class RecordView: UIView {
     }()
     
     
-
-    
-    
     private let youSaidLabel: UILabel = {
         let label = UILabel()
         label.text = "You Said"
@@ -142,6 +153,29 @@ class RecordView: UIView {
         label.isHidden = true
         return label
     }()
+    
+    private let meaningLabel: UILabel = {
+        let label = UILabel()
+        label.text = "..."
+        label.textAlignment = .left
+        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        label.textColor = UIColor.black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.isHidden = true
+        return label
+    }()
+    
+    private let meaningTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Meaning"
+        label.textAlignment = .center
+        label.textColor = UIColor.black
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.isHidden = true
+        return label
+    }()
+    
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -180,9 +214,10 @@ class RecordView: UIView {
         button.setTitle("Continue", for: .normal)
         button.tintColor = .white
         button.backgroundColor = .orange3
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         //        button.contentEdgeInsets = UIEdgeInsets(top: 20,left: 20,bottom: 20,right: 20)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.cornerRadius = 16
+        button.layer.cornerRadius = 12
         button.isHidden = true
         button.contentHorizontalAlignment = .center
         return button
@@ -192,10 +227,11 @@ class RecordView: UIView {
         let button = UIButton(type: .system)
         button.setTitle("Continue", for: .normal)
         button.tintColor = .white
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         button.backgroundColor = .orange3
         //        button.contentEdgeInsets = UIEdgeInsets(top: 20,left: 20,bottom: 20,right: 20)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.cornerRadius = 16
+        button.layer.cornerRadius = 12
         button.isHidden = true
         button.contentHorizontalAlignment = .center
         return button
@@ -246,6 +282,9 @@ class RecordView: UIView {
         addSubview(continueButtonWrong)
         addSubview(continueButtonCorrect)
         addSubview(statusDescriptionLabel)
+        addSubview(meaningLabel)
+        addSubview(meaningTitleLabel)
+
         setupConstraints()
         
         recordButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
@@ -292,10 +331,16 @@ class RecordView: UIView {
             transcribeLabel.topAnchor.constraint(equalTo: youSaidLabel.bottomAnchor),
             transcribeLabel.leadingAnchor.constraint(equalTo: youSaidLabel.leadingAnchor),
             
+            meaningTitleLabel.topAnchor.constraint(equalTo: transcribeLabel.bottomAnchor),
+            meaningTitleLabel.leadingAnchor.constraint(equalTo: transcribeLabel.leadingAnchor),
+            
+            meaningLabel.topAnchor.constraint(equalTo: meaningTitleLabel.bottomAnchor),
+            meaningLabel.leadingAnchor.constraint(equalTo: meaningTitleLabel.leadingAnchor),
+            
             continueButtonCorrect.centerXAnchor.constraint(equalTo: recordButton.centerXAnchor),
             continueButtonCorrect.topAnchor.constraint(equalTo: recordButton.topAnchor,constant: 25),
-            continueButtonCorrect.widthAnchor.constraint(equalToConstant: 300),
-            continueButtonCorrect.heightAnchor.constraint(equalToConstant: 50),
+            continueButtonCorrect.widthAnchor.constraint(equalToConstant: 350),
+            continueButtonCorrect.heightAnchor.constraint(equalToConstant: 64),
             
             continueButtonWrong.trailingAnchor.constraint(equalTo: trailingAnchor),
             continueButtonWrong.topAnchor.constraint(equalTo: recordButton.topAnchor,constant: 25),
@@ -303,37 +348,29 @@ class RecordView: UIView {
             continueButtonWrong.heightAnchor.constraint(equalToConstant: 50),
             
             repeatButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: -30),
-            repeatButton.topAnchor.constraint(equalTo: continueButtonWrong.topAnchor,constant: -25),
-            repeatButton.widthAnchor.constraint(equalToConstant: 100),
-            repeatButton.heightAnchor.constraint(equalTo: repeatButton.widthAnchor),
+            repeatButton.topAnchor.constraint(equalTo: continueButtonWrong.topAnchor),
+            repeatButton.widthAnchor.constraint(equalToConstant: 50),
+            repeatButton.heightAnchor.constraint(equalToConstant: 50),
         ])
         
         // Set dynamic top constraint for recordButton
         recordButtonTopConstraint = recordButton.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 20)
         recordButtonTopConstraint.isActive = true
-        //            transcribeLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-        //            transcribeLabel.topAnchor.constraint(equalTo: recordButton.bottomAnchor, constant: 20),
-        
-        
-        //            confirmButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 40),
-        //            confirmButton.centerYAnchor.constraint(equalTo: recordButton.centerYAnchor),
-        //            confirmButton.widthAnchor.constraint(equalToConstant: 84),
-        //            confirmButton.heightAnchor.constraint(equalTo: confirmButton.widthAnchor),
-        
-        
-        //            finalTranscriptionLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-        //            finalTranscriptionLabel.topAnchor.constraint(equalTo: transcribeLabel.topAnchor),
+
     }
     
     func compareAnswer(A: String, B: String) -> Bool {
         var diff = 0
-        
+        var cleanCharacter = B
+        cleanCharacter = cleanCharacter.removingCharacters(inCharacterSet: CharacterSet.punctuationCharacters)
+        cleanCharacter = cleanCharacter.removingCharacters(inCharacterSet: CharacterSet.whitespacesAndNewlines)
+        print(cleanCharacter)
         // Iterate over the characters in the strings
-        for i in 0..<min(A.count, B.count) {
+        for i in 0..<min(A.count, cleanCharacter.count) {
             let indexA = A.index(A.startIndex, offsetBy: i)
-            let indexB = B.index(B.startIndex, offsetBy: i)
+            let indexB = cleanCharacter.index(cleanCharacter.startIndex, offsetBy: i)
             
-            if A[indexA] == B[indexB] {
+            if A[indexA] == cleanCharacter[indexB] {
                 diff += 1
             }
         }
@@ -417,27 +454,6 @@ class RecordView: UIView {
         }
     }
     
-    
-    //    @objc private func confirmTapped() {
-    //        currentState = .confirming
-    //
-    //        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-    //        let fileName = path.appendingPathComponent("recording.wav")
-    //
-    //        Task {
-    //            print(fileName.path)
-    ////            print(self.viewModel.toneView)
-    //            if let response = await HuggingFace.instance.getResponse(audioPath: fileName.path) {
-    //                print("Response: \(response)")
-    //                DispatchQueue.main.async {
-    //                    self.finalTranscriptionLabel.text = response
-    //                }
-    //            } else {
-    //                print("Failed to get a response.")
-    //            }
-    //        }
-    //    }
-    
     private func updateViewForState() {
         switch currentState {
         case .idle:
@@ -475,18 +491,6 @@ class RecordView: UIView {
             youSaidLabel.isHidden = true
             
             
-        case .confirming:
-            
-            statusLabel.text = "Tap to Confirm"
-            instructionLabel.isHidden = true
-            questionLabel.isHidden = true
-            //            transcribeLabel.isHidden = true
-            recordButton.isHidden = true
-            repeatButton.isHidden = false
-            //            confirmButton.isHidden = false
-            //            finalTranscriptionLabel.isHidden = false
-            youSaidLabel.isHidden = true
-            
         case .correct:
             statusDescriptionLabel.isHidden = true
             rectangle.backgroundColor = .greenLight
@@ -497,10 +501,20 @@ class RecordView: UIView {
             recordButton.isHidden = true
             transcribeLabel.isHidden = false
             youSaidLabel.isHidden = false
-            titleLabel.text = "Amazing !"
+            titleLabel.text = "Amazing!"
             titleLabel.textColor = .green2
             titleLabel.isHidden = false
             continueButtonCorrect.isHidden = false
+            if (currentMode == .pinyin){
+                meaningTitleLabel.isHidden = true
+                meaningLabel.isHidden = true
+            }
+            else{
+                meaningTitleLabel.isHidden = false
+                meaningLabel.isHidden = false
+                meaningLabel.text = viewModel.currentStory.user[0].meaning
+                
+            }
             
             
         case .wrong:
@@ -514,7 +528,7 @@ class RecordView: UIView {
             transcribeLabel.isHidden = false
             youSaidLabel.isHidden = false
             titleLogo.isHidden = false
-            titleLabel.text = "Oops !"
+            titleLabel.text = "Oops!"
             titleLabel.isHidden = false
             titleLabel.textColor = .red
             continueButtonWrong.isHidden = false
@@ -534,6 +548,23 @@ class RecordView: UIView {
     }
     
     
+}
+
+extension String {
+  func removingCharacters(inCharacterSet forbiddenCharacters:CharacterSet) -> String
+{
+    var filteredString = self
+    while true {
+      if let forbiddenCharRange = filteredString.rangeOfCharacter(from: forbiddenCharacters)  {
+        filteredString.removeSubrange(forbiddenCharRange)
+      }
+      else {
+        break
+      }
+    }
+
+    return filteredString
+  }
 }
 
 #Preview {
