@@ -24,7 +24,7 @@ struct LearnPinYinPage: View {
                         .frame(height: geometry.size.height * 0.74)
                 }
                 ZStack {
-                    LearnPinYinContents(learnVM: learnVM)
+                    LearnPinYinContents(viewModel: learnVM)
                         .frame(maxHeight: .infinity)
 
                 }

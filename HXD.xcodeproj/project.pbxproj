@@ -91,6 +91,7 @@
 		29CBBC432C76F8AD00F9123A /* tone3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 29CBBC222C76F8AC00F9123A /* tone3.m4a */; };
 		29CBBC442C76F8AD00F9123A /* tone1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 29CBBC232C76F8AC00F9123A /* tone1.m4a */; };
 		29CBBC502C771D8300F9123A /* PinYinToneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CBBC4F2C771D8300F9123A /* PinYinToneView.swift */; };
+		29CBBC522C772EE600F9123A /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CBBC512C772EE600F9123A /* LearnView.swift */; };
 		29EBBBC62C5BAB0600AFCD60 /* HXDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBC52C5BAB0600AFCD60 /* HXDApp.swift */; };
 		29EBBBC82C5BAB0600AFCD60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */; };
 		29EBBBCA2C5BAB0700AFCD60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29EBBBC92C5BAB0700AFCD60 /* Assets.xcassets */; };
@@ -229,6 +230,7 @@
 		29CBBC222C76F8AC00F9123A /* tone3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = tone3.m4a; sourceTree = "<group>"; };
 		29CBBC232C76F8AC00F9123A /* tone1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = tone1.m4a; sourceTree = "<group>"; };
 		29CBBC4F2C771D8300F9123A /* PinYinToneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinYinToneView.swift; sourceTree = "<group>"; };
+		29CBBC512C772EE600F9123A /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		29EBBBC22C5BAB0600AFCD60 /* HXD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29EBBBC52C5BAB0600AFCD60 /* HXDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXDApp.swift; sourceTree = "<group>"; };
 		29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -714,6 +716,7 @@
 				325BB5E72C76FA1B00F12820 /* Final.swift */,
 				325BB5ED2C76FABD00F12820 /* PinYinTonePage.swift */,
 				29CBBC4F2C771D8300F9123A /* PinYinToneView.swift */,
+				29CBBC512C772EE600F9123A /* LearnView.swift */,
 			);
 			path = PinYinPage;
 			sourceTree = "<group>";
@@ -919,6 +922,7 @@
 				29EBBBC82C5BAB0600AFCD60 /* ContentView.swift in Sources */,
 				1A06B9F62C76DD0F00226FD1 /* HomeViewModel.swift in Sources */,
 				32031F602C75D8140064FFBD /* PrimaryButton.swift in Sources */,
+				29CBBC522C772EE600F9123A /* LearnView.swift in Sources */,
 				29B12C9D2C6466AE008FEAF4 /* HanziToPinyin.swift in Sources */,
 				29CBBBE72C7580B100F9123A /* ToneView.swift in Sources */,
 				29B12D122C6B9409008FEAF4 /* QuizPage.swift in Sources */,

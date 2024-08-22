@@ -21,7 +21,7 @@ class HomeViewModel: ObservableObject {
     }
     
     func switchStage(to stage: Stage) {
-          currentStage = stage
+        currentStage = stage
         print(currentStage)
-      }
+    }
 }

@@ -48,9 +48,9 @@ struct PinYinTonePage: View {
                         Text("Example")
                             .font(.headline)
                             .padding(.bottom, 1)
-                        Text("妈")
+                        Text(hanzi)
                             .font(.largeTitle)
-                        Text("mā (Mom)")
+                        Text("\(pinyin) \(meaning)")
                             .font(.subheadline)
                             .foregroundColor(.gray)
                     }

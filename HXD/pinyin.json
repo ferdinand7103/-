@@ -61,6 +61,10 @@
             "sound": "z"
         },
         {
+            "pinyin": "c",
+            "sound": "c"
+        },
+        {
             "pinyin": "ch",
             "sound": "ch"
         },
@@ -79,14 +83,6 @@
         {
             "pinyin": "s",
             "sound": "s"
-        },
-        {
-            "pinyin": "y",
-            "sound": "y"
-        },
-        {
-            "pinyin": "w",
-            "sound": "w"
         }
     ],
     "pinyinfinal": [
