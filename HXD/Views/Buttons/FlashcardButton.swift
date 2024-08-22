@@ -19,7 +19,7 @@ struct FlashcardButton: View {
                     .fill(Color.orange3)
                     .frame(width: 50, height: 50)
                     .overlay(
-                        Image(systemName: "rectangle.on.rectangle")
+                        Image("bookOpen")
                             .foregroundStyle(.white)
                             .font(.system(size: 20, weight: .bold))
                     )

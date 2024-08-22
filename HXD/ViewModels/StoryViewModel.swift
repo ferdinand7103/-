@@ -55,7 +55,7 @@ class StoryViewModel: ObservableObject {
             }
         case .flashcard:
             quizView = "Quiz"
-            currentStage = .completed
+            currentStage = .quiz1
         case .quiz1:
             quizView2 = "Quiz"
             currentStage = .quiz2
