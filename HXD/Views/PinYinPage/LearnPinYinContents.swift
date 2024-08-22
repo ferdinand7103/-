@@ -8,53 +8,46 @@
 import SwiftUI
 
 struct LearnPinYinContents: View {
-    @ObservedObject var learnVM: LearnViewModel
+    @ObservedObject var viewModel: LearnViewModel
     
     var body: some View {
-        NavigationView {
-            VStack {
+        ZStack {
+            VStack(spacing: 32) {
                 Text("Learn Pin Yin")
                     .fontWeight(.heavy)
                     .font(.system(size: 48))
                     .foregroundStyle(.white)
                     .padding(.top, 2)
-                
-                VStack(spacing: 40) {
-                    PinYinExampleCard()
-                    
-                    VStack(spacing: 16) {
-                        NavigationLink(destination: Initial(viewModel: learnVM)) {
-                            PinYinNavigationButton(labelImage: .initialIcon, title: "Initial", content: "Initials are usually consonants")
-                        }
-                        NavigationLink(destination: Final(viewModel: learnVM)) {
-                            PinYinNavigationButton(labelImage: .finalIcon, title: "Final", content: "Finals are usually made up of vowels")
-                        }
-                        NavigationLink(destination: PinYinToneView(viewModel: learnVM)) {
-                            PinYinNavigationButton(labelImage: .toneIcon, title: "Tone", content: "Tones differentiate word meanings")
-                        }
+
+                PinYinExampleCard()
+
+                VStack(spacing: 16) {
+                    Button(action: {
+                        viewModel.switchStage(to: .initial)
+                    }) {
+                        PinYinNavigationButton(labelImage: .initialIcon, title: "Initial", content: "Initials are usually consonants")
+                    }
+
+                    Button(action: {
+                        viewModel.switchStage(to: .final)
+                    }) {
+                        PinYinNavigationButton(labelImage: .finalIcon, title: "Final", content: "Finals are usually made up of vowels")
+                    }
+
+                    Button(action: {
+                        viewModel.switchStage(to: .tone)
+                    }) {
+                        PinYinNavigationButton(labelImage: .toneIcon, title: "Tone", content: "Tones differentiate word meanings")
                     }
                 }
                 .padding(.bottom, 56)
                 .background(Color.clear)
             }
-            .navigationBarTitleDisplayMode(.inline) // Add this to set the inline navigation title style
-                        .toolbar { // Optional: add a back button or other toolbar items if necessary
-                            ToolbarItem(placement: .navigationBarLeading) {
-                                Button(action: {
-                                    // Add back button action or leave default
-                                }) {
-                                    Image(systemName: "chevron.left")
-                                }
-                            }
-                        }
-                    }
-                    .navigationViewStyle(StackNavigationViewStyle()) 
-        
+        }
+        .background(Image(.pinyinBackground))
     }
 }
 
-
-
 #Preview {
-    LearnPinYinContents(learnVM: LearnViewModel())
+    LearnPinYinContents(viewModel: LearnViewModel())
 }

@@ -47,7 +47,7 @@ struct FlashcardSwipeView: View {
                 if done {
                     Button(action: {
                         viewModel.moveToNextStage()
-                        homeViewModel.switchStage(to: .home)
+//                        homeViewModel.switchStage(to: .home)
                     }) {
                         HStack {
                             Text("I'm Ready!")

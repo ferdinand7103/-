@@ -213,10 +213,12 @@ class RecordView: UIView {
     }
     
     private var viewModel: StoryViewModel
+    private var homeVM: HomeViewModel
     
-    init(frame: CGRect, mode: RecordingMode, viewModel: StoryViewModel) {
+    init(frame: CGRect, mode: RecordingMode, viewModel: StoryViewModel, homeVM: HomeViewModel) {
         self.currentMode = mode
         self.viewModel = viewModel
+        self.homeVM = homeVM
         super.init(frame: frame)
         setupView()
     }
@@ -403,7 +405,15 @@ class RecordView: UIView {
     }
     
     @objc private func continueTapped() {
-        self.viewModel.moveToNextStage()
+        if currentMode == .conversation {
+            if viewModel.currentPage == .home {
+                homeVM.switchStage(to: .home)
+            } else {
+                self.viewModel.moveToNextStage()
+            }
+        } else {
+            self.viewModel.moveToNextStage()
+        }
     }
     
     
@@ -526,5 +536,5 @@ class RecordView: UIView {
 }
 
 #Preview {
-    RecordingView(mode: .conversation, viewModel: StoryViewModel())
+    RecordingView(mode: .conversation, viewModel: StoryViewModel(), homeVM: HomeViewModel())
 }

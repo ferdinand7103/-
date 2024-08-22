@@ -14,7 +14,7 @@ struct QuizPage2: View {
     var body: some View {
         ZStack {
             if viewModel.quizView2 == "Quiz" {
-                ToneTop(viewModel: viewModel, homeViewModel: homeViewModel, hanzi: viewModel.currentStory.quiz2.text)
+                ToneTop(viewModel: viewModel, homeViewModel: homeViewModel, hanzi: viewModel.currentStory.quiz2.text, speak: viewModel.currentStory.quiz2.speak)
                 QuizHanzi(choice1: viewModel.currentStory.quiz2.choice[0], choice2: viewModel.currentStory.quiz2.choice[1], choice3: viewModel.currentStory.quiz2.choice[2], choice4: viewModel.currentStory.quiz2.choice[3], correctAnswerIndex: viewModel.currentStory.quiz2.correctAnswer, viewModel2: viewModel)
                     .padding(.top, 550)
                     .padding([.leading, .trailing])

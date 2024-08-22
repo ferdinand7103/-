@@ -48,15 +48,15 @@ struct PinYinTonePage: View {
                         Text("Example")
                             .font(.headline)
                             .padding(.bottom, 1)
-                        Text("妈")
+                        Text(hanzi)
                             .font(.largeTitle)
-                        Text("mā (Mom)")
+                        Text("\(pinyin) \(meaning)")
                             .font(.subheadline)
                             .foregroundColor(.gray)
                     }
                     Spacer()
                     
-                    BubbleSoundButton(icon: "sound", buttonAction: { tts.speak(text: image)}, size: 45, soundSize: 20)
+                    BubbleSoundButton(icon: "sound", buttonAction: { tts.speakSlow(text: hanzi)}, size: 45, soundSize: 20)
                 }
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 10).stroke(Color.gray.opacity(0.5)))

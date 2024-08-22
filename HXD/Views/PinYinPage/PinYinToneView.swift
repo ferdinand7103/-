@@ -15,7 +15,7 @@ struct PinYinToneView: View {
         VStack {
             HStack {
                 Button(action: {
-                    // Action for the back button
+                    viewModel.switchStage(to: .front)
                 }) {
                     Image(systemName: "chevron.left")
                         .foregroundColor(.orange)
@@ -28,7 +28,7 @@ struct PinYinToneView: View {
             TabView(selection: $selectedPage) {
                 ForEach(0..<viewModel.tones.count, id: \.self) { index in
                     PinYinTonePage(
-                        image: "tone\(index)",
+                        image: "tone\(index + 1)",
                         nada: viewModel.tones[index].jenis,
                         desc: viewModel.tones[index].desc,
                         hanzi: viewModel.tones[index].hanzi,

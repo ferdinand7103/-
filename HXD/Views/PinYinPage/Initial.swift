@@ -12,6 +12,18 @@ struct Initial: View {
     @ObservedObject var viewModel: LearnViewModel
     
     var body: some View {
+        HStack {
+            Button(action: {
+                viewModel.switchStage(to: .front)
+            }) {
+                Image(systemName: "chevron.left")
+                    .foregroundColor(.orange)
+                Text("Back")
+                    .foregroundColor(.orange)
+            }
+            Spacer()
+        }
+        .padding(.leading)
         VStack {
             Text("Pin Yin Initial")
                 .font(.system(size: 25, weight: .bold))

@@ -13,10 +13,23 @@ class LearnViewModel: ObservableObject {
     @Published var pinyinInit: [PinyinInit] = []
     @Published var pinyinFinal: [PinyinFinal] = []
     @Published var tones: [Tone] = []
+    @Published var currentStage: pinyinCase = .front
 
     init() {
         loadLearnData()
         print(learnData)
+    }
+    
+    enum pinyinCase {
+        case front
+        case initial
+        case final
+        case tone
+    }
+    
+    func switchStage(to stage: pinyinCase) {
+        currentStage = stage
+        print(currentStage)
     }
 
     // Function to load the Learn data from the JSON file

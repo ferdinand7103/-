@@ -12,6 +12,7 @@ class StoryViewModel: ObservableObject {
     @Published var stories: [Story] = []
     @Published var currentStoryIndex = 0
     @Published var currentStage: StoryStage = .onboarding
+    @Published var currentPage: Page = .story
     @Published var currentOnboardingIndex = 0
     @Published var currentFlashcardIndex = 0
     @Published var currentQuiz1Index = 0
@@ -35,6 +36,11 @@ class StoryViewModel: ObservableObject {
         case completed
     }
     
+    enum Page {
+        case home
+        case story
+    }
+    
     var currentStory: Story {
         stories[currentStoryIndex]
     }
@@ -55,7 +61,7 @@ class StoryViewModel: ObservableObject {
             }
         case .flashcard:
             quizView = "Quiz"
-            currentStage = .completed
+            currentStage = .quiz1
         case .quiz1:
             quizView2 = "Quiz"
             currentStage = .quiz2
@@ -72,16 +78,14 @@ class StoryViewModel: ObservableObject {
                 currentStage = .completed
                 currentConversationIndex = 0
                 currentConversationIndex2 = 0
-                // Move to next story or reset if done
-                if currentStoryIndex < stories.count - 1 {
+                if currentStoryIndex < stories.count - 3 {
                     currentStoryIndex += 1
                     currentStage = .onboarding
                 } else {
-                    // Handle end of all stories
+                    currentPage = .home
                 }
             }
         case .completed:
-//            homeViewModel.switchStage(to: .home)
             break
         }
     }
