@@ -10,6 +10,7 @@ import SwiftUI
 struct InformationButton: View {
     var body: some View {
         Button(action: {
+            
         }) {
             HStack {
                 Image("Flashcard")

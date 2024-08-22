@@ -88,6 +88,7 @@
 		29CBBC402C76F8AD00F9123A /* zh.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 29CBBC1E2C76F8AC00F9123A /* zh.m4a */; };
 		29CBBC502C771D8300F9123A /* PinYinToneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CBBC4F2C771D8300F9123A /* PinYinToneView.swift */; };
 		29CBBC522C772EE600F9123A /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CBBC512C772EE600F9123A /* LearnView.swift */; };
+		29CBBC5F2C7792EB00F9123A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CBBC5E2C7792EB00F9123A /* HomeView.swift */; };
 		29EBBBC62C5BAB0600AFCD60 /* HXDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBC52C5BAB0600AFCD60 /* HXDApp.swift */; };
 		29EBBBC82C5BAB0600AFCD60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */; };
 		29EBBBCA2C5BAB0700AFCD60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29EBBBC92C5BAB0700AFCD60 /* Assets.xcassets */; };
@@ -224,6 +225,7 @@
 		29CBBC4F2C771D8300F9123A /* PinYinToneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinYinToneView.swift; sourceTree = "<group>"; };
 		29CBBC512C772EE600F9123A /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		29CBBC5D2C773D0400F9123A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29CBBC5E2C7792EB00F9123A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		29EBBBC22C5BAB0600AFCD60 /* HXD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29EBBBC52C5BAB0600AFCD60 /* HXDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HXDApp.swift; sourceTree = "<group>"; };
 		29EBBBC72C5BAB0600AFCD60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 			children = (
 				293E0ED22C6EFCC00062C2AD /* HomePage.swift */,
 				32031F672C76144D0064FFBD /* TabBarView.swift */,
+				29CBBC5E2C7792EB00F9123A /* HomeView.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -880,6 +883,7 @@
 				325BB5F02C7709BB00F12820 /* PinYinViewModel.swift in Sources */,
 				29B12D162C6C4E64008FEAF4 /* FlashcardButton.swift in Sources */,
 				293E0E962C6C701A0062C2AD /* TalkingView.swift in Sources */,
+				29CBBC5F2C7792EB00F9123A /* HomeView.swift in Sources */,
 				32031F4B2C72EDD40064FFBD /* LogoAnimation.swift in Sources */,
 				29B12D142C6B9E7A008FEAF4 /* HandleButtonClick.swift in Sources */,
 				325BB5DE2C76DDA500F12820 /* LearnPinYinPage.swift in Sources */,
@@ -1139,7 +1143,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HXD/Preview Content\"";
-				DEVELOPMENT_TEAM = U542U52PMZ;
+				DEVELOPMENT_TEAM = M793N4X6S7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HXD/Info.plist;
@@ -1172,7 +1176,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HXD/Preview Content\"";
-				DEVELOPMENT_TEAM = U542U52PMZ;
+				DEVELOPMENT_TEAM = M793N4X6S7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HXD/Info.plist;

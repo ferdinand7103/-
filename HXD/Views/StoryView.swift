@@ -28,7 +28,7 @@ struct StoryView: View {
             case .conversation:
                 ConversationView(viewModel: viewModel, homeViewModel: homeViewModel)
             case .completed:
-                HXDView(homeViewModel: homeViewModel)
+                HXDView(homeViewModel: homeViewModel, viewModel: viewModel)
             }
         }
     }

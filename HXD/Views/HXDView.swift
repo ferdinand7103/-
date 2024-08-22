@@ -10,13 +10,14 @@ import SwiftUI
 struct HXDView: View {
     @State var Opacity: Double = 0.0
     @ObservedObject var homeViewModel : HomeViewModel
+    @ObservedObject var viewModel: StoryViewModel
     
     var body: some View {
         ZStack {
             switch homeViewModel.currentStage{
             case .open:
                 SplashScreenView()
-                HomePage(homeViewModel:homeViewModel)
+                HomeView(homeViewModel:homeViewModel, viewModel: viewModel)
                     .opacity(Opacity)
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -26,7 +27,7 @@ struct HXDView: View {
                         }
                     }
             case .home:
-                HomePage(homeViewModel:homeViewModel)
+                HomeView(homeViewModel:homeViewModel, viewModel: viewModel)
                     .opacity(Opacity)
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -48,5 +49,5 @@ struct HXDView: View {
 }
 
 #Preview {
-    HXDView(homeViewModel: HomeViewModel())
+    HXDView(homeViewModel: HomeViewModel(), viewModel: StoryViewModel())
 }
