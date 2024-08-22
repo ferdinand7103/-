@@ -68,6 +68,15 @@
 		32031F502C72F7A60064FFBD /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F4F2C72F7A60064FFBD /* SplashScreenView.swift */; };
 		32031F522C7444600064FFBD /* BubbleChatSoundOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F512C7444600064FFBD /* BubbleChatSoundOption.swift */; };
 		32031F542C74466F0064FFBD /* BubbleSoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F532C74466F0064FFBD /* BubbleSoundButton.swift */; };
+		32031F572C758DB10064FFBD /* RecallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F562C758DB10064FFBD /* RecallView.swift */; };
+		32031F5A2C758E8A0064FFBD /* ChapterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F592C758E8A0064FFBD /* ChapterCard.swift */; };
+		32031F5E2C75CDFE0064FFBD /* InformationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F5D2C75CDFE0064FFBD /* InformationButton.swift */; };
+		32031F602C75D8140064FFBD /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F5F2C75D8140064FFBD /* PrimaryButton.swift */; };
+		32031F622C75D8FD0064FFBD /* CardMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F612C75D8FD0064FFBD /* CardMenuButton.swift */; };
+		32031F642C75E87E0064FFBD /* HomeCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F632C75E87E0064FFBD /* HomeCardScrollView.swift */; };
+		32031F682C76144D0064FFBD /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F672C76144D0064FFBD /* TabBarView.swift */; };
+		32031F6B2C7640CA0064FFBD /* ComingSoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F6A2C7640CA0064FFBD /* ComingSoonView.swift */; };
+		32031F6E2C764C260064FFBD /* CompleteStatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32031F6D2C764C260064FFBD /* CompleteStatusLabel.swift */; };
 		323B23952C7239A200A3403E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B23942C7239A200A3403E /* RecordViewController.swift */; };
 		323B23972C723A0700A3403E /* RecordViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B23962C723A0700A3403E /* RecordViewWrapper.swift */; };
 		323B23992C723A3300A3403E /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B23982C723A3300A3403E /* RecordView.swift */; };
@@ -156,6 +165,15 @@
 		32031F4F2C72F7A60064FFBD /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		32031F512C7444600064FFBD /* BubbleChatSoundOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChatSoundOption.swift; sourceTree = "<group>"; };
 		32031F532C74466F0064FFBD /* BubbleSoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSoundButton.swift; sourceTree = "<group>"; };
+		32031F562C758DB10064FFBD /* RecallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallView.swift; sourceTree = "<group>"; };
+		32031F592C758E8A0064FFBD /* ChapterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCard.swift; sourceTree = "<group>"; };
+		32031F5D2C75CDFE0064FFBD /* InformationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationButton.swift; sourceTree = "<group>"; };
+		32031F5F2C75D8140064FFBD /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		32031F612C75D8FD0064FFBD /* CardMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMenuButton.swift; sourceTree = "<group>"; };
+		32031F632C75E87E0064FFBD /* HomeCardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardScrollView.swift; sourceTree = "<group>"; };
+		32031F672C76144D0064FFBD /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		32031F6A2C7640CA0064FFBD /* ComingSoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonView.swift; sourceTree = "<group>"; };
+		32031F6D2C764C260064FFBD /* CompleteStatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteStatusLabel.swift; sourceTree = "<group>"; };
 		323B23942C7239A200A3403E /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		323B23962C723A0700A3403E /* RecordViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewWrapper.swift; sourceTree = "<group>"; };
 		323B23982C723A3300A3403E /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
@@ -225,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				293E0ED22C6EFCC00062C2AD /* HomePage.swift */,
+				32031F672C76144D0064FFBD /* TabBarView.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -286,13 +305,13 @@
 		29B12D0B2C6B2A3C008FEAF4 /* Reuseable */ = {
 			isa = PBXGroup;
 			children = (
+				32031F6C2C764C140064FFBD /* Label */,
+				32031F582C758E520064FFBD /* Cards */,
 				323B23A02C724BAC00A3403E /* Feedback */,
 				323B239F2C724B9D00A3403E /* Quiz */,
 				323B239E2C724B5800A3403E /* Animation */,
 				323B239D2C724B2500A3403E /* Bubble */,
 				323B239C2C724AA900A3403E /* Recording */,
-				293E0ED72C6EFCD20062C2AD /* RectangleButton.swift */,
-				293E0ED52C6EFCC90062C2AD /* HomeCard.swift */,
 				293E0E932C6C67420062C2AD /* ConfirmationView.swift */,
 			);
 			path = Reuseable;
@@ -384,6 +403,8 @@
 		29EBBBD32C5BAB3E00AFCD60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				32031F692C7640BB0064FFBD /* ComingSoonPage */,
+				32031F552C758D9F0064FFBD /* RecallPage */,
 				29CBBBEC2C7588B700F9123A /* ConversationPage */,
 				29CBBBE32C757FD600F9123A /* TonePage */,
 				1A06B9E22C7437DD00226FD1 /* DictionaryPage */,
@@ -428,6 +449,40 @@
 				32031F4F2C72F7A60064FFBD /* SplashScreenView.swift */,
 			);
 			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		32031F552C758D9F0064FFBD /* RecallPage */ = {
+			isa = PBXGroup;
+			children = (
+				32031F562C758DB10064FFBD /* RecallView.swift */,
+			);
+			path = RecallPage;
+			sourceTree = "<group>";
+		};
+		32031F582C758E520064FFBD /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				293E0ED52C6EFCC90062C2AD /* HomeCard.swift */,
+				32031F592C758E8A0064FFBD /* ChapterCard.swift */,
+				32031F632C75E87E0064FFBD /* HomeCardScrollView.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		32031F692C7640BB0064FFBD /* ComingSoonPage */ = {
+			isa = PBXGroup;
+			children = (
+				32031F6A2C7640CA0064FFBD /* ComingSoonView.swift */,
+			);
+			path = ComingSoonPage;
+			sourceTree = "<group>";
+		};
+		32031F6C2C764C140064FFBD /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				32031F6D2C764C260064FFBD /* CompleteStatusLabel.swift */,
+			);
+			path = Label;
 			sourceTree = "<group>";
 		};
 		323B239C2C724AA900A3403E /* Recording */ = {
@@ -490,12 +545,16 @@
 		32714E502C6A4F4700EE6486 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				293E0ED72C6EFCD20062C2AD /* RectangleButton.swift */,
 				32714E512C6A4F6E00EE6486 /* SoundButton.swift */,
 				293E0E8D2C6C62A00062C2AD /* FCNavigationButton.swift */,
 				29B12D092C6B2909008FEAF4 /* BackButton.swift */,
 				3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */,
 				29B12D152C6C4E64008FEAF4 /* FlashcardButton.swift */,
 				32031F532C74466F0064FFBD /* BubbleSoundButton.swift */,
+				32031F5D2C75CDFE0064FFBD /* InformationButton.swift */,
+				32031F5F2C75D8140064FFBD /* PrimaryButton.swift */,
+				32031F612C75D8FD0064FFBD /* CardMenuButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -621,6 +680,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32031F642C75E87E0064FFBD /* HomeCardScrollView.swift in Sources */,
 				32031F492C72ED4C0064FFBD /* LogoAnimationView.swift in Sources */,
 				29B12D162C6C4E64008FEAF4 /* FlashcardButton.swift in Sources */,
 				293E0E962C6C701A0062C2AD /* TalkingView.swift in Sources */,
@@ -633,11 +693,13 @@
 				29CBBBE52C757FE000F9123A /* ToneTop.swift in Sources */,
 				29B12CA22C6467D0008FEAF4 /* PinyinFormatter.swift in Sources */,
 				32714E4B2C6A443500EE6486 /* FlashcardView.swift in Sources */,
+				32031F622C75D8FD0064FFBD /* CardMenuButton.swift in Sources */,
 				29B12CAE2C64CABD008FEAF4 /* TextToSpeech.swift in Sources */,
 				29B12D0A2C6B2909008FEAF4 /* BackButton.swift in Sources */,
 				29EBBBDB2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift in Sources */,
 				29B12D0D2C6B2A53008FEAF4 /* QuizHanzi.swift in Sources */,
 				29EBBBC82C5BAB0600AFCD60 /* ContentView.swift in Sources */,
+				32031F602C75D8140064FFBD /* PrimaryButton.swift in Sources */,
 				29B12C9D2C6466AE008FEAF4 /* HanziToPinyin.swift in Sources */,
 				29CBBBE72C7580B100F9123A /* ToneView.swift in Sources */,
 				29B12D122C6B9409008FEAF4 /* QuizPage.swift in Sources */,
@@ -649,16 +711,21 @@
 				293E0EE62C72FAD00062C2AD /* StoryViewModel.swift in Sources */,
 				293E0E942C6C67420062C2AD /* ConfirmationView.swift in Sources */,
 				32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */,
+				32031F682C76144D0064FFBD /* TabBarView.swift in Sources */,
 				29CBBBDE2C743B4B00F9123A /* AudioRecorder.swift in Sources */,
 				293E0EAB2C6CF8A30062C2AD /* BubbleChatTail.swift in Sources */,
+				32031F5E2C75CDFE0064FFBD /* InformationButton.swift in Sources */,
 				32714E4D2C6A46FC00EE6486 /* FlashcardViewModel.swift in Sources */,
+				32031F572C758DB10064FFBD /* RecallView.swift in Sources */,
 				3252BDA42C6CFB8A00CE8CEE /* OnboardingPage.swift in Sources */,
 				29EBBBC62C5BAB0600AFCD60 /* HXDApp.swift in Sources */,
 				323B239B2C723B1200A3403E /* RecordingView.swift in Sources */,
 				32031F502C72F7A60064FFBD /* SplashScreenView.swift in Sources */,
+				32031F6E2C764C260064FFBD /* CompleteStatusLabel.swift in Sources */,
 				32031F522C7444600064FFBD /* BubbleChatSoundOption.swift in Sources */,
 				29CBBBEE2C7588C300F9123A /* ConversationView.swift in Sources */,
 				29B12CB22C65BFF5008FEAF4 /* Wrong.swift in Sources */,
+				32031F6B2C7640CA0064FFBD /* ComingSoonView.swift in Sources */,
 				293E0EC32C6DB1BC0062C2AD /* HuggingFace.swift in Sources */,
 				3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */,
 				29CBBBF02C75A23400F9123A /* HXDView.swift in Sources */,
@@ -667,6 +734,7 @@
 				29CBBBE92C7583A800F9123A /* ToneCorrect.swift in Sources */,
 				293E0E9A2C6CD00D0062C2AD /* TalkingAnimationProtocol.swift in Sources */,
 				29B12CB02C64D1F0008FEAF4 /* TextToSpeechProtocol.swift in Sources */,
+				32031F5A2C758E8A0064FFBD /* ChapterCard.swift in Sources */,
 				293E0E922C6C64DD0062C2AD /* QuizTop.swift in Sources */,
 				293E0ED62C6EFCC90062C2AD /* HomeCard.swift in Sources */,
 				29B12CA52C6468C0008FEAF4 /* HanziPinyinResources.swift in Sources */,

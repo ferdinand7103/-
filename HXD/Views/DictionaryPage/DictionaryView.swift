@@ -23,15 +23,16 @@ struct DictionaryView: View {
                     .font(.subheadline)
                     .foregroundColor(.gray)
                     .frame(maxWidth: .infinity, alignment: .center)
+                    .padding(.bottom, 16)
                 
 
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 0) {
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
                     ForEach(0..<viewModel.currentStory.flashcard.count) { index in
                         ZStack {
                             FlashcardView(vocab: viewModel.currentStory.flashcard[index], width: 170, height: 236)
                                 .padding(0)
-                                .shadow(radius: 2)
-                            
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(.lighterGray, lineWidth: 1)
                             SoundButton(vocab: viewModel.currentStory.flashcard[index])
                                 .frame(width: 30, height: 30)
                                 .background(Color.white)
