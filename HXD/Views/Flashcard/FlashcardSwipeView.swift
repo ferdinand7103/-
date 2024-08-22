@@ -42,28 +42,47 @@ struct FlashcardSwipeView: View {
                                     }
                                 }
                             }
-                            HStack {
-                                BackButton(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict)
-                                    .padding(.bottom, 500)
+                            VStack {
+                                HStack (alignment: .top) {
+                                    BackButton(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict)
+                                        .position(x:0,y:0)
+                                    Spacer()
+                                }
+                                .frame(height:20)
+                                .padding()
                                 Spacer()
                             }
+                            .frame(alignment: .top)
                             .padding()
-                        }
-                        HStack {
-                            if currentIndex > 0 {
-                                PreviousButton(action: {
-                                    performSwipeLeft()
-                                })
+                            
+                            ZStack {
+                                VStack {
+                                    Spacer()
+                                    HStack {
+                                        if currentIndex > 0 {
+                                            PreviousButton(action: {
+                                                performSwipeLeft()
+                                            })
+                                        }
+                                        Spacer()
+                                        NextButton(action: {
+                                            performSwipeRight()
+                                        })
+                                    }
+                                }
+                                .frame(maxHeight: 500)
+                                
                             }
-                            Spacer()
-                            NextButton(action: {
-                                performSwipeRight()
-                            })
+                            
+                            
                         }
+                        
+                       
                     }
                 }
-                .contentShape(Rectangle())
                 .gesture(createDragGesture())
+
+//                .contentShape(Rectangle())
                 if done {
                     Button(action: {
                         viewModel.moveToNextStage()
@@ -84,7 +103,7 @@ struct FlashcardSwipeView: View {
                                 .frame(width: 300)
                         )
                     }
-                    .padding(.top, 20)
+                    .padding(.bottom, 80)
                 }
             }
             .padding()
