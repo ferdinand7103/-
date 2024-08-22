@@ -19,7 +19,7 @@ struct DictButton: View {
                     .fill(Color.orange3)
                     .frame(width: 50, height: 50)
                     .overlay(
-                        Image(systemName: "rectangle.on.rectangle")
+                        Image("Dictionary")
                             .foregroundStyle(.white)
                             .font(.system(size: 20, weight: .bold))
                     )
