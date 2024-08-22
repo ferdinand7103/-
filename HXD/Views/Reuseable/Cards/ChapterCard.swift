@@ -31,9 +31,11 @@ struct ChapterCard: View {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Chapter \(chapterNumber)")
                         .font(.system(size: 14, weight: .regular))
+                        .foregroundColor(.black)
                       
                     Text(chapterTitle)
                         .font(.system(size: 20, weight: .bold))
+                        .foregroundStyle(.black)
                 }
                 Spacer()
             }
@@ -51,6 +53,7 @@ struct ChapterCard: View {
                       
                     Text(options[index])
                         .font(.system(size: 16, weight: .medium))
+                        .foregroundColor(.black)
                       
                     Spacer()
                       
