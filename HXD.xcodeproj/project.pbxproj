@@ -84,6 +84,8 @@
 		3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */; };
 		3252BDA42C6CFB8A00CE8CEE /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252BDA32C6CFB8A00CE8CEE /* OnboardingPage.swift */; };
 		3252BDA62C6D0A4000CE8CEE /* BubbleChatNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252BDA52C6D0A4000CE8CEE /* BubbleChatNext.swift */; };
+		325BB5DE2C76DDA500F12820 /* LearnPinYinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5DD2C76DDA500F12820 /* LearnPinYinPage.swift */; };
+		325BB5E02C76DEB400F12820 /* PinYinNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5DF2C76DEB400F12820 /* PinYinNavigationButton.swift */; };
 		32714E4B2C6A443500EE6486 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4A2C6A443500EE6486 /* FlashcardView.swift */; };
 		32714E4D2C6A46FC00EE6486 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4C2C6A46FC00EE6486 /* FlashcardViewModel.swift */; };
 		32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4E2C6A47EE00EE6486 /* FlashcardListView.swift */; };
@@ -181,6 +183,8 @@
 		3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperButtons.swift; sourceTree = "<group>"; };
 		3252BDA32C6CFB8A00CE8CEE /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingPage.swift; path = HXD/Views/OnboardingPage/Scene1_School/OnboardingPage.swift; sourceTree = SOURCE_ROOT; };
 		3252BDA52C6D0A4000CE8CEE /* BubbleChatNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChatNext.swift; sourceTree = "<group>"; };
+		325BB5DD2C76DDA500F12820 /* LearnPinYinPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnPinYinPage.swift; sourceTree = "<group>"; };
+		325BB5DF2C76DEB400F12820 /* PinYinNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinYinNavigationButton.swift; sourceTree = "<group>"; };
 		32714E4A2C6A443500EE6486 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		32714E4C2C6A46FC00EE6486 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
 		32714E4E2C6A47EE00EE6486 /* FlashcardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardListView.swift; sourceTree = "<group>"; };
@@ -403,6 +407,7 @@
 		29EBBBD32C5BAB3E00AFCD60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				325BB5DC2C76DD7A00F12820 /* PinYinPage */,
 				32031F692C7640BB0064FFBD /* ComingSoonPage */,
 				32031F552C758D9F0064FFBD /* RecallPage */,
 				29CBBBEC2C7588B700F9123A /* ConversationPage */,
@@ -542,6 +547,14 @@
 			path = Scene1_School;
 			sourceTree = "<group>";
 		};
+		325BB5DC2C76DD7A00F12820 /* PinYinPage */ = {
+			isa = PBXGroup;
+			children = (
+				325BB5DD2C76DDA500F12820 /* LearnPinYinPage.swift */,
+			);
+			path = PinYinPage;
+			sourceTree = "<group>";
+		};
 		32714E502C6A4F4700EE6486 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -555,6 +568,7 @@
 				32031F5D2C75CDFE0064FFBD /* InformationButton.swift */,
 				32031F5F2C75D8140064FFBD /* PrimaryButton.swift */,
 				32031F612C75D8FD0064FFBD /* CardMenuButton.swift */,
+				325BB5DF2C76DEB400F12820 /* PinYinNavigationButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -686,10 +700,12 @@
 				293E0E962C6C701A0062C2AD /* TalkingView.swift in Sources */,
 				32031F4B2C72EDD40064FFBD /* LogoAnimation.swift in Sources */,
 				29B12D142C6B9E7A008FEAF4 /* HandleButtonClick.swift in Sources */,
+				325BB5DE2C76DDA500F12820 /* LearnPinYinPage.swift in Sources */,
 				29CBBBE02C743D7600F9123A /* QuizPage2.swift in Sources */,
 				32714E522C6A4F6E00EE6486 /* SoundButton.swift in Sources */,
 				293E0ED82C6EFCD20062C2AD /* RectangleButton.swift in Sources */,
 				32031F542C74466F0064FFBD /* BubbleSoundButton.swift in Sources */,
+				325BB5E02C76DEB400F12820 /* PinYinNavigationButton.swift in Sources */,
 				29CBBBE52C757FE000F9123A /* ToneTop.swift in Sources */,
 				29B12CA22C6467D0008FEAF4 /* PinyinFormatter.swift in Sources */,
 				32714E4B2C6A443500EE6486 /* FlashcardView.swift in Sources */,
