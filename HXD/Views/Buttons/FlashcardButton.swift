@@ -9,11 +9,13 @@ import SwiftUI
 
 struct DictButton: View {
     @Binding var isShowingDict: Bool
+    @ObservedObject var viewModel: StoryViewModel
 
     var body: some View {
         ZStack {
             Button(action: {
                 isShowingDict = true
+                viewModel.showChoice = false
             }) {
                 Rectangle()
                     .fill(Color.orange3)
@@ -55,5 +57,5 @@ struct DictButton: View {
 }
 
 #Preview {
-    DictButton(isShowingDict: .constant(false))
+    DictButton(isShowingDict: .constant(false), viewModel: StoryViewModel())
 }

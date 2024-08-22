@@ -37,12 +37,11 @@ struct ToneTop: View {
                     .edgesIgnoringSafeArea(.all)
                 
                 DictionaryView(isShowingDict: $isShowingDict, viewModel: viewModel)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height)
                     .transition(.scale)
                     .zIndex(100)
-                    .padding(.bottom, 85)
             }
-            UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict)
+            UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict, viewModel: viewModel)
                 .padding(.bottom, 680)
             TalkingView(images: ["Orange1","Orange2"],talkingAnimation: talkingAnimation)
                 .onAppear {

@@ -20,7 +20,6 @@ struct FlashcardSwipeView: View {
 
     var body: some View {
         ZStack {
-
             VStack {
                 ZStack {
                     VStack {
@@ -43,9 +42,12 @@ struct FlashcardSwipeView: View {
                                     }
                                 }
                             }
-                            UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict)
-                                .padding(.bottom, 500)
-                         
+                            HStack {
+                                BackButton(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict)
+                                    .padding(.bottom, 500)
+                                Spacer()
+                            }
+                            .padding()
                         }
                         HStack {
                             if currentIndex > 0 {

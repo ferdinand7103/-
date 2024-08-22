@@ -18,8 +18,13 @@ struct OnboardingPage: View {
     var body: some View {
         ZStack {
             Image(viewModel.currentStory.background).resizable().modifier(BackgroundImageModifier())
-            UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict)
-                .padding(.bottom, 680)
+            HStack {
+                BackButton(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict)
+                    .padding(.bottom, 680)
+                    .padding(.leading, 30)
+                Spacer()
+            }
+            .padding(.leading)
             TalkingView(images: ["Orange1","Orange2"],talkingAnimation: talkingAnimation)
                 .onAppear {
                     talkingAnimation.startTalking(duration: 5)
@@ -59,7 +64,6 @@ struct OnboardingPage: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .transition(.scale)
                     .zIndex(100)
-                    .padding(.bottom, 85)
             }
         }
     }
