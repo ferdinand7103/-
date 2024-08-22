@@ -20,14 +20,18 @@ struct ConfirmationView: View {
             VStack(alignment: .center) {
                 Text("Are you sure you want")
                     .font(.system(size: 24, weight: .bold))
+                    .foregroundStyle(Color(.black))
                 Text("to leave this page?")
                     .font(.system(size: 24, weight: .bold))
+                    .foregroundStyle(Color(.black))
                     .padding(.bottom, 15)
                 Text("You'll need to start the story over")
                     .font(.system(size: 16))
+                    .foregroundStyle(Color(.black))
                 Text("from the beginning")
                     .font(.system(size: 16))
                     .padding(.bottom, 15)
+                    .foregroundStyle(Color(.black))
                 Button(action: {
                     print("leave")
                     isShowingConfirmation = false
@@ -41,6 +45,7 @@ struct ConfirmationView: View {
                         Text("Leave")
                             .font(.system(size: 16))
                             .foregroundStyle(.white)
+                            .fontWeight(.bold)
                     }
                 }
                 Button(action: {
@@ -55,10 +60,11 @@ struct ConfirmationView: View {
                         Text("Back to story")
                             .font(.system(size: 16))
                             .foregroundStyle(.orange3)
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     }
                 }
             }
-            .shadow(radius: 16)
+//            .shadow(radius: 16)
         }
     }
 }

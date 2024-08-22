@@ -14,7 +14,7 @@ struct CardMenuButton: View {
 
         }) {
             Rectangle()
-                .fill(isDisabled ? Color.lighterGray : Color.gold2)
+                .fill(isDisabled ? Color(red: 0.9, green: 0.9, blue: 0.9) : Color.gold2)
                 .frame(width: 64, height: 64)
                 .overlay(
                     Image("menuIcon")
@@ -22,7 +22,7 @@ struct CardMenuButton: View {
                         .renderingMode(.template)
                         .scaledToFit()
                         .frame(width: 32, height: 32)
-                        .foregroundStyle(isDisabled ? Color.lightGray : Color.orange3)
+                        .foregroundStyle(isDisabled ? Color(red: 0.7, green: 0.7, blue: 0.7) : Color.orange3)
                 )
                 .cornerRadius(10)
         }

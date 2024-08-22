@@ -15,11 +15,11 @@ struct PrimaryButton: View {
         Button(action: { homeViewModel.switchStage(to: .story)}) {
             ZStack {
                 Rectangle()
-                    .foregroundColor(isDisabled ? Color.lighterGray : Color.orange3)
+                    .foregroundColor(isDisabled ? Color(red: 0.9, green: 0.9, blue: 0.9) : Color.orange3)
                     .frame(width: 233, height: 64)
                     .cornerRadius(12)
                 Text("Practice")
-                    .foregroundStyle(isDisabled ? Color.lightGray : Color.white)
+                    .foregroundStyle(isDisabled ? Color(red: 0.7, green: 0.7, blue: 0.7) : Color.white)
                     .font(.system(size: 20, weight: .bold))
             }
         }
