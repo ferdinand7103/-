@@ -28,8 +28,7 @@ struct HXDApp: App {
 //                        selectedOption: nil, isInactive: .constant(false), isFinished: .constant(false) )
 //            RecordingView()
 //            StoryView()
-            LearnPinYinPage()
-//            HomePage()
+            HXDView(homeViewModel: HomeViewModel())
         }
     }
 }

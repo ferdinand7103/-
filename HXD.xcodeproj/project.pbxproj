@@ -11,6 +11,7 @@
 		1A06B9F02C75AE0C00226FD1 /* pinyin.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A06B9EF2C75AE0C00226FD1 /* pinyin.json */; };
 		1A06B9F22C75AE1D00226FD1 /* LearnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A06B9F12C75AE1D00226FD1 /* LearnViewModel.swift */; };
 		1A06B9F42C75AE2A00226FD1 /* LearnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A06B9F32C75AE2A00226FD1 /* LearnModel.swift */; };
+		1A06B9F62C76DD0F00226FD1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A06B9F52C76DD0F00226FD1 /* HomeViewModel.swift */; };
 		293E0E8E2C6C62A00062C2AD /* FCNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E8D2C6C62A00062C2AD /* FCNavigationButton.swift */; };
 		293E0E922C6C64DD0062C2AD /* QuizTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E912C6C64DD0062C2AD /* QuizTop.swift */; };
 		293E0E942C6C67420062C2AD /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293E0E932C6C67420062C2AD /* ConfirmationView.swift */; };
@@ -114,6 +115,7 @@
 		1A06B9EF2C75AE0C00226FD1 /* pinyin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pinyin.json; sourceTree = "<group>"; };
 		1A06B9F12C75AE1D00226FD1 /* LearnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewModel.swift; sourceTree = "<group>"; };
 		1A06B9F32C75AE2A00226FD1 /* LearnModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnModel.swift; sourceTree = "<group>"; };
+		1A06B9F52C76DD0F00226FD1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		293E0E8D2C6C62A00062C2AD /* FCNavigationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCNavigationButton.swift; sourceTree = "<group>"; };
 		293E0E912C6C64DD0062C2AD /* QuizTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTop.swift; sourceTree = "<group>"; };
 		293E0E932C6C67420062C2AD /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 				32714E4C2C6A46FC00EE6486 /* FlashcardViewModel.swift */,
 				293E0EE52C72FAD00062C2AD /* StoryViewModel.swift */,
 				1A06B9F12C75AE1D00226FD1 /* LearnViewModel.swift */,
+				1A06B9F52C76DD0F00226FD1 /* HomeViewModel.swift */,
 				325BB5EF2C7709BB00F12820 /* PinYinViewModel.swift */,
 			);
 			path = ViewModels;
@@ -735,6 +738,7 @@
 				29EBBBDB2C5BAC0D00AFCD60 /* PinyinOutputFormat.swift in Sources */,
 				29B12D0D2C6B2A53008FEAF4 /* QuizHanzi.swift in Sources */,
 				29EBBBC82C5BAB0600AFCD60 /* ContentView.swift in Sources */,
+				1A06B9F62C76DD0F00226FD1 /* HomeViewModel.swift in Sources */,
 				32031F602C75D8140064FFBD /* PrimaryButton.swift in Sources */,
 				29B12C9D2C6466AE008FEAF4 /* HanziToPinyin.swift in Sources */,
 				29CBBBE72C7580B100F9123A /* ToneView.swift in Sources */,
