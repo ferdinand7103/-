@@ -19,11 +19,11 @@ struct QuizPage2: View {
                     .padding([.leading, .trailing])
             } else if viewModel.quizView2 == "Correct" {
                 ToneTop(viewModel: viewModel, hanzi: viewModel.currentStory.quiz2.happyFlow)
-                Correct(hanzi: viewModel.currentStory.quiz2.speak, pinyin: viewModel.currentStory.quiz2.pinyin, meaning: viewModel.currentStory.quiz2.meaning, pad: 70, viewModel: viewModel)
+                Correct(hanzi: viewModel.currentStory.quiz2.speak, pinyin: viewModel.currentStory.quiz2.pinyin, meaning: viewModel.currentStory.quiz2.meaning, viewModel: viewModel)
                     .padding(.top, 550)
             } else if viewModel.quizView2 == "Wrong" {
                 ToneTop(viewModel: viewModel, hanzi: viewModel.currentStory.quiz2.negativeFlow)
-                Wrong(hanzi: viewModel.currentStory.quiz2.speak, pinyin: viewModel.currentStory.quiz2.pinyin, meaning: viewModel.currentStory.quiz2.meaning, pad: 165, viewModel: viewModel)
+                Wrong(hanzi: viewModel.currentStory.quiz2.speak, pinyin: viewModel.currentStory.quiz2.pinyin, meaning: viewModel.currentStory.quiz2.meaning, viewModel: viewModel)
                     .padding(.top, 550)
                     .padding([.leading, .trailing])
             }

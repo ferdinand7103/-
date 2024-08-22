@@ -19,11 +19,11 @@ struct QuizPage: View {
                     .padding([.leading, .trailing])
             } else if viewModel.quizView == "Correct" {
                 QuizTop(viewModel: viewModel, text: viewModel.currentStory.quiz1.happyFlow)
-                Correct(hanzi: viewModel.currentStory.quiz1.choice[viewModel.currentStory.quiz1.correctAnswer].text, pinyin: viewModel.currentStory.quiz1.choice[viewModel.currentStory.quiz1.correctAnswer].pinyin, meaning: viewModel.currentStory.quiz1.meaning, pad: 70, viewModel: viewModel)
+                Correct(hanzi: viewModel.currentStory.quiz1.choice[viewModel.currentStory.quiz1.correctAnswer].text, pinyin: viewModel.currentStory.quiz1.choice[viewModel.currentStory.quiz1.correctAnswer].pinyin, meaning: viewModel.currentStory.quiz1.meaning, viewModel: viewModel)
                     .padding(.top, 550)
             } else if viewModel.quizView == "Wrong" {
                 QuizTop(viewModel: viewModel, text: viewModel.currentStory.quiz1.negativeFlow)
-                Wrong(hanzi: viewModel.currentStory.quiz1.choice[viewModel.currentStory.quiz1.correctAnswer].text, pinyin: viewModel.currentStory.quiz1.choice[viewModel.currentStory.quiz1.correctAnswer].pinyin, meaning: viewModel.currentStory.quiz1.meaning, pad: 165, viewModel: viewModel)
+                Wrong(hanzi: viewModel.currentStory.quiz1.choice[viewModel.currentStory.quiz1.correctAnswer].text, pinyin: viewModel.currentStory.quiz1.choice[viewModel.currentStory.quiz1.correctAnswer].pinyin, meaning: viewModel.currentStory.quiz1.meaning, viewModel: viewModel)
                     .padding(.top, 550)
                     .padding([.leading, .trailing])
             }
