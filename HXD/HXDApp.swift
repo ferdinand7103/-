@@ -29,8 +29,8 @@ struct HXDApp: App {
 //            RecordingView()
 //            StoryView()
 //            HomePage()
-//            Initial(viewModel: LearnViewModel())
-            bpm(text: "b", speak: "b")
+            Initial(viewModel: LearnViewModel())
+//            bpm(text: "b", speak: "b")
         }
     }
 }
