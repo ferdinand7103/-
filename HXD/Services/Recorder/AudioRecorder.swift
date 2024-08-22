@@ -60,48 +60,77 @@ class AudioRecorder: NSObject , ObservableObject , AVAudioPlayerDelegate  {
         } catch _ {
         }
     }
-    
-    func playSong() {
-        print("HI")
+    func playSound(speak: String) {
         do {
-            try session.setCategory(.soloAmbient, mode: .default, options: .duckOthers)
-            try session.setActive(true)
+            
+            let folderURL = Bundle.main.url(forResource: speak, withExtension: ".m4a")!
+            audioPlayer = try AVAudioPlayer(contentsOf: folderURL)
+            audioPlayer?.prepareToPlay()
+            audioPlayer?.play()
+            print("Playing sound.")
         } catch let error {
-            fatalError("error play session: \(error.localizedDescription)")
-        }
-        
-        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let fileName = path.appendingPathComponent("recording.wav")
-        
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: fileName)
-            audioPlayer.prepareToPlay()
-            audioPlayer.play()
-        } catch let error {
-            fatalError("Error playing recorded sound: \(error.localizedDescription)")
+            print("Error initializing audio player: \(error.localizedDescription)")
         }
     }
+
+//    func playSong() {
+//        print("HI")
+//        do {
+//            try session.setCategory(.soloAmbient, mode: .default, options: .duckOthers)
+//            try session.setActive(true)
+//        } catch let error {
+//            fatalError("error play session: \(error.localizedDescription)")
+//        }
+//        
+//        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+//        let fileName = path.appendingPathComponent("recording.wav")
+//        
+//        do {
+//            audioPlayer = try AVAudioPlayer(contentsOf: fileName)
+//            audioPlayer.prepareToPlay()
+//            audioPlayer.play()
+//        } catch let error {
+//            fatalError("Error playing recorded sound: \(error.localizedDescription)")
+//        }
+//    }
     
-    func playSound(soundName: String) {
-        do {
-            try session.setCategory(.soloAmbient, mode: .default, options: .duckOthers)
-            try session.setActive(true)
-        } catch let error {
-            fatalError("Error setting up audio session: \(error.localizedDescription)")
+//    func playSound() {
+//        let fileManager = FileManager.default
+//        if let folderURL = Bundle.main.url(forResource: "b", withExtension: ".m4a") {
+//            print("Folder URL: \(folderURL)")
+//        } else {
+//            print("Folder not found.")
+//        }
+//    }
+//        do {
+////            if let filePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first{
+////                print("File path: \(filePath)")
+//                
+//            let contents = try fileManager.contentsOfDirectory(atPath: Bundle.main.url(forResource: "HXD", withExtension: nil)!.absoluteString)
+//                for item in contents {
+//                    print(item)
+//                }
+//        } catch {
+//            print("Error accessing directory: \(error.localizedDescription)")
+//        }
+//    }
+//    
+    
+    
+    //        guard let folderURL = Bundle.main.url(forResource: "/Users/jeha/Documents/HXD/HXD/Pinyin/\(folderName)", withExtension: nil) else {
+    //            print("Unable to find the folder.")
+    //            return
+    //        }
+    //
+    //        let fileURL = folderURL.appendingPathComponent("\(filename).m4a")
+    //
+    //        do {
+    //            audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
+    //            audioPlayer?.prepareToPlay()
+    //            audioPlayer?.play()
+    //        } catch {
+    //            print("Error loading sound file: \(error.localizedDescription)")
+    //        }
         }
-        
-        let soundFileName = soundName.contains(".") ? soundName : "\(soundName).m4a"
-        
-        if let fileName = Bundle.main.url(forResource: soundFileName, withExtension: nil, subdirectory: "HXD/Pinyin/Initial") {
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: fileName)
-                audioPlayer?.prepareToPlay()
-                audioPlayer?.play()
-            } catch let error {
-                fatalError("Error playing sound: \(error.localizedDescription)")
-            }
-        } else {
-            fatalError("File not found: \(soundFileName)")
-        }
-    }
-}
+    
+    
