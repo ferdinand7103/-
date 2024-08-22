@@ -123,7 +123,6 @@
 		325BB5E02C76DEB400F12820 /* PinYinNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5DF2C76DEB400F12820 /* PinYinNavigationButton.swift */; };
 		325BB5E22C76EBF400F12820 /* PinYinExampleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5E12C76EBF400F12820 /* PinYinExampleCard.swift */; };
 		325BB5E42C76F46400F12820 /* LearnPinYinContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5E32C76F46400F12820 /* LearnPinYinContents.swift */; };
-		325BB5E62C76F95300F12820 /* Initial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5E52C76F95300F12820 /* Initial.swift */; };
 		325BB5E82C76FA1B00F12820 /* Final.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5E72C76FA1B00F12820 /* Final.swift */; };
 		325BB5EE2C76FABD00F12820 /* PinYinTonePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5ED2C76FABD00F12820 /* PinYinTonePage.swift */; };
 		325BB5F02C7709BB00F12820 /* PinYinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5EF2C7709BB00F12820 /* PinYinViewModel.swift */; };
@@ -262,7 +261,6 @@
 		325BB5DF2C76DEB400F12820 /* PinYinNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinYinNavigationButton.swift; sourceTree = "<group>"; };
 		325BB5E12C76EBF400F12820 /* PinYinExampleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinYinExampleCard.swift; sourceTree = "<group>"; };
 		325BB5E32C76F46400F12820 /* LearnPinYinContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnPinYinContents.swift; sourceTree = "<group>"; };
-		325BB5E52C76F95300F12820 /* Initial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initial.swift; sourceTree = "<group>"; };
 		325BB5E72C76FA1B00F12820 /* Final.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final.swift; sourceTree = "<group>"; };
 		325BB5ED2C76FABD00F12820 /* PinYinTonePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinYinTonePage.swift; sourceTree = "<group>"; };
 		325BB5EF2C7709BB00F12820 /* PinYinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinYinViewModel.swift; sourceTree = "<group>"; };
@@ -562,7 +560,6 @@
 		29EBBBD32C5BAB3E00AFCD60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				29CBBBF92C76DEBA00F9123A /* Initial.swift */,
 				325BB5DC2C76DD7A00F12820 /* PinYinPage */,
 				32031F692C7640BB0064FFBD /* ComingSoonPage */,
 				32031F552C758D9F0064FFBD /* RecallPage */,
@@ -711,7 +708,7 @@
 			children = (
 				325BB5DD2C76DDA500F12820 /* LearnPinYinPage.swift */,
 				325BB5E32C76F46400F12820 /* LearnPinYinContents.swift */,
-				325BB5E52C76F95300F12820 /* Initial.swift */,
+				29CBBBF92C76DEBA00F9123A /* Initial.swift */,
 				325BB5E72C76FA1B00F12820 /* Final.swift */,
 				325BB5ED2C76FABD00F12820 /* PinYinTonePage.swift */,
 			);
@@ -946,7 +943,6 @@
 				29CBBBEE2C7588C300F9123A /* ConversationView.swift in Sources */,
 				29B12CB22C65BFF5008FEAF4 /* Wrong.swift in Sources */,
 				32031F6B2C7640CA0064FFBD /* ComingSoonView.swift in Sources */,
-				325BB5E62C76F95300F12820 /* Initial.swift in Sources */,
 				293E0EC32C6DB1BC0062C2AD /* HuggingFace.swift in Sources */,
 				3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */,
 				29CBBBF02C75A23400F9123A /* HXDView.swift in Sources */,

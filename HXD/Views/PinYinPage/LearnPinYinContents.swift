@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LearnPinYinContents: View {
+    @ObservedObject var learnVM: LearnViewModel
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -21,10 +23,10 @@ struct LearnPinYinContents: View {
                     PinYinExampleCard()
                     
                     VStack(spacing: 16) {
-                        NavigationLink(destination: Initial()) {
+                        NavigationLink(destination: Initial(viewModel: learnVM)) {
                             PinYinNavigationButton(labelImage: .initialIcon, title: "Initial", content: "Initials are usually consonants")
                         }
-                        NavigationLink(destination: Final()) {
+                        NavigationLink(destination: Final(viewModel: learnVM)) {
                             PinYinNavigationButton(labelImage: .finalIcon, title: "Final", content: "Finals are usually made up of vowels")
                         }
                         NavigationLink(destination: PinYinTonePage()) {
@@ -54,5 +56,5 @@ struct LearnPinYinContents: View {
 
 
 #Preview {
-    LearnPinYinContents()
+    LearnPinYinContents(learnVM: LearnViewModel())
 }
