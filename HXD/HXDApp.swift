@@ -28,7 +28,9 @@ struct HXDApp: App {
 //                        selectedOption: nil, isInactive: .constant(false), isFinished: .constant(false) )
 //            RecordingView()
 //            StoryView()
-            HXDView(homeViewModel: HomeViewModel())
+//            HomePage()
+//            Initial(viewModel: LearnViewModel())
+            bpm(text: "b", speak: "b")
         }
     }
 }
