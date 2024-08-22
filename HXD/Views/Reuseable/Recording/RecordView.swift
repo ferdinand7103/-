@@ -406,6 +406,7 @@ class RecordView: UIView {
     
     @objc private func continueTapped() {
         if currentMode == .conversation {
+            print(viewModel.currentPage)
             if viewModel.currentPage == .home {
                 homeVM.switchStage(to: .home)
             } else {

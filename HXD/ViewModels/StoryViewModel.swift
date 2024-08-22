@@ -70,6 +70,11 @@ class StoryViewModel: ObservableObject {
             currentStage = .toneTest
         case .toneTest:
             currentStage = .conversation
+            if currentStoryIndex < stories.count - 1 {
+//
+            } else {
+                currentPage = .home
+            }
         case .conversation:
             if currentConversationIndex < currentStory.conversation.count - 1 {
                 currentConversationIndex += 1
@@ -78,11 +83,11 @@ class StoryViewModel: ObservableObject {
                 currentStage = .completed
                 currentConversationIndex = 0
                 currentConversationIndex2 = 0
-                if currentStoryIndex < stories.count - 3 {
+                if currentStoryIndex < stories.count - 1 {
                     currentStoryIndex += 1
                     currentStage = .onboarding
                 } else {
-                    currentPage = .home
+//
                 }
             }
         case .completed:
