@@ -19,6 +19,8 @@ struct Story: Codable {
     var quiz2: Quiz2
     var toneTest: ToneTest
     var conversation: [ConversationPart]
+    var conversationValidate: String
+    var user: [ConversationPart]
 }
 
 struct OnboardingEntry: Codable {
@@ -56,6 +58,8 @@ struct ToneTest: Codable {
     var speak: String
     var happyFlow: String
     var negativeFlow: String
+    var happyDown: String
+    var negativeDown: String
 }
 
 struct ConversationPart: Codable {

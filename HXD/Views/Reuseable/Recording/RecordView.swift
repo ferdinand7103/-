@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 enum RecordingMode {
     case pinyin
@@ -37,7 +38,7 @@ class RecordView: UIView {
         label.isHidden = true
         return label
     }()
-        
+    
     private let questionLabel: UILabel = {
         let label = UILabel()
         label.text = "Question"
@@ -108,8 +109,11 @@ class RecordView: UIView {
         }
     }
     
-    init(frame: CGRect, mode: RecordingMode) {
+    private var viewModel: StoryViewModel
+    
+    init(frame: CGRect, mode: RecordingMode, viewModel: StoryViewModel) {
         self.currentMode = mode
+        self.viewModel = viewModel
         super.init(frame: frame)
         setupView()
     }
@@ -117,12 +121,12 @@ class RecordView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     func setMode(_ mode: RecordingMode) {
         currentMode = mode
         updateViewForState()
     }
-
+    
     private func setupView() {
         addSubview(statusLabel)
         addSubview(recordButton)
@@ -145,7 +149,7 @@ class RecordView: UIView {
         NSLayoutConstraint.activate([
             statusLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             statusLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-
+            
             recordButton.widthAnchor.constraint(equalToConstant: 84),
             recordButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             recordButton.heightAnchor.constraint(equalTo: recordButton.widthAnchor),
@@ -175,7 +179,7 @@ class RecordView: UIView {
             NSLayoutConstraint.activate([
                 instructionLabel.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 20),
                 instructionLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-                       
+                
                 questionLabel.topAnchor.constraint(equalTo: instructionLabel.bottomAnchor, constant: 10),
                 questionLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
             ])
@@ -190,13 +194,15 @@ class RecordView: UIView {
             DispatchQueue.main.async {
                 AudioRecorder.instance.startRecording()
             }
-                currentState = .recording
+            currentState = .recording
             
         } else if currentState == .recording {
             DispatchQueue.main.async {
                 AudioRecorder.instance.stopRecording()
             }
-                currentState = .confirming
+            currentState = .confirming
+        } else if currentState == .confirming {
+            self.viewModel.moveToNextStage()
         }
     }
     
@@ -212,11 +218,26 @@ class RecordView: UIView {
         let fileName = path.appendingPathComponent("recording.wav")
         
         Task {
+            self.viewModel.moveToNextStage()
             print(fileName.path)
+            print(self.viewModel.toneView)
             if let response = await HuggingFace.instance.getResponse(audioPath: fileName.path) {
                 print("Response: \(response)")
                 DispatchQueue.main.async {
                     self.finalTranscriptionLabel.text = response
+                    if self.currentMode == .pinyin {
+                        if let text = self.finalTranscriptionLabel.text, text == self.viewModel.currentStory.toneTest.speak {
+                            self.viewModel.toneView = "Correct"
+                        } else {
+                            self.viewModel.toneView = "Wrong"
+                        }
+                    } else if self.currentMode == .conversation {
+                        if let text = self.finalTranscriptionLabel.text, text == self.viewModel.currentStory.user[self.viewModel.currentConversationIndex].hanzi {
+                            self.viewModel.convView = "Correct"
+                        } else {
+                            self.viewModel.convView = "Wrong"
+                        }
+                    }
                 }
             } else {
                 print("Failed to get a response.")
@@ -243,7 +264,7 @@ class RecordView: UIView {
             repeatButton.isHidden = true
             confirmButton.isHidden = true
             finalTranscriptionLabel.isHidden = true
-
+            
         case .recording:
             statusLabel.text = "Tap to Stop"
             recordButton.setImage(UIImage(named: "Stop"), for: .normal)
@@ -261,7 +282,7 @@ class RecordView: UIView {
             } else {
                 recordButtonTopConstraint.constant = 20
             }
-
+            
         case .confirming:
             statusLabel.text = "Tap to Confirm"
             instructionLabel.isHidden = true
@@ -272,11 +293,11 @@ class RecordView: UIView {
             confirmButton.isHidden = false
             finalTranscriptionLabel.isHidden = false
         }
-
+        
         // Animate the constraint change
-//        UIView.animate(withDuration: 0.3) {
-//            self.layoutIfNeeded()
-//        }
+        //        UIView.animate(withDuration: 0.3) {
+        //            self.layoutIfNeeded()
+        //        }
     }
     
     override func layoutSubviews() {

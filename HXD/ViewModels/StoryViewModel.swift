@@ -18,8 +18,11 @@ class StoryViewModel: ObservableObject {
     @Published var currentQuiz2Index = 0
     @Published var currentToneTestIndex = 0
     @Published var currentConversationIndex = 0
+    @Published var currentConversationIndex2 = 0
     @Published var quizView: String = "Quiz"
     @Published var quizView2: String = "Quiz"
+    @Published var toneView: String = "Quiz"
+    @Published var convView: String = "Quiz"
     
     enum StoryStage {
         case onboarding
@@ -33,6 +36,10 @@ class StoryViewModel: ObservableObject {
     
     var currentStory: Story {
         stories[currentStoryIndex]
+    }
+    
+    func setcurrentStory(index: Int) {
+        stories[index]
     }
     
     // Method to move to the next stage or story
@@ -52,15 +59,18 @@ class StoryViewModel: ObservableObject {
             quizView2 = "Quiz"
             currentStage = .quiz2
         case .quiz2:
+            toneView = "Quiz"
             currentStage = .toneTest
         case .toneTest:
             currentStage = .conversation
         case .conversation:
             if currentConversationIndex < currentStory.conversation.count - 1 {
                 currentConversationIndex += 1
+                currentConversationIndex2 += 1
             } else {
                 currentStage = .completed
                 currentConversationIndex = 0
+                currentConversationIndex2 = 0
                 // Move to next story or reset if done
                 if currentStoryIndex < stories.count - 1 {
                     currentStoryIndex += 1
@@ -80,7 +90,7 @@ class StoryViewModel: ObservableObject {
         print(stories)
     }
     
-    private func loadStories() {
+    func loadStories() {
         // Locate the JSON file in the bundle
         guard let url = Bundle.main.url(forResource: "quizpage", withExtension: "json") else {
             print("File not found")
