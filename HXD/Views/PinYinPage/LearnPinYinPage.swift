@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LearnPinYinPage: View {
+    @ObservedObject var learnVM: LearnViewModel
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -22,7 +24,8 @@ struct LearnPinYinPage: View {
                         .frame(height: geometry.size.height * 0.74)
                 }
                 ZStack {
-                    LearnPinYinContents()                .frame(maxHeight: .infinity)
+                    LearnPinYinContents(learnVM: learnVM)
+                        .frame(maxHeight: .infinity)
 
                 }
                 .background(Color.clear)
@@ -35,5 +38,5 @@ struct LearnPinYinPage: View {
 }
 
 #Preview {
-    LearnPinYinPage()
+    LearnPinYinPage(learnVM: LearnViewModel())
 }

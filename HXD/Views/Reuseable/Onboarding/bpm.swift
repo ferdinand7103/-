@@ -19,7 +19,7 @@ struct bpm: View {
                 .foregroundStyle(.black)
             BubbleSoundButton(
                 icon: "sound",
-                buttonAction: { AudioRecorder().playSound() },
+                buttonAction: { AudioRecorder().playSound(soundName: speak) },
                 size: 25,
                 soundSize: 12
             )
