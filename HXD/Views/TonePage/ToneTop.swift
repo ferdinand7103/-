@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ToneTop: View {
     @State private var isShowingConfirmation: Bool = false
-    @State private var isShowingFlashcard: Bool = false
+    @State private var isShowingDict: Bool = false
     @StateObject private var talkingAnimation = TalkingAnimation()
     @ObservedObject var viewModel: StoryViewModel
     @ObservedObject var homeViewModel: HomeViewModel
@@ -32,17 +32,17 @@ struct ToneTop: View {
                     .zIndex(3)
                     .padding(.bottom, 85)
             }
-            if isShowingFlashcard {
+            if isShowingDict {
                 Color.black.opacity(0.4)
                     .edgesIgnoringSafeArea(.all)
                 
-                FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard, viewModel: StoryViewModel(), homeViewModel: homeViewModel)
-                    .frame(width: 313, height: 282)
+                DictionaryView(isShowingDict: $isShowingDict, viewModel: viewModel)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .transition(.scale)
-                    .zIndex(3)
+                    .zIndex(100)
                     .padding(.bottom, 85)
             }
-            UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingFlashcard: $isShowingFlashcard)
+            UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict)
                 .padding(.bottom, 680)
             TalkingView(images: ["Orange1","Orange2"],talkingAnimation: talkingAnimation)
                 .onAppear {

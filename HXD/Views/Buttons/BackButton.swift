@@ -9,12 +9,12 @@ import SwiftUI
 
 struct BackButton: View {
     @Binding var isShowingConfirmation: Bool
-    @Binding var isShowingFlashcard: Bool
+    @Binding var isShowingDict: Bool
 
     var body: some View {
         Button(action: {
-            if isShowingFlashcard {
-                isShowingFlashcard = false
+            if isShowingDict {
+                isShowingDict = false
             } else {
                 isShowingConfirmation = true
             }
@@ -33,5 +33,5 @@ struct BackButton: View {
 }
 
 #Preview {
-    BackButton(isShowingConfirmation: .constant(false), isShowingFlashcard: .constant(false))
+    BackButton(isShowingConfirmation: .constant(false), isShowingDict: .constant(false))
 }

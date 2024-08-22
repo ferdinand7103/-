@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingPage: View {
     @State private var isShowingConfirmation: Bool = false
-    @State private var isShowingFlashcard: Bool = false
+    @State private var isShowingDict: Bool = false
     @StateObject private var talkingAnimation = TalkingAnimation()
     @ObservedObject var viewModel: StoryViewModel
     @ObservedObject var homeViewModel: HomeViewModel
@@ -18,7 +18,7 @@ struct OnboardingPage: View {
     var body: some View {
         ZStack {
             Image(viewModel.currentStory.background).resizable().modifier(BackgroundImageModifier())
-            UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingFlashcard: $isShowingFlashcard)
+            UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict)
                 .padding(.bottom, 680)
             TalkingView(images: ["Orange1","Orange2"],talkingAnimation: talkingAnimation)
                 .onAppear {
@@ -51,12 +51,12 @@ struct OnboardingPage: View {
                     .zIndex(100)
                     .padding(.bottom, 85)
             }
-            if isShowingFlashcard {
+            if isShowingDict {
                 Color.black.opacity(0.4)
                     .edgesIgnoringSafeArea(.all)
 
-                FlashcardSwipeView(isShowingFlashcard: $isShowingFlashcard, viewModel: StoryViewModel(), homeViewModel: homeViewModel)
-                    .frame(width: 313, height: 282)
+                DictionaryView(isShowingDict: $isShowingDict, viewModel:viewModel)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .transition(.scale)
                     .zIndex(100)
                     .padding(.bottom, 85)

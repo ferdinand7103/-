@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct FlashcardButton: View {
-    @Binding var isShowingFlashcard: Bool
+struct DictButton: View {
+    @Binding var isShowingDict: Bool
 
     var body: some View {
         ZStack {
             Button(action: {
-                isShowingFlashcard = true
+                isShowingDict = true
             }) {
                 Rectangle()
                     .fill(Color.orange3)
@@ -55,5 +55,5 @@ struct FlashcardButton: View {
 }
 
 #Preview {
-    FlashcardButton(isShowingFlashcard: .constant(false))
+    DictButton(isShowingDict: .constant(false))
 }
