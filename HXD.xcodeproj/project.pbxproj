@@ -85,6 +85,14 @@
 		3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */; };
 		3252BDA42C6CFB8A00CE8CEE /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252BDA32C6CFB8A00CE8CEE /* OnboardingPage.swift */; };
 		3252BDA62C6D0A4000CE8CEE /* BubbleChatNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3252BDA52C6D0A4000CE8CEE /* BubbleChatNext.swift */; };
+		325BB5DE2C76DDA500F12820 /* LearnPinYinPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5DD2C76DDA500F12820 /* LearnPinYinPage.swift */; };
+		325BB5E02C76DEB400F12820 /* PinYinNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5DF2C76DEB400F12820 /* PinYinNavigationButton.swift */; };
+		325BB5E22C76EBF400F12820 /* PinYinExampleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5E12C76EBF400F12820 /* PinYinExampleCard.swift */; };
+		325BB5E42C76F46400F12820 /* LearnPinYinContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5E32C76F46400F12820 /* LearnPinYinContents.swift */; };
+		325BB5E62C76F95300F12820 /* Initial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5E52C76F95300F12820 /* Initial.swift */; };
+		325BB5E82C76FA1B00F12820 /* Final.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5E72C76FA1B00F12820 /* Final.swift */; };
+		325BB5EE2C76FABD00F12820 /* PinYinTonePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5ED2C76FABD00F12820 /* PinYinTonePage.swift */; };
+		325BB5F02C7709BB00F12820 /* PinYinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325BB5EF2C7709BB00F12820 /* PinYinViewModel.swift */; };
 		32714E4B2C6A443500EE6486 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4A2C6A443500EE6486 /* FlashcardView.swift */; };
 		32714E4D2C6A46FC00EE6486 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4C2C6A46FC00EE6486 /* FlashcardViewModel.swift */; };
 		32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32714E4E2C6A47EE00EE6486 /* FlashcardListView.swift */; };
@@ -183,6 +191,14 @@
 		3252BD7F2C6CAD1800CE8CEE /* UpperButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperButtons.swift; sourceTree = "<group>"; };
 		3252BDA32C6CFB8A00CE8CEE /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingPage.swift; path = HXD/Views/OnboardingPage/Scene1_School/OnboardingPage.swift; sourceTree = SOURCE_ROOT; };
 		3252BDA52C6D0A4000CE8CEE /* BubbleChatNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleChatNext.swift; sourceTree = "<group>"; };
+		325BB5DD2C76DDA500F12820 /* LearnPinYinPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnPinYinPage.swift; sourceTree = "<group>"; };
+		325BB5DF2C76DEB400F12820 /* PinYinNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinYinNavigationButton.swift; sourceTree = "<group>"; };
+		325BB5E12C76EBF400F12820 /* PinYinExampleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinYinExampleCard.swift; sourceTree = "<group>"; };
+		325BB5E32C76F46400F12820 /* LearnPinYinContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnPinYinContents.swift; sourceTree = "<group>"; };
+		325BB5E52C76F95300F12820 /* Initial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initial.swift; sourceTree = "<group>"; };
+		325BB5E72C76FA1B00F12820 /* Final.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final.swift; sourceTree = "<group>"; };
+		325BB5ED2C76FABD00F12820 /* PinYinTonePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinYinTonePage.swift; sourceTree = "<group>"; };
+		325BB5EF2C7709BB00F12820 /* PinYinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinYinViewModel.swift; sourceTree = "<group>"; };
 		32714E4A2C6A443500EE6486 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		32714E4C2C6A46FC00EE6486 /* FlashcardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViewModel.swift; sourceTree = "<group>"; };
 		32714E4E2C6A47EE00EE6486 /* FlashcardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardListView.swift; sourceTree = "<group>"; };
@@ -405,6 +421,7 @@
 		29EBBBD32C5BAB3E00AFCD60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				325BB5DC2C76DD7A00F12820 /* PinYinPage */,
 				32031F692C7640BB0064FFBD /* ComingSoonPage */,
 				32031F552C758D9F0064FFBD /* RecallPage */,
 				29CBBBEC2C7588B700F9123A /* ConversationPage */,
@@ -431,6 +448,7 @@
 				293E0EE52C72FAD00062C2AD /* StoryViewModel.swift */,
 				1A06B9F12C75AE1D00226FD1 /* LearnViewModel.swift */,
 				1A06B9F52C76DD0F00226FD1 /* HomeViewModel.swift */,
+				325BB5EF2C7709BB00F12820 /* PinYinViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -468,6 +486,7 @@
 				293E0ED52C6EFCC90062C2AD /* HomeCard.swift */,
 				32031F592C758E8A0064FFBD /* ChapterCard.swift */,
 				32031F632C75E87E0064FFBD /* HomeCardScrollView.swift */,
+				325BB5E12C76EBF400F12820 /* PinYinExampleCard.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -545,6 +564,18 @@
 			path = Scene1_School;
 			sourceTree = "<group>";
 		};
+		325BB5DC2C76DD7A00F12820 /* PinYinPage */ = {
+			isa = PBXGroup;
+			children = (
+				325BB5DD2C76DDA500F12820 /* LearnPinYinPage.swift */,
+				325BB5E32C76F46400F12820 /* LearnPinYinContents.swift */,
+				325BB5E52C76F95300F12820 /* Initial.swift */,
+				325BB5E72C76FA1B00F12820 /* Final.swift */,
+				325BB5ED2C76FABD00F12820 /* PinYinTonePage.swift */,
+			);
+			path = PinYinPage;
+			sourceTree = "<group>";
+		};
 		32714E502C6A4F4700EE6486 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,6 +589,7 @@
 				32031F5D2C75CDFE0064FFBD /* InformationButton.swift */,
 				32031F5F2C75D8140064FFBD /* PrimaryButton.swift */,
 				32031F612C75D8FD0064FFBD /* CardMenuButton.swift */,
+				325BB5DF2C76DEB400F12820 /* PinYinNavigationButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -685,14 +717,18 @@
 			files = (
 				32031F642C75E87E0064FFBD /* HomeCardScrollView.swift in Sources */,
 				32031F492C72ED4C0064FFBD /* LogoAnimationView.swift in Sources */,
+				325BB5F02C7709BB00F12820 /* PinYinViewModel.swift in Sources */,
 				29B12D162C6C4E64008FEAF4 /* FlashcardButton.swift in Sources */,
 				293E0E962C6C701A0062C2AD /* TalkingView.swift in Sources */,
 				32031F4B2C72EDD40064FFBD /* LogoAnimation.swift in Sources */,
 				29B12D142C6B9E7A008FEAF4 /* HandleButtonClick.swift in Sources */,
+				325BB5DE2C76DDA500F12820 /* LearnPinYinPage.swift in Sources */,
+				325BB5E42C76F46400F12820 /* LearnPinYinContents.swift in Sources */,
 				29CBBBE02C743D7600F9123A /* QuizPage2.swift in Sources */,
 				32714E522C6A4F6E00EE6486 /* SoundButton.swift in Sources */,
 				293E0ED82C6EFCD20062C2AD /* RectangleButton.swift in Sources */,
 				32031F542C74466F0064FFBD /* BubbleSoundButton.swift in Sources */,
+				325BB5E02C76DEB400F12820 /* PinYinNavigationButton.swift in Sources */,
 				29CBBBE52C757FE000F9123A /* ToneTop.swift in Sources */,
 				29B12CA22C6467D0008FEAF4 /* PinyinFormatter.swift in Sources */,
 				32714E4B2C6A443500EE6486 /* FlashcardView.swift in Sources */,
@@ -713,6 +749,7 @@
 				1A06B9F22C75AE1D00226FD1 /* LearnViewModel.swift in Sources */,
 				293E0ECA2C6DCA470062C2AD /* FetchJSON.swift in Sources */,
 				293E0EE62C72FAD00062C2AD /* StoryViewModel.swift in Sources */,
+				325BB5E22C76EBF400F12820 /* PinYinExampleCard.swift in Sources */,
 				293E0E942C6C67420062C2AD /* ConfirmationView.swift in Sources */,
 				32714E4F2C6A47EE00EE6486 /* FlashcardListView.swift in Sources */,
 				32031F682C76144D0064FFBD /* TabBarView.swift in Sources */,
@@ -730,6 +767,7 @@
 				29CBBBEE2C7588C300F9123A /* ConversationView.swift in Sources */,
 				29B12CB22C65BFF5008FEAF4 /* Wrong.swift in Sources */,
 				32031F6B2C7640CA0064FFBD /* ComingSoonView.swift in Sources */,
+				325BB5E62C76F95300F12820 /* Initial.swift in Sources */,
 				293E0EC32C6DB1BC0062C2AD /* HuggingFace.swift in Sources */,
 				3252BD802C6CAD1800CE8CEE /* UpperButtons.swift in Sources */,
 				29CBBBF02C75A23400F9123A /* HXDView.swift in Sources */,
@@ -742,6 +780,7 @@
 				293E0E922C6C64DD0062C2AD /* QuizTop.swift in Sources */,
 				293E0ED62C6EFCC90062C2AD /* HomeCard.swift in Sources */,
 				29B12CA52C6468C0008FEAF4 /* HanziPinyinResources.swift in Sources */,
+				325BB5E82C76FA1B00F12820 /* Final.swift in Sources */,
 				323B23972C723A0700A3403E /* RecordViewWrapper.swift in Sources */,
 				293E0E8E2C6C62A00062C2AD /* FCNavigationButton.swift in Sources */,
 				323B23992C723A3300A3403E /* RecordView.swift in Sources */,
@@ -759,6 +798,7 @@
 				29EBBBD72C5BABF000AFCD60 /* Correct.swift in Sources */,
 				293E0EC02C6DB1B20062C2AD /* APIResponse.swift in Sources */,
 				32031F4D2C72EE370064FFBD /* LogoAnimationProtocol.swift in Sources */,
+				325BB5EE2C76FABD00F12820 /* PinYinTonePage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -936,7 +976,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HXD/Preview Content\"";
-				DEVELOPMENT_TEAM = M793N4X6S7;
+				DEVELOPMENT_TEAM = U542U52PMZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
@@ -968,7 +1008,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HXD/Preview Content\"";
-				DEVELOPMENT_TEAM = M793N4X6S7;
+				DEVELOPMENT_TEAM = U542U52PMZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
