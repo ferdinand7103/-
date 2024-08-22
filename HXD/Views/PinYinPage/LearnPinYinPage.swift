@@ -9,28 +9,17 @@ import SwiftUI
 
 struct LearnPinYinPage: View {
     var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                VStack {
-                    Rectangle()
-                        .fill(Color.clear).frame(height: geometry.size.height * 0.3)
-
-                    Rectangle()
-                        .foregroundStyle(Color(.white))
-                        .clipShape(.rect(cornerRadius: 32))
-//                        .frame(maxHeight: 900)
-                        .frame(height: geometry.size.height * 0.74)
+        ZStack {
+                    // Background Image
+                    Image("pinyinBackground")
+                        .resizable()
+                        .scaledToFill() // Ensure the image fills the background
+                        .edgesIgnoringSafeArea(.all) // Makes sure the image covers the entire screen
+                    
+                    // Content
+                    LearnPinYinContents()
+                        .background() // Ensures background of the content is transparent
                 }
-                ZStack {
-                    LearnPinYinContents()                .frame(maxHeight: .infinity)
-
-                }
-                .background(Color.clear)
-
-            }
-            
-        }
-        .background(Image(.homeBackground))
     }
 }
 
