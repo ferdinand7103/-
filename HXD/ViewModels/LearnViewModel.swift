@@ -29,7 +29,7 @@ class LearnViewModel: ObservableObject {
     
     func switchStage(to stage: pinyinCase) {
         currentStage = stage
-        print(currentStage)
+//        print(currentStage)
     }
 
     // Function to load the Learn data from the JSON file

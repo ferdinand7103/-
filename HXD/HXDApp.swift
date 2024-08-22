@@ -12,6 +12,7 @@ struct HXDApp: App {
     var body: some Scene {
         WindowGroup {
             HXDView(homeViewModel: HomeViewModel())
+//            LearnView()
         }
     }
 }
