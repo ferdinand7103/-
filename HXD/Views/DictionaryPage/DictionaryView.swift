@@ -14,16 +14,20 @@ struct DictionaryView: View {
     var body: some View {
         NavigationView {
             ZStack{
+                Rectangle()
+                    .ignoresSafeArea()
+                    .foregroundColor(.white)
                 VStack {
                     Text("Dictionary")
                         .font(.title)
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .center)
                         .padding(.top, 16)
+                        .foregroundColor(.black)
                     
-                    Text("Story 1 - Chapter 2")
+                    Text("Story 1 - Chapter \(viewModel.currentStoryIndex + 1)")
                         .font(.subheadline)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .padding(.bottom, 16)
                     
@@ -34,7 +38,7 @@ struct DictionaryView: View {
                                 FlashcardView(vocab: viewModel.currentStory.flashcard[index], width: 170, height: 236)
                                     .padding(0)
                                 RoundedRectangle(cornerRadius: 16)
-                                    .stroke(.lighterGray, lineWidth: 1)
+                                    .stroke(.gray, lineWidth: 2)
                                 SoundButton(vocab: viewModel.currentStory.flashcard[index])
                                     .frame(width: 30, height: 30)
                                     .background(Color.white)
@@ -49,6 +53,7 @@ struct DictionaryView: View {
                 }
                 .navigationBarItems(leading: Button(action: {
                     isShowingDict = false
+                    viewModel.showChoice = true
                 }) {
                     HStack {
                         Image(systemName: "chevron.left")

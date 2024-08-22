@@ -38,7 +38,7 @@ struct QuizTop: View {
                     .transition(.scale)
                     .zIndex(100)
             }
-            UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict)
+            UpperButtons(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict, viewModel: viewModel)
                 .padding(.bottom, 680)
             TalkingView(images: ["Orange1","Orange2"],talkingAnimation: talkingAnimation)
                 .onAppear {

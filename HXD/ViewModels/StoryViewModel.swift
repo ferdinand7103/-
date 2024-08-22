@@ -25,6 +25,7 @@ class StoryViewModel: ObservableObject {
     @Published var toneView: String = "Quiz"
     @Published var convView: String = "Quiz"
     @Published var recall: String = "Home"
+    @Published var showChoice: Bool = true
     
     enum StoryStage {
         case onboarding
