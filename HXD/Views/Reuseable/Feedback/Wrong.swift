@@ -11,7 +11,6 @@ struct Wrong: View {
     var hanzi: String
     var pinyin: String
     var meaning: String
-    var pad: CGFloat
     @ObservedObject var viewModel: StoryViewModel
     
     var body: some View {
@@ -32,16 +31,18 @@ struct Wrong: View {
                 }
                 .padding(.trailing, 255)
                 .padding(.bottom, 20)
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Correct Answer:")
-                        .font(.system(size: 20, weight: .bold))
-                        .foregroundStyle(.black)
-                    Text("\(hanzi)  |  \(pinyin)  |  \(meaning)")
-                        .font(.system(size: 20))
-                        .foregroundStyle(.black)
+                HStack {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Correct Answer:")
+                            .font(.system(size: 20, weight: .bold))
+                            .foregroundStyle(.black)
+                        Text("\(hanzi)  |  \(pinyin)  |  \(meaning)")
+                            .font(.system(size: 20))
+                            .foregroundStyle(.black)
+                    }
+                    .padding(.bottom, 20)
                 }
-                .padding(.trailing, pad)
-                .padding(.bottom, 20)
+                .frame(maxWidth: 350, alignment: .leading)
                 HStack(spacing: 16) {
                     Button(action: {
                         viewModel.quizView = "Quiz"
@@ -82,5 +83,5 @@ struct Wrong: View {
 }
 
 #Preview {
-    Wrong(hanzi: "猫", pinyin: "Māo", meaning: "Cat", pad: 200, viewModel: StoryViewModel())
+    Wrong(hanzi: "猫", pinyin: "Māo", meaning: "Cat", viewModel: StoryViewModel())
 }

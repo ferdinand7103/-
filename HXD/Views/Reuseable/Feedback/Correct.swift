@@ -11,7 +11,6 @@ struct Correct: View {
     var hanzi: String
     var pinyin: String
     var meaning: String
-    var pad: CGFloat
     @ObservedObject var viewModel: StoryViewModel
     
     var body: some View {
@@ -31,12 +30,14 @@ struct Correct: View {
                 }
                 .padding(.trailing, 220)
                 .padding(.bottom, 10)
-                Text("\(hanzi) (\(pinyin)) means '\(meaning)'")
-                    .font(.system(size: 22, weight: .bold))
-                    .foregroundStyle(.black)
-                    .padding(.trailing, pad)
-                    .padding(.bottom, 50)
-                    .padding(.top, 10)
+                HStack {
+                    Text("\(hanzi) (\(pinyin)) means '\(meaning)'")
+                        .font(.system(size: 22, weight: .bold))
+                        .foregroundStyle(.black)
+                        .padding(.bottom, 50)
+                        .padding(.top, 10)
+                }
+                .frame(maxWidth: 350, alignment: .leading)
                 Button(action: {
                     viewModel.moveToNextStage()
                 }) {
@@ -56,5 +57,5 @@ struct Correct: View {
 }
 
 #Preview {
-    Correct(hanzi: "猫", pinyin: "Māo", meaning: "Cat", pad: 130, viewModel: StoryViewModel())
+    Correct(hanzi: "猫", pinyin: "Māo", meaning: "How many people", viewModel: StoryViewModel())
 }
