@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ConfirmationView: View {
     @Binding var isShowingConfirmation: Bool
+    @ObservedObject var homeVM: HomeViewModel
     
     var body: some View {
         ZStack {
@@ -30,6 +31,7 @@ struct ConfirmationView: View {
                 Button(action: {
                     print("leave")
                     isShowingConfirmation = false
+                    homeVM.switchStage(to: .home)
                 }) {
                     ZStack{
                         Rectangle()
@@ -62,5 +64,5 @@ struct ConfirmationView: View {
 }
 
 #Preview {
-    ConfirmationView(isShowingConfirmation: .constant(true))
+    ConfirmationView(isShowingConfirmation: .constant(true), homeVM: HomeViewModel())
 }

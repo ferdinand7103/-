@@ -11,9 +11,10 @@ import UIKit
 struct RecordViewWrapper: UIViewRepresentable {
     var mode: RecordingMode
     var viewModel: StoryViewModel
+    var homeVM: HomeViewModel
 
     func makeUIView(context: Context) -> RecordView{
-        return RecordView(frame: .zero, mode: mode, viewModel: viewModel)
+        return RecordView(frame: .zero, mode: mode, viewModel: viewModel, homeVM: homeVM)
     }
 
     func updateUIView(_ uiView: RecordView, context: Context) {

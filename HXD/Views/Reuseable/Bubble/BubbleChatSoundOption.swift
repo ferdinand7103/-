@@ -44,7 +44,7 @@ struct BubbleChatSoundOption: View {
                 HStack {
                     BubbleSoundButton(icon: "sound", buttonAction: { tts.speak(text: speak)}, size: 48, soundSize: 20)
                         .padding(.trailing, 10)
-                    BubbleSoundButton(icon: "sound", buttonAction: { tts.speak(text: speak)}, size: 48, soundSize: 20)
+                    BubbleSoundButton(icon: "soundSlow", buttonAction: { tts.speakSlow(text: speak)}, size: 48, soundSize: 20)
                 }
                 .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
             }

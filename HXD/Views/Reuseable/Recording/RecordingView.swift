@@ -10,6 +10,7 @@ import SwiftUI
 struct RecordingView: View {
     var mode: RecordingMode
     @ObservedObject var viewModel: StoryViewModel
+    @ObservedObject var homeVM: HomeViewModel
     
     var body: some View {
          ZStack {
@@ -18,7 +19,7 @@ struct RecordingView: View {
                 .frame(width: .infinity, height: 300)
                 .cornerRadius(24)
             VStack {
-                RecordViewWrapper(mode: mode, viewModel: viewModel)
+                RecordViewWrapper(mode: mode, viewModel: viewModel, homeVM: homeVM)
                     .frame(width: 300, height: 250)
             }
             .padding()
@@ -27,5 +28,5 @@ struct RecordingView: View {
 }
 
 #Preview {
-    RecordingView(mode: .conversation, viewModel: StoryViewModel())
+    RecordingView(mode: .conversation, viewModel: StoryViewModel(), homeVM: HomeViewModel())
 }

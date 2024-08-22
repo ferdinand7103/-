@@ -15,7 +15,7 @@ struct ConversationView: View {
         ZStack {
             if viewModel.toneView == "Quiz" {
                 ToneTop(viewModel: viewModel, homeViewModel: homeViewModel, hanzi: viewModel.currentStory.conversation[viewModel.currentConversationIndex].hanzi, pinyin: viewModel.currentStory.conversation[viewModel.currentConversationIndex].pinyin, meaning: viewModel.currentStory.conversation[viewModel.currentConversationIndex].meaning, speak: viewModel.currentStory.conversation[viewModel.currentConversationIndex].hanzi)
-                RecordingView(mode: .conversation, viewModel: viewModel)
+                RecordingView(mode: .conversation, viewModel: viewModel, homeVM: homeViewModel)
                     .padding(.top, 625)
                     .padding([.leading, .trailing])
             } else if viewModel.toneView == "Correct" {

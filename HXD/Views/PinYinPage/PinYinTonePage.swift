@@ -56,7 +56,7 @@ struct PinYinTonePage: View {
                     }
                     Spacer()
                     
-                    BubbleSoundButton(icon: "sound", buttonAction: { tts.speak(text: image)}, size: 45, soundSize: 20)
+                    BubbleSoundButton(icon: "sound", buttonAction: { tts.speakSlow(text: hanzi)}, size: 45, soundSize: 20)
                 }
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 10).stroke(Color.gray.opacity(0.5)))

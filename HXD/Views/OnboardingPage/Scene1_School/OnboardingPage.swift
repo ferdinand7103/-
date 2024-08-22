@@ -45,7 +45,7 @@ struct OnboardingPage: View {
                 Color.black.opacity(0.4)
                     .edgesIgnoringSafeArea(.all)
 
-                ConfirmationView(isShowingConfirmation: $isShowingConfirmation)
+                ConfirmationView(isShowingConfirmation: $isShowingConfirmation, homeVM: homeViewModel)
                     .frame(width: 313, height: 282)
                     .transition(.scale)
                     .zIndex(100)
