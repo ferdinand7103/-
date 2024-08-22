@@ -14,7 +14,7 @@ struct RecordingView: View {
     var body: some View {
          ZStack {
             Rectangle()
-                .foregroundColor(Color.white)
+                .foregroundColor(Color.blue)
                 .frame(width: .infinity, height: 300)
                 .cornerRadius(24)
             VStack {
