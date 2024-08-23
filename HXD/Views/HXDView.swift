@@ -17,7 +17,7 @@ struct HXDView: View {
             switch homeViewModel.currentStage{
             case .open:
                 SplashScreenView()
-                HomeView(homeViewModel:homeViewModel, viewModel: viewModel)
+                TabBarView(homeViewModel:homeViewModel, viewModel: viewModel)
                     .opacity(Opacity)
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {

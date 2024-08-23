@@ -14,7 +14,7 @@ struct HomeView: View {
     var body: some View {
         VStack {
             if viewModel.recall == "Home" {
-                TabBarView(homeViewModel:homeViewModel, viewModel: viewModel)
+                HomePage(homeViewModel:homeViewModel, viewModel: viewModel)
             } else {
                 RecallView(viewModel: viewModel)
             }

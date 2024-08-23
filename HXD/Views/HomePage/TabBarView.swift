@@ -23,7 +23,7 @@ struct TabBarView: View {
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            HomePage(homeViewModel: homeViewModel, viewModel: viewModel)
+            HomeView(homeViewModel: homeViewModel, viewModel: viewModel)
                 .tabItem {
                     Label {
                         Text("Story")
@@ -37,7 +37,7 @@ struct TabBarView: View {
                 }
             // change to pinyin page
 //            ContentView()
-            ComingSoonView()
+            LearnView()
                 .tabItem {
                     Label {
                         Text("Pin Yin")
