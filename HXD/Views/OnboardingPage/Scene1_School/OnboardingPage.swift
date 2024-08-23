@@ -20,8 +20,8 @@ struct OnboardingPage: View {
             Image(viewModel.currentStory.background).resizable().modifier(BackgroundImageModifier())
             HStack {
                 BackButton(isShowingConfirmation: $isShowingConfirmation, isShowingDict: $isShowingDict)
-                    .padding(.bottom, 680)
-                    .padding(.leading, 30)
+                    .padding(.bottom, 715)
+                    .padding(.leading, 22)
                 Spacer()
             }
             .padding(.leading)
